@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfólio de Marlon de Cristo Paula, QA Sênior e Test Lead em sistemas críticos: 14 anos em qualidade de software, estudos de caso em migração de sistemas, faturamento, controle de acesso e sustentação em produção.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marlon de Cristo Paula · QA em sistemas críticos">
+<meta property="og:description" content="Portfólio de Marlon de Cristo Paula, QA Sênior e Test Lead em sistemas críticos: 14 anos em qualidade de software, estudos de caso em migração de sistemas, faturamento, controle de acesso e sustentação em produção.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a6b73'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
+<title>Portfólio Marlon Paula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f4f1; --surface:#ffffff; --ink:#121a22; --muted:#56616b; --rule:#d5d9d6;
+  --accent:#0a6b73; --accent-ink:#ffffff; --signal:#c98a00; --soft:#e7ecea;
+  --head:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1419; --surface:#151c23; --ink:#e6eaec; --muted:#9aa5ae; --rule:#2a343d;
+    --accent:#4fc3c9; --accent-ink:#0f1419; --signal:#f0b429; --soft:#1b242c;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1419; --surface:#151c23; --ink:#e6eaec; --muted:#9aa5ae; --rule:#2a343d;
+  --accent:#4fc3c9; --accent-ink:#0f1419; --signal:#f0b429; --soft:#1b242c;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
+:root:not([data-lang="en"]) .en{display:none !important}
+:root[data-lang="en"] .pt{display:none !important}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+@media (max-width:560px){.wrap{padding:0 16px}}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.bar .mark{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar nav{display:flex;gap:18px;font-size:14px}
+.bar nav a{color:var(--ink);text-decoration:none}
+.bar nav a:hover{color:var(--accent)}
+@media (max-width:760px){.bar nav{display:none}}
+.lang{display:inline-flex;border:1px solid var(--rule);font-family:var(--mono);font-size:12.5px}
+.lang button{all:unset;cursor:pointer;padding:5px 10px;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* hero */
+.hero{padding:64px 0 36px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin:0 0 18px}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(38px,6.4vw,68px);line-height:1.02;letter-spacing:-.02em;margin:0 0 22px}
+h1 .u{box-shadow:inset 0 -.18em 0 var(--signal)}
+.lede{font-size:clamp(18px,2.1vw,21px);max-width:760px;margin:0 0 28px;color:var(--ink)}
+.statement{font-family:var(--head);font-weight:700;font-size:clamp(24px,3.3vw,36px);line-height:1.18;letter-spacing:-.01em;max-width:900px;margin:0 0 22px}
+.statement .u{box-shadow:inset 0 -.2em 0 var(--signal)}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin:40px 0 28px}
+.proof > div{padding:20px 18px 20px 0}
+.proof > div + div{border-left:1px solid var(--rule);padding-left:18px}
+.proof b{display:block;font-family:var(--head);font-size:40px;line-height:1;font-weight:800;color:var(--accent)}
+.proof h2{font-family:var(--head);font-size:17px;margin:10px 0 6px;letter-spacing:0}
+.proof p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.5}
+@media (max-width:900px){.proof{grid-template-columns:1fr 1fr}.proof > div:nth-child(3){border-left:0;padding-left:0}.proof > div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:520px){.proof{grid-template-columns:1fr}.proof > div{padding:18px 0 !important;border-left:0 !important;border-top:1px solid var(--rule)}.proof > div:first-child{border-top:0}}
+.transfer{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 26px}
+.transfer .tlabel{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-right:6px;flex-basis:100%}
+.transfer .chip{font-size:14px;padding:5px 11px;border:1px solid var(--ink);background:var(--surface)}
+.eco{border:2px solid var(--ink);background:var(--surface);padding:22px 22px 18px;margin:0 0 30px}
+.eco-head p{font-size:16.5px;margin:6px 0 16px;max-width:820px}
+.eco-head b{font-family:var(--head)}
+.eco .tlabel,.eco .band-lbl{display:block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.eco .band-lbl b{font-family:var(--head);font-size:16px;color:var(--accent);letter-spacing:0}
+.eco-band{padding:14px 0;border-top:1px solid var(--rule)}
+.eco .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.eco .chips > span{font-size:13.5px;padding:3px 9px;border:1px solid var(--rule);background:var(--bg)}
+.eco-bus{margin:2px 0 0;padding:9px 12px;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;text-align:center}
+.domains{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:10px;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.domains > div{padding:12px 14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg)}
+.domains b{font-family:var(--head);font-size:24px;line-height:1;color:var(--accent)}
+.domains h3{font-size:15px;margin:6px 0 4px}
+.domains p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.45}
+.eco-foot{font-size:14.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px;margin:0}
+.eco-foot b{color:var(--ink)}
+@media (max-width:820px){.domains{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.eco{padding:16px 14px}.domains{grid-template-columns:1fr}}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:13.5px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-top:44px}
+.stats div{padding:18px 16px 18px 0}
+.stats div + div{border-left:1px solid var(--rule);padding-left:16px}
+.stats b{display:block;font-family:var(--head);font-size:34px;line-height:1;font-weight:700}
+.stats span{font-size:13.5px;color:var(--muted)}
+@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(3){border-left:0;padding-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* sections */
+section{padding:64px 0;border-bottom:1px solid var(--rule)}
+h2{font-family:var(--head);font-weight:700;font-size:clamp(26px,3.4vw,34px);letter-spacing:-.01em;margin:0 0 8px}
+.sec-sub{color:var(--muted);margin:0 0 36px;max-width:720px}
+h3{font-family:var(--head);font-weight:700;font-size:22px;line-height:1.25;margin:0 0 6px}
+h4{font-family:var(--mono);font-weight:500;font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin:22px 0 6px}
+p{margin:0 0 12px}
+ul{margin:0 0 12px;padding-left:20px}
+li{margin:0 0 6px}
+
+/* principles */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.principles div{padding:20px 20px 20px 0}
+.principles div:nth-child(3n+2),.principles div:nth-child(3n){padding-left:20px;border-left:1px solid var(--rule)}
+.principles div:nth-child(n+4){border-top:1px solid var(--rule)}
+.principles b{display:block;font-family:var(--head);font-size:17px;margin-bottom:6px}
+.principles p{font-size:15px;color:var(--muted);margin:0}
+@media (max-width:820px){.principles{grid-template-columns:1fr}.principles div{padding:18px 0 !important;border-left:0 !important;border-top:1px solid var(--rule)}.principles div:first-child{border-top:0}}
+
+/* cases */
+.case{display:grid;grid-template-columns:250px 1fr;gap:36px;padding:40px 0;border-top:1px solid var(--rule)}
+.case:first-of-type{border-top:2px solid var(--ink)}
+.case > *{min-width:0}
+.case aside{font-size:14px;color:var(--muted)}
+.case .no{font-family:var(--mono);font-size:13px;color:var(--accent);display:block;margin-bottom:10px}
+.case aside dl{margin:0}
+.case aside dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:14px}
+.case aside dd{margin:2px 0 0;color:var(--ink)}
+.case .kicker{color:var(--muted);font-size:17px;margin:0 0 4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-family:var(--mono);font-size:12px;padding:2px 7px;border:1px solid var(--rule);background:var(--surface);color:var(--ink)}
+.callout{border-left:3px solid var(--signal);background:var(--soft);padding:12px 16px;margin:18px 0 4px;font-size:15.5px}
+.callout b{font-family:var(--head)}
+.figure{display:flex;flex-wrap:wrap;gap:0;margin:16px 0 6px;border:1px solid var(--rule);background:var(--surface)}
+.figure div{flex:1 1 140px;padding:14px 16px}
+.figure div + div{border-left:1px solid var(--rule)}
+.figure b{display:block;font-family:var(--head);font-size:26px;line-height:1.1}
+.figure span{font-size:13px;color:var(--muted)}
+@media (max-width:520px){.figure div + div{border-left:0;border-top:1px solid var(--rule)}}
+@media (max-width:820px){.case{grid-template-columns:1fr;gap:12px}}
+
+.figure b span,.proof b span{font-size:inherit;color:inherit;display:inline}
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:0;margin:14px 0 4px;font-family:var(--mono);font-size:12.5px}
+.flow span{padding:6px 10px;border:1px solid var(--rule);background:var(--surface);margin:0 -1px -1px 0;position:relative}
+.flow span:not(:last-child)::after{content:"→";position:absolute;right:-7px;top:50%;transform:translateY(-50%);background:var(--bg);color:var(--accent);font-size:12px;line-height:1;z-index:1;padding:0 1px}
+
+:root:not([data-lang="en"]) .flow > span.pt:nth-last-child(2)::after,:root[data-lang="en"] .flow > span.en:last-child::after{content:none}
+/* matrix sample */
+.matrix{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px;margin:12px 0 6px;background:var(--surface)}
+.matrix th,.matrix td{border:1px solid var(--rule);padding:6px 8px;text-align:left}
+.matrix th{background:var(--soft);font-weight:500}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ok{color:var(--accent)} .warn{color:var(--signal)}
+
+/* more examples */
+.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:2px solid var(--ink)}
+.mini article{padding:22px 24px 22px 0}
+.mini article:nth-child(even){padding-left:24px;border-left:1px solid var(--rule)}
+.mini article:nth-child(n+3){border-top:1px solid var(--rule)}
+.mini h3{font-size:18px}
+.mini p{font-size:15px;color:var(--muted);margin:0}
+@media (max-width:760px){.mini{grid-template-columns:1fr}.mini article{padding:18px 0 !important;border-left:0 !important;border-top:1px solid var(--rule)}.mini article:first-child{border-top:0}}
+
+/* skills */
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:var(--muted);margin:-18px 0 26px}
+.lv{display:inline-block;font-family:var(--mono);font-size:11.5px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+.lv.p{background:var(--accent);color:var(--accent-ink)}
+.lv.f{border:1px solid var(--accent);color:var(--accent)}
+.lv.s{border:1px dashed var(--muted);color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+.skills .grp{padding:16px 0;border-top:1px solid var(--rule)}
+.skills .grp h3{font-size:17px;margin-bottom:10px}
+.skills ul{list-style:none;padding:0;margin:0}
+.skills li{font-size:15px;display:flex;gap:8px;align-items:baseline;margin-bottom:7px}
+.skills li .lv{flex:none;min-width:74px;text-align:center}
+@media (max-width:760px){.skills{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--ink)}
+.tl li{position:relative;padding:0 0 22px 24px;margin:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:var(--bg);border:2px solid var(--ink)}
+.tl li.now::before{background:var(--accent);border-color:var(--accent)}
+.tl .when{font-family:var(--mono);font-size:13px;color:var(--accent)}
+.tl b{font-family:var(--head);font-size:17px;display:block}
+.tl span.d{font-size:15px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr;gap:36px}
+.edu{columns:2;column-gap:40px;border-top:2px solid var(--ink);padding-top:18px}
+.edu h3,.edu p{break-inside:avoid}
+@media (max-width:640px){.edu{columns:1}}
+.tl .trow{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px}
+.tl .tk{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);min-width:128px}
+.tt{font-family:var(--mono);font-size:11.5px;padding:2px 7px;font-style:normal}
+.tt.u{background:var(--accent);color:var(--accent-ink)}
+.tt.s{border:1px dashed var(--accent);color:var(--accent)}
+.tt.c{border:1px solid var(--rule);color:var(--muted);background:var(--surface)}
+.tl-leg{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;color:var(--muted);margin:-18px 0 26px}
+.tl-leg .tt{display:inline-block;width:18px;padding:2px 0;margin-right:6px;vertical-align:-2px}
+.tl li{padding-bottom:26px}
+@media (max-width:520px){.tl .tk{min-width:100%}}
+
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:28px}}
+.edu p{font-size:15px}
+.edu b{font-family:var(--head)}
+
+
+/* troubleshooting */
+.inv{display:flex;flex-wrap:wrap;margin:6px 0 34px;font-family:var(--mono);font-size:12.5px}
+.inv > span{padding:8px 11px;border:1px solid var(--rule);background:var(--surface);margin:0 -1px -1px 0;position:relative}
+.inv > span b{display:block;font-family:var(--head);font-size:13.5px;color:var(--accent);font-weight:700}
+.inv > span:not(:last-child)::after{content:"→";position:absolute;right:-7px;top:50%;transform:translateY(-50%);background:var(--bg);color:var(--accent);font-size:12px;line-height:1;z-index:1;padding:0 1px}
+.log{border-top:2px solid var(--ink)}
+.log .row{display:grid;grid-template-columns:1.1fr 1.3fr 1fr;gap:0 28px;padding:16px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.log .row.head{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:10px 0}
+.log .row > div > .lbl{display:none;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin-bottom:2px}
+.log .row .sym{font-weight:600}
+.log .row .out{color:var(--muted)}
+.log .layer{display:inline-block;font-family:var(--mono);font-size:11px;padding:0 6px;border:1px solid var(--rule);margin-left:6px;vertical-align:1px;color:var(--muted);font-weight:400}
+@media (max-width:760px){.log .row{grid-template-columns:1fr;gap:6px}.log .row.head{display:none}.log .row > div > .lbl{display:block}}
+.periods{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:1px solid var(--rule)}
+.periods div{padding:16px 18px 16px 0}
+.periods div + div{padding-left:18px;border-left:1px solid var(--rule)}
+.periods .when{font-family:var(--mono);font-size:12.5px;color:var(--accent);display:block}
+.periods b{font-family:var(--head);font-size:16px;display:block;margin:2px 0 4px}
+.periods p{font-size:14.5px;color:var(--muted);margin:0}
+@media (max-width:820px){.periods{grid-template-columns:1fr 1fr}.periods div:nth-child(3){border-left:0;padding-left:0}.periods div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:520px){.periods{grid-template-columns:1fr}.periods div{padding:14px 0 !important;border-left:0 !important;border-top:1px solid var(--rule)}.periods div:first-child{border-top:0}}
+
+
+/* checklist + consumers */
+.chk{list-style:none;counter-reset:c;padding:0;margin:10px 0 6px;border-top:1px solid var(--rule)}
+.chk li{counter-increment:c;display:grid;grid-template-columns:34px 48px 1fr;align-items:baseline;gap:0 10px;padding:9px 0;border-bottom:1px solid var(--rule);margin:0;font-size:15.5px}
+.chk li::before{content:counter(c,decimal-leading-zero);font-family:var(--head);font-weight:700;font-size:17px;color:var(--ink)}
+.chk li .cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;padding:1px 0;text-align:center;border:1px solid var(--rule);color:var(--muted);background:var(--surface)}
+.chk li.key{background:var(--soft);box-shadow:inset 3px 0 0 var(--signal);padding-left:10px;margin-left:0}
+.chk li.key::before{color:var(--signal)}
+.chk-legend{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--muted);margin:6px 0 4px}
+.chk-legend b{font-family:var(--mono);font-weight:500;font-size:11px;color:var(--ink)}
+.consume{display:grid;grid-template-columns:200px 28px 1fr;align-items:stretch;margin:14px 0 6px}
+.consume .src{border:2px solid var(--ink);background:var(--surface);padding:14px;display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:13.5px;color:var(--muted)}
+.consume .src b{font-family:var(--head);font-size:17px;color:var(--ink)}
+.consume .arrow{position:relative}
+.consume .arrow::before{content:"";position:absolute;left:0;right:6px;top:50%;border-top:2px solid var(--accent)}
+.consume .arrow::after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);border-left:8px solid var(--accent);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.consume .dst{display:grid;grid-template-columns:1fr 1fr;border-left:2px solid var(--accent)}
+.consume .dst > div{border:1px solid var(--rule);border-left:0;background:var(--surface);padding:10px 12px;font-size:14px;margin:0 0 -1px 0}
+.lbl2{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin-bottom:3px}
+@media (max-width:640px){.consume{grid-template-columns:1fr}.consume .arrow{height:26px}.consume .arrow::before{left:50%;right:auto;top:0;bottom:6px;border-top:0;border-left:2px solid var(--accent)}.consume .arrow::after{left:50%;right:auto;top:auto;bottom:0;transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--accent);border-bottom:0}.consume .dst{grid-template-columns:1fr;border-left:0;border-top:2px solid var(--accent)}.consume .dst > div{border-left:1px solid var(--rule)}.chk li{grid-template-columns:30px 44px 1fr;font-size:15px}}
+
+
+/* case 01 lifecycle */
+.phases{list-style:none;counter-reset:ph;display:grid;grid-template-columns:repeat(6,1fr);padding:0;margin:20px 0 8px;border-top:2px solid var(--ink)}
+.phases li{counter-increment:ph;margin:0;padding:10px 10px 10px 0;position:relative;font-size:14px}
+.phases li + li{padding-left:10px;border-left:1px solid var(--rule)}
+.phases li::before{content:counter(ph);display:block;font-family:var(--head);font-weight:800;font-size:26px;line-height:1;color:var(--accent);margin-bottom:4px}
+.phases b{font-family:var(--head);font-size:14.5px;line-height:1.25;display:block}
+@media (max-width:700px){.phases{grid-template-columns:repeat(3,1fr)}.phases li:nth-child(4){border-left:0;padding-left:0}.phases li:nth-child(n+4){border-top:1px solid var(--rule)}}
+.stage{border-top:1px solid var(--rule);margin-top:14px}
+.resp{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);background:var(--surface);margin-top:8px}
+.resp > div{padding:12px 14px;font-size:14.5px}
+.resp > div + div{border-left:1px solid var(--rule)}
+.resp ul{margin:0;padding-left:18px}
+.resp li{margin-bottom:4px}
+@media (max-width:700px){.resp{grid-template-columns:1fr}.resp > div + div{border-left:0;border-top:1px solid var(--rule)}}
+.flows4{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule);background:var(--surface);margin-top:10px}
+.flows4 > div{padding:12px 14px}
+.flows4 > div + div{border-left:1px solid var(--rule)}
+.flows4 b{font-family:var(--mono);font-size:12px;color:var(--bg);background:var(--accent);padding:1px 7px}
+.flows4 h5{font-family:var(--head);font-size:15px;margin:8px 0 4px}
+.flows4 p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.45}
+@media (max-width:900px){.flows4{grid-template-columns:1fr 1fr}.flows4 > div:nth-child(3){border-left:0}.flows4 > div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:520px){.flows4{grid-template-columns:1fr}.flows4 > div{border-left:0 !important}.flows4 > div + div{border-top:1px solid var(--rule)}}
+
+
+/* evolution timeline */
+.evo{list-style:none;padding:0;margin:18px 0 8px;border-left:2px solid var(--ink)}
+.evo li{display:grid;grid-template-columns:110px 1fr;gap:0 16px;padding:0 0 16px 20px;position:relative;margin:0}
+.evo li::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;background:var(--accent)}
+.evo-when{font-family:var(--mono);font-size:12.5px;color:var(--accent);padding-top:2px}
+.evo h5{font-family:var(--head);font-size:16px;margin:0 0 3px}
+.evo p{font-size:14.5px;color:var(--muted);margin:0}
+@media (max-width:560px){.evo li{grid-template-columns:1fr}.evo-when{margin-bottom:2px}}
+
+
+h4.sub{color:var(--ink);font-size:12px;margin-top:18px}
+/* swimlane */
+.swim{min-width:760px;border:1px solid var(--rule);background:var(--surface);margin:12px 0 4px}
+.lane{display:grid;grid-template-columns:120px repeat(7,1fr);align-items:center;min-height:46px;border-top:1px solid var(--rule)}
+.lane:first-child{border-top:0}
+.lane .ln{grid-column:1;align-self:stretch;display:flex;align-items:center;padding:0 10px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--soft);border-right:1px solid var(--rule)}
+.lane .st{grid-row:1;margin:6px 5px;padding:5px 7px;border:1px solid var(--ink);background:var(--bg);font-size:12px;line-height:1.3;text-align:center}
+.lane .st.new{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.lane .st.err{border:1px dashed var(--signal);color:var(--ink);background:transparent}
+.lane .c1{grid-column:2}.lane .c2{grid-column:3}.lane .c3{grid-column:4}.lane .c4{grid-column:5}.lane .c5{grid-column:6}.lane .c6{grid-column:7}.lane .c7{grid-column:8}
+.swim-leg{display:flex;gap:18px;font-size:13px;color:var(--muted);margin:4px 0 10px}
+.swim-leg .sw{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.swim-leg .sw.new{background:var(--accent)}
+.swim-leg .sw.err{border:1px dashed var(--signal)}
+/* before/after + pipeline */
+.ba{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);margin:8px 0 14px}
+.ba > div{padding:12px 14px;background:var(--surface)}
+.ba > div + div{border-left:3px solid var(--accent);background:var(--soft)}
+.ba p{margin:0;font-size:14.5px}
+@media (max-width:640px){.ba{grid-template-columns:1fr}.ba > div + div{border-left:0;border-top:3px solid var(--accent)}}
+.pipe{list-style:none;counter-reset:pp;padding:0;margin:10px 0 8px;border-top:1px solid var(--rule)}
+.pipe li{counter-increment:pp;display:grid;grid-template-columns:34px 1fr 1fr;gap:0 16px;padding:10px 0;border-bottom:1px solid var(--rule);margin:0;font-size:14.5px}
+.pipe li::before{content:counter(pp);font-family:var(--head);font-weight:800;font-size:20px;color:var(--accent);line-height:1.1}
+.pipe .pw{font-weight:600}
+.pipe .pv{color:var(--muted);border-left:2px solid var(--rule);padding-left:12px}
+@media (max-width:640px){.pipe li{grid-template-columns:30px 1fr}.pipe .pv{grid-column:2;border-left:0;padding-left:0;margin-top:4px}}
+
+/* contact */
+.contact{padding:64px 0 80px;border-bottom:0}
+.contact .big{font-family:var(--head);font-size:clamp(22px,3vw,30px);font-weight:700;word-break:break-word}
+.note{font-size:13.5px;color:var(--muted);margin-top:30px;max-width:720px}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap">
+    <div class="mark">marlon de cristo paula / qa</div>
+    <nav>
+      <a href="#metodo"><span class="pt">Método</span><span class="en">Approach</span></a>
+      <a href="#casos"><span class="pt">Casos</span><span class="en">Case studies</span></a>
+      <a href="#sustentacao"><span class="pt">Sustentação</span><span class="en">Production support</span></a>
+      <a href="#habilidades"><span class="pt">Habilidades</span><span class="en">Skills</span></a>
+      <a href="#trajetoria"><span class="pt">Trajetória</span><span class="en">Career</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-set="pt" aria-pressed="true">PT</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <p class="eyebrow"><span class="pt">QA Sênior · Test Lead · Quality Engineer</span><span class="en">Senior QA · Test Lead · Quality Engineer</span></p>
+  <h1>Marlon de Cristo Paula</h1>
+  <p class="statement pt">Testo <span class="u">sistemas críticos</span>, aqueles em que uma falha para a operação, gera cobrança errada ou chega ao cliente antes de chegar ao time.</p>
+  <p class="statement en">I test <span class="u">critical systems</span>: the kind where one failure stops operations, bills the wrong amount, or reaches the customer before it reaches the team.</p>
+  <p class="lede pt">São 14 anos em qualidade de software, sempre perto de operações que não podem parar. Comecei numa fábrica de software com processos CMMI nível III, passei por sistemas de licenciamento de trens, onde a regra era não admitir falhas, e dediquei 10 anos a um terminal de contêineres que roda sobre 42 sistemas e serviços integrados, com faturamento e conexão direta com a Receita Federal e outros órgãos do governo. Lá liderei o time de testes na troca do sistema central da empresa, com tudo funcionando.</p>
+  <p class="lede en">14 years in software quality, always close to operations that can't stop. I started at a CMMI level III software house, moved on to train-licensing systems where failure was not an option, then spent 10 years at a container terminal running on 42 integrated systems and services, with billing and direct links to the federal tax authority and other government agencies. There I led the test team through the replacement of the company's core system while everything kept running.</p>
+
+  <div class="proof">
+    <div>
+      <b>2×</b>
+      <h2 class="pt">Troca do sistema central</h2><h2 class="en">Core system replacement</h2>
+      <p class="pt">Duas migrações completas do sistema que comanda a operação, com APIs, banco, integrações e ERP, ensaios de virada, go-live e estabilização.</p>
+      <p class="en">Two full migrations of the system that runs operations: APIs, database, integrations and ERP, cutover rehearsals, go-live and stabilisation.</p>
+    </div>
+    <div>
+      <b>13</b>
+      <h2 class="pt">Tipos de fatura validados</h2><h2 class="en">Invoice types validated</h2>
+      <p class="pt">Faturamento com regras fiscais e aduaneiras, contratos, faixas de preço e rateio de custos, onde cada erro vira prejuízo ou cobrança indevida.</p>
+      <p class="en">Billing with tax and customs rules, contracts, price tiers and cost sharing, where every error means lost revenue or an overcharge.</p>
+    </div>
+    <div>
+      <b><span class="pt">2.090</span><span class="en">2,090</span></b>
+      <h2 class="pt">Cenários de controle de acesso</h2><h2 class="en">Access-control scenarios</h2>
+      <p class="pt">Matriz combinatória para o sistema que decide, em segundos, se um veículo entra ou sai, com OCR, balança e biometria.</p>
+      <p class="en">A combinatorial matrix for the system that decides in seconds whether a vehicle may enter or leave, using OCR, a weighbridge and biometrics.</p>
+    </div>
+    <div>
+      <b>4</b>
+      <h2 class="pt">Camadas em cada investigação</h2><h2 class="en">Layers in every investigation</h2>
+      <p class="pt">Tela, API, fila de mensagens e banco. Em produção, sigo o defeito até a causa raiz e entrego a evidência, não só o sintoma.</p>
+      <p class="en">Screen, API, message queue and database. In production I trace a defect to its root cause and hand over evidence, not just the symptom.</p>
+    </div>
+  </div>
+
+  <div class="eco">
+    <div class="eco-head">
+      <span class="tlabel pt">O ambiente em que trabalhei como analista de testes e de negócios</span><span class="tlabel en">The environment I worked in as a test and business analyst</span>
+      <p class="pt"><b>42 sistemas e serviços</b> conversando entre si, com órgãos do governo e com clientes. Uma mudança pequena em um deles podia aparecer em cinco outros, e testar significava saber onde.</p>
+      <p class="en"><b>42 systems and services</b> talking to each other, to government agencies and to customers. A small change in one could surface in five others, and testing meant knowing where.</p>
+    </div>
+
+    <div class="eco-band ext">
+      <span class="band-lbl pt">Conexões externas</span><span class="band-lbl en">External connections</span>
+      <div class="chips">
+        <span class="pt">Receita Federal</span><span class="en">Federal tax authority</span>
+        <span class="pt">Ministério da Agricultura</span><span class="en">Ministry of Agriculture</span>
+        <span class="pt">Ministério dos Transportes</span><span class="en">Ministry of Transport</span>
+        <span class="pt">Autoridade portuária</span><span class="en">Port authority</span>
+        <span class="pt">Departamento de trânsito</span><span class="en">Vehicle registry</span>
+        <span class="pt">Clientes e operadores logísticos</span><span class="en">Customers and logistics operators</span>
+        <span class="pt">Scanner e firmware de gates</span><span class="en">Scanner and gate firmware</span>
+        <span>CRM</span>
+      </div>
+    </div>
+
+    <div class="eco-bus"><span class="pt">Barramento de integração (ESB): orquestra as chamadas entre todos os sistemas</span><span class="en">Integration bus (ESB): orchestrates calls between every system</span></div>
+
+    <div class="eco-band">
+      <span class="band-lbl pt"><b>33</b> serviços próprios, por domínio</span><span class="band-lbl en"><b>33</b> in-house services, by domain</span>
+      <div class="domains">
+        <div><b>9</b><h3 class="pt">Operação e acesso</h3><h3 class="en">Operations and access</h3><p class="pt">Gates rodoviário e ferroviário, pré-cadastro de cargas, contêineres refrigerados, incidentes, rastreamento, fluxos de exportação, dados da ferrovia.</p><p class="en">Road and rail gates, cargo pre-registration, refrigerated containers, incidents, tracking, export workflows, rail data.</p></div>
+        <div><b>6</b><h3 class="pt">Dados e integração</h3><h3 class="en">Data and integration</h3><p class="pt">Base de consulta consolidada (CQRS), relatórios, consultas diretas às bases, automações, logs do barramento, captura para machine learning.</p><p class="en">Consolidated query base (CQRS), reports, direct database queries, automations, bus logs, data capture for machine learning.</p></div>
+        <div><b>5</b><h3 class="pt">Governo e aduana</h3><h3 class="en">Government and customs</h3><p class="pt">Fluxo aduaneiro, consultas a sistemas do governo, órgãos intervenientes, auditoria regulatória, integração com scanner.</p><p class="en">Customs workflow, government system lookups, inspection agencies, regulatory audit, scanner integration.</p></div>
+        <div><b>5</b><h3 class="pt">Financeiro e clientes</h3><h3 class="en">Finance and customers</h3><p class="pt">Faturamento, integração com CRM, serviços expostos a clientes, integração com parceiros e com a unidade de armazenagem.</p><p class="en">Billing, CRM integration, customer-facing services, partner integrations and the warehousing unit.</p></div>
+        <div><b>5</b><h3 class="pt">Pessoas e suporte</h3><h3 class="en">People and support</h3><p class="pt">Jornada e escala das equipes, notificações por WhatsApp, manutenção de equipamentos, painéis de chamados.</p><p class="en">Staff shifts and rosters, WhatsApp notifications, equipment maintenance, ticket dashboards.</p></div>
+        <div><b>3</b><h3 class="pt">Cadastro e identidade</h3><h3 class="en">Registration and identity</h3><p class="pt">Cadastro sincronizado entre as bases, servidor de identidade (autenticação e autorização), proteção anti-robô.</p><p class="en">Registration kept in sync across databases, identity server (authentication and authorisation), bot protection.</p></div>
+      </div>
+    </div>
+
+    <div class="eco-band">
+      <span class="band-lbl pt"><b>8</b> plataformas de terceiros</span><span class="band-lbl en"><b>8</b> third-party platforms</span>
+      <div class="chips">
+        <span class="pt">Sistema operacional do terminal (TOS)</span><span class="en">Terminal operating system (TOS)</span>
+        <span class="pt">Planejamento de navio e pátio</span><span class="en">Vessel and yard planning</span>
+        <span class="pt">Apontamento de equipamentos</span><span class="en">Equipment tracking</span>
+        <span class="pt">Faturamento do TOS</span><span class="en">TOS billing</span>
+        <span>ERP</span>
+        <span class="pt">Gestão de armazém (WMS)</span><span class="en">Warehouse management (WMS)</span>
+        <span class="pt">Relatórios para a Receita Federal</span><span class="en">Tax-authority reporting</span>
+        <span class="pt">Comunicação com o firmware do gate</span><span class="en">Gate firmware communication</span>
+      </div>
+    </div>
+
+    <p class="eco-foot pt"><b>A partir de 2019</b> esse parque começou a migrar para microsserviços em Kubernetes, com RabbitMQ, MongoDB, micro front-ends em Angular, ambiente híbrido (servidores próprios e AWS) e pipelines com análise de qualidade de código. Testei essa transição no portal do cliente e, em 2024–2025, liderei os testes da troca do próprio TOS.</p>
+    <p class="eco-foot en"><b>From 2019 on</b> this landscape began moving to microservices on Kubernetes, with RabbitMQ, MongoDB, Angular micro front-ends, a hybrid environment (on-premises and AWS) and pipelines with code-quality gates. I tested that transition on the customer portal and, in 2024–2025, led testing for the replacement of the TOS itself.</p>
+  </div>
+
+  <div class="transfer">
+    <span class="tlabel pt">O que levo para qualquer setor</span><span class="tlabel en">What I bring to any industry</span>
+    <span class="chip pt">Sistemas críticos e de alta disponibilidade</span><span class="chip en">Critical, high-availability systems</span>
+    <span class="chip pt">Migração de sistemas legados</span><span class="chip en">Legacy system migration</span>
+    <span class="chip pt">Faturamento e regras fiscais</span><span class="chip en">Billing and tax rules</span>
+    <span class="chip pt">APIs, filas e integrações</span><span class="chip en">APIs, queues and integrations</span>
+    <span class="chip pt">Validação de dados com SQL</span><span class="chip en">Data validation with SQL</span>
+    <span class="chip pt">Sustentação em produção</span><span class="chip en">Production support</span>
+    <span class="chip pt">Liderança de times de teste</span><span class="chip en">Test team leadership</span>
+    <span class="chip pt">Automação e IA aplicada a QA</span><span class="chip en">Automation and AI for QA</span>
+  </div>
+
+  <div class="meta-row">
+    <span>Curitiba, PR · Brasil</span>
+    <span class="pt">Português nativo · Inglês</span><span class="en">Portuguese (native) · English</span>
+    <span class="pt">LinkedIn e contato no fim da página</span><span class="en">LinkedIn and contact at the end of the page</span>
+  </div>
+</div>
+
+
+<!-- METHOD -->
+<section id="metodo">
+  <h2><span class="pt">Como eu trabalho</span><span class="en">How I work</span></h2>
+  <p class="sec-sub pt">Seis hábitos que aparecem em todos os projetos abaixo.</p>
+  <p class="sec-sub en">Six habits that show up in every project below.</p>
+  <div class="principles">
+    <div>
+      <b class="pt">Teste por camada</b><b class="en">Test by layer</b>
+      <p class="pt">Cada estratégia separa front, API, fila de mensagens, banco, jobs e integrações. Um bug é investigado até a camada que o causou.</p>
+      <p class="en">Every strategy separates front end, API, message queue, database, jobs and integrations. A bug is traced down to the layer that caused it.</p>
+    </div>
+    <div>
+      <b class="pt">Discovery antes do teste</b><b class="en">Discovery before testing</b>
+      <p class="pt">Mapeio termos, regras e dúvidas do negócio antes de escrever cenários. Muitos defeitos aparecem já nessa validação estática dos requisitos.</p>
+      <p class="en">I map business terms, rules and open questions before writing scenarios. Many defects surface already during this static review of the requirements.</p>
+    </div>
+    <div>
+      <b class="pt">Técnica de desenho explícita</b><b class="en">Explicit test design</b>
+      <p class="pt">Tabela de decisão e análise combinatória, partição de equivalência, valores-limite e priorização por risco.</p>
+      <p class="en">Decision tables and combinatorial analysis, equivalence partitioning, boundary values and risk-based prioritisation.</p>
+    </div>
+    <div>
+      <b class="pt">Massa de teste como ativo</b><b class="en">Test data as an asset</b>
+      <p class="pt">Mantenho catálogos reutilizáveis de filtros, veículos e motoristas de teste. O mesmo catálogo serviu a vários projetos.</p>
+      <p class="en">I keep reusable catalogues of data filters, test vehicles and test drivers. The same catalogue served several projects.</p>
+    </div>
+    <div>
+      <b class="pt">Esperado × obtido, sempre</b><b class="en">Expected vs. actual, always</b>
+      <p class="pt">Cada cenário tem massa, resultado esperado, resultado obtido e status. Isso deixa o teste auditável por qualquer pessoa do time.</p>
+      <p class="en">Each scenario records its data, expected result, actual result and status, so anyone on the team can audit the test.</p>
+    </div>
+    <div>
+      <b class="pt">IA como parceira de desenho</b><b class="en">AI as a design partner</b>
+      <p class="pt">Uso Claude, ChatGPT e Copilot para ampliar cenários e estratégias de teste. A revisão e a decisão final continuam comigo.</p>
+      <p class="en">I use Claude, ChatGPT and Copilot to broaden test scenarios and strategies. Review and the final call stay with me.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="casos">
+  <h2><span class="pt">Estudos de caso</span><span class="en">Case studies</span></h2>
+  <p class="sec-sub pt">Projetos reais, descritos sem dados confidenciais: nomes de clientes, identificadores internos, consultas de produção e dados pessoais foram removidos ou trocados por exemplos genéricos.</p>
+  <p class="sec-sub en">Real projects, described without confidential data: customer names, internal identifiers, production queries and personal data were removed or replaced with generic examples.</p>
+
+  <!-- 01 -->
+  <article class="case">
+    <aside>
+      <span class="no">01</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2024 – 2025</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Senior Test Lead: estruturou e liderou a área de qualidade do projeto</span><span class="en">Senior Test Lead: built and led the project's quality function</span></dd>
+        <dt><span class="pt">Escopo</span><span class="en">Scope</span></dt><dd><span class="pt">Todo o parque de software: APIs, views, procedures, jobs, integrações, sistemas web e ERP</span><span class="en">The whole software landscape: APIs, views, procedures, jobs, integrations, web systems and ERP</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Oracle SQL</span><span class="tag">RabbitMQ</span><span class="tag">Kubernetes / Lens</span><span class="tag">OpenSearch</span><span class="tag">Kibana</span><span class="tag">Consul</span><span class="tag">Swagger</span><span class="tag">Postman</span><span class="tag">Jira</span><span class="tag">Confluence</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Estruturei a qualidade de um grande projeto, da contratação ao acompanhamento final</h3>
+      <h3 class="en">I built quality for a major programme, from hiring to final follow-up</h3>
+      <p class="kicker pt">O terminal trocou o sistema que comanda toda a operação (o TOS) por um sistema próprio. Não havia área de QA pronta para isso, então eu a montei.</p>
+      <p class="kicker en">The terminal replaced the system that runs its entire operation (the TOS) with an in-house one. There was no QA function ready for it, so I built one.</p>
+
+      <h4><span class="pt">Contexto</span><span class="en">Context</span></h4>
+      <p class="pt">Trocar o TOS equivale a trocar o ERP de uma indústria com a fábrica funcionando. Navios, pátio, gates, ferrovia e faturamento dependem dele, e a migração tocava ao mesmo tempo boa parte dos 42 sistemas e serviços do parque.</p>
+      <p class="en">Replacing the TOS is like replacing a manufacturer's ERP with the factory running. Vessels, yard, gates, rail and billing all depend on it, and the migration touched a large share of the 42 systems and services in the landscape at once.</p>
+
+      <ol class="phases">
+        <li><b class="pt">Montar o time</b><b class="en">Build the team</b></li>
+        <li><b class="pt">Definir a área</b><b class="en">Define the function</b></li>
+        <li><b class="pt">Modelos de trabalho</b><b class="en">Working models</b></li>
+        <li><b class="pt">Executar por frente</b><b class="en">Execute by workstream</b></li>
+        <li><b class="pt">Virada</b><b class="en">Cutover</b></li>
+        <li><b class="pt">Acompanhar</b><b class="en">Follow through</b></li>
+      </ol>
+
+      <div class="stage">
+        <h4><span class="pt">1 · Montar o time</span><span class="en">1 · Build the team</span></h4>
+        <ul class="pt">
+          <li>Defini as habilidades técnicas e comportamentais necessárias para o time.</li>
+          <li>Conduzi as entrevistas técnicas e a seleção.</li>
+          <li>Fiz o onboarding no negócio portuário, porque ninguém testa bem uma regra de faturamento aduaneiro sem entender o processo.</li>
+        </ul>
+        <ul class="en">
+          <li>Defined the technical and behavioural skills the team needed.</li>
+          <li>Ran the technical interviews and the selection.</li>
+          <li>Onboarded the team into port operations, because nobody tests a customs-billing rule well without understanding the process.</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h4><span class="pt">2 · Definir como a área funciona</span><span class="en">2 · Define how the function works</span></h4>
+        <div class="resp">
+          <div><span class="lbl2"><span class="pt">Responsabilidades do time</span><span class="en">Team responsibilities</span></span>
+            <ul class="pt"><li>Colaborar no entendimento da demanda</li><li>Mapear testes com técnicas de desenho</li><li>Executar testes em múltiplas camadas</li><li>Reportar inconsistências</li></ul>
+            <ul class="en"><li>Help clarify each request</li><li>Map tests using design techniques</li><li>Execute tests across multiple layers</li><li>Report inconsistencies</li></ul>
+          </div>
+          <div><span class="lbl2"><span class="pt">Padrões definidos</span><span class="en">Standards set</span></span>
+            <ul class="pt"><li>Quais documentos de teste o time produz</li><li>Onde ficam os cenários (no Jira, junto da história)</li><li>Como e onde registrar inconsistências</li></ul>
+            <ul class="en"><li>Which test documents the team produces</li><li>Where scenarios live (in Jira, next to the story)</li><li>How and where to log inconsistencies</li></ul>
+          </div>
+          <div><span class="lbl2"><span class="pt">Ferramentas</span><span class="en">Tooling</span></span>
+            <ul class="pt"><li>Levantamento do que o time precisava, como um plugin do Jira para gestão de cenários de teste</li><li>Plano de testes modelo no Confluence</li></ul>
+            <ul class="en"><li>Assessment of what the team needed, such as a Jira plugin for test-scenario management</li><li>A template test plan on Confluence</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h4><span class="pt">3 · Um modelo de trabalho para cada tipo de frente</span><span class="en">3 · A working model for each type of workstream</span></h4>
+        <p class="pt">Cada fluxo seguia os mesmos passos: <b>0</b> entender a demanda, <b>1</b> mapear os testes por camada na história do Jira, <b>2</b> executar com evidência e registrar notas e dúvidas. O conteúdo de cada passo mudava conforme a frente.</p>
+        <p class="en">Every flow followed the same steps: <b>0</b> understand the request, <b>1</b> map tests by layer in the Jira story, <b>2</b> execute with evidence and log notes and questions. What went into each step depended on the workstream.</p>
+        <div class="flows4">
+          <div><b>A</b><h5 class="pt">Camada de compatibilidade</h5><h5 class="en">Compatibility layer</h5><p class="pt">Views e APIs migradas, validadas pelo checklist de 11 pontos (caso 06).</p><p class="en">Migrated views and APIs, validated with the 11-point checklist (case 06).</p></div>
+          <div><b>B</b><h5 class="pt">Integração com o novo TOS</h5><h5 class="en">Integration with the new TOS</h5><p class="pt">Novo mapeamento das APIs, cenários do fluxo de negócio e pré-requisitos de cada teste.</p><p class="en">New API mappings, business-flow scenarios and prerequisites for each test.</p></div>
+          <div><b>C</b><h5 class="pt">Customizações do TOS</h5><h5 class="en">TOS customisations</h5><p class="pt">Integrações de eventos, tipos de tarefa, tarefas executáveis e gatilhos de sistema.</p><p class="en">Event integrations, task types, executable tasks and system triggers.</p></div>
+          <div><b>D</b><h5 class="pt">Operações integradas</h5><h5 class="en">Integrated operations</h5><p class="pt">Testes ponta a ponta das operações do terminal atravessando vários sistemas.</p><p class="en">End-to-end tests of terminal operations across several systems.</p></div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h4><span class="pt">4 · Executar por frente</span><span class="en">4 · Execute by workstream</span></h4>
+        <ul class="pt">
+          <li><b>Faturamento:</b> conduzi a discovery do novo módulo (pontos de cobrança, 13 tipos de fatura, regimes aduaneiros, rateio de custo, período livre, cobranças especiais) e rodei os regressivos de importação e exportação.</li>
+          <li><b>Notificações orientadas a eventos:</b> testei o caminho completo, do evento no TOS ao serviço de integração, à fila no RabbitMQ e ao e-mail. Para ver o conteúdo exato de cada mensagem, parava o consumer no Kubernetes e inspecionava a fila.</li>
+          <li><b>Outras frentes:</b> migração do gate para mensageria, parametrização de cobranças, o webhook do cliente (caso 05) e o app do motorista.</li>
+        </ul>
+        <ul class="en">
+          <li><b>Billing:</b> led discovery of the new module (billing points, 13 invoice types, customs regimes, cost sharing, free time, special charges) and ran the import and export regressions.</li>
+          <li><b>Event-driven notifications:</b> tested the full path, from the TOS event through the integration service and the RabbitMQ queue to the e-mail. To see each message's exact content, I paused the consumer in Kubernetes and inspected the queue.</li>
+          <li><b>Other workstreams:</b> moving the gate onto messaging, charge configuration, the customer webhook (case 05) and the driver app.</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <h4><span class="pt">5 · Virada · 6 · Acompanhamento</span><span class="en">5 · Cutover · 6 · Follow-through</span></h4>
+        <ul class="pt">
+          <li>Acompanhei os ensaios de virada nos ambientes de desenvolvimento e de produção, com uma lista de pendências separando o que estava feito do que ainda bloqueava.</li>
+          <li>Validei proteções para o pós-go-live, como o bloqueio de refaturamento de ordens emitidas antes da virada, testado com a chave ligada e desligada.</li>
+          <li>Acompanhei a estabilização em produção e reportei o andamento a gestores e áreas de negócio até o fim.</li>
+        </ul>
+        <ul class="en">
+          <li>Ran the cutover rehearsals in the development and production environments, with an open-items list separating what was done from what still blocked go-live.</li>
+          <li>Validated post-go-live safeguards, such as blocking re-billing of orders issued before cutover, tested with the flag on and off.</li>
+          <li>Followed production stabilisation and reported progress to managers and business areas through to the end.</li>
+        </ul>
+      </div>
+
+      <div class="figure">
+        <div><b>6</b><span class="pt">fases, da contratação ao pós-go-live</span><span class="en">phases, from hiring to post-go-live</span></div>
+        <div><b>4</b><span class="pt">modelos de trabalho por tipo de frente</span><span class="en">working models by workstream type</span></div>
+        <div><b>13</b><span class="pt">tipos de fatura testados</span><span class="en">invoice types tested</span></div>
+        <div><b>2</b><span class="pt">ambientes de ensaio de virada</span><span class="en">cutover rehearsal environments</span></div>
+      </div>
+      <div class="callout pt"><b>Resultado.</b> Go-live concluído com o terminal em operação sustentado por uma área de QA com time, padrões, ferramentas e modelos de trabalho próprios, estruturada do zero para o projeto. As inconsistências foram registradas com evidência e priorizadas por impacto antes e depois do go-live.</div>
+      <div class="callout en"><b>Outcome.</b> Go-live completed with the terminal operating, backed by a QA function with its own team, standards, tooling and working models, built from scratch for the programme. Inconsistencies were logged with evidence and prioritised by impact before and after go-live.</div>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article class="case">
+    <aside>
+      <span class="no">02</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2023 – 2026</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Responsável pelos testes; autor do fluxograma do processo, do mapa de testes do fluxo em mensageria e da matriz combinatória</span><span class="en">Owned testing; author of the process flowchart, the test map for the messaging flow and the combinatorial matrix</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Event-driven</span><span class="tag">Consumers</span><span class="tag">REST APIs</span><span class="tag">XML contracts</span><span class="tag">Oracle SQL</span><span class="tag">Decision table</span><span class="tag">Swimlane BPM</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Gate sem código de barras e reescrito em mensageria</h3>
+      <h3 class="en">A barcode-free gate, rebuilt on messaging</h3>
+      <p class="kicker pt">O gate decide em segundos se um caminhão entra ou sai do terminal. Testei as duas mudanças mais profundas desse sistema: tirar o código de barras do processo e migrar para o novo SGG, reescrito em mensageria.</p>
+      <p class="kicker en">The gate decides in seconds whether a truck may enter or leave the terminal. I tested the two deepest changes that system went through: taking the barcode out of the process and moving to the new gate system (SGG), rebuilt on messaging.</p>
+
+      <h4><span class="pt">Por que é crítico</span><span class="en">Why it's critical</span></h4>
+      <p class="pt">Em cada passagem o gate cruza OCR de placas e contêineres, balança, biometria do motorista, inspeção prévia, agendamento, o sistema operacional do terminal (TOS) e o armazém. Se uma regra falha, o caminhão para na cancela e a fila chega à rodovia.</p>
+      <p class="en">On every pass the gate combines plate and container OCR, a weighbridge, driver biometrics, the pre-gate inspection, the appointment, the terminal operating system (TOS) and the warehouse. If one rule fails, the truck stops at the barrier and the queue backs up onto the highway.</p>
+
+      <div class="figure">
+        <div><b>7</b><span class="pt">atores mapeados no processo</span><span class="en">actors mapped in the process</span></div>
+        <div><b>7</b><span class="pt">etapas no fluxo orientado a eventos</span><span class="en">steps in the event-driven flow</span></div>
+        <div><b>3</b><span class="pt">sistemas consumindo cada evento</span><span class="en">systems consuming each event</span></div>
+        <div><b><span class="pt">2.090</span><span class="en">2,090</span></b><span class="pt">cenários de acesso mapeados</span><span class="en">access scenarios mapped</span></div>
+      </div>
+
+      <!-- PART 1 -->
+      <h4><span class="pt">Parte 1 · Tirar o código de barras sem perder o controle</span><span class="en">Part 1 · Removing the barcode without losing control</span></h4>
+      <p class="pt">Antes, o motorista apresentava uma guia com código de barras para o gate identificar o agendamento. Com a mudança, o sistema passou a descobrir o agendamento pela placa lida no OCR, buscando no histórico de inspeção da última hora ou no período de atraso configurado. Eu desenhei o novo processo em raias, com os sete atores, antes de escrever qualquer teste.</p>
+      <p class="en">Previously the driver presented a slip with a barcode so the gate could identify the appointment. After the change, the system finds the appointment from the OCR-read plate, searching the inspection history for the past hour or the configured delay window. I drew the new process as a swimlane diagram with all seven actors before writing any test.</p>
+
+      <div class="scroll">
+      <div class="swim">
+        <div class="lane"><span class="ln pt">Motorista</span><span class="ln en">Driver</span>
+          <span class="st c1 pt">Apresenta a guia na inspeção</span><span class="st c1 en">Shows slip at inspection</span>
+          <span class="st c2 pt">Entra no gate</span><span class="st c2 en">Enters the gate</span>
+          <span class="st c3 pt">Biometria</span><span class="st c3 en">Biometrics</span></div>
+        <div class="lane"><span class="ln pt">Inspeção</span><span class="ln en">Inspection</span>
+          <span class="st c1 pt">Inspeciona placas, excesso, avarias, contêiner</span><span class="st c1 en">Checks plates, oversize, damage, container</span></div>
+        <div class="lane"><span class="ln pt">Automação do gate</span><span class="ln en">Gate automation</span>
+          <span class="st c2 pt">OCR e peso</span><span class="st c2 en">OCR and weight</span>
+          <span class="st c3 pt">Gera mensagem de entrada</span><span class="st c3 en">Builds entry message</span>
+          <span class="st c7 pt">Abre a cancela ou exibe erro</span><span class="st c7 en">Opens barrier or shows error</span></div>
+        <div class="lane"><span class="ln pt">Sistema do gate</span><span class="ln en">Gate system</span>
+          <span class="st c4 new pt">Acha o agendamento pela placa</span><span class="st c4 new en">Finds appointment by plate</span>
+          <span class="st c5 pt">Valida e identifica o tipo</span><span class="st c5 en">Validates, identifies type</span>
+          <span class="st c7 pt">Verifica o retorno</span><span class="st c7 en">Checks the result</span></div>
+        <div class="lane"><span class="ln pt">Analista do gate</span><span class="ln en">Gate analyst</span>
+          <span class="st c5 err pt">Corrige os dados e reenvia</span><span class="st c5 err en">Corrects data, resubmits</span></div>
+        <div class="lane"><span class="ln">TOS</span>
+          <span class="st c6 pt">Valida e registra a entrada</span><span class="st c6 en">Validates, records entry</span></div>
+        <div class="lane"><span class="ln pt">Armazém</span><span class="ln en">Warehouse</span>
+          <span class="st c6 pt">Registra a entrada</span><span class="st c6 en">Records entry</span></div>
+      </div>
+      </div>
+      <p class="swim-leg"><span><i class="sw new"></i><span class="pt">regra nova</span><span class="en">new rule</span></span><span><i class="sw err"></i><span class="pt">caminho de erro</span><span class="en">error path</span></span></p>
+
+      <ul class="pt">
+        <li><b>Pontos de decisão viraram cenários:</b> o agendamento foi encontrado pela placa? A validação identificou o tipo de agendamento? O TOS e o armazém registraram a entrada sem erro? Cada saída dessas decisões virou um grupo de testes.</li>
+        <li><b>A janela de busca:</b> é a regra mais sensível do fluxo. Uma inspeção feita dentro da última hora, fora dela ou dentro do atraso configurado leva a resultados diferentes.</li>
+        <li><b>O caminho de erro, de ponta a ponta:</b> a mensagem "agendamento não encontrado para a placa ou caminhão não inspecionado" aparece para o operador, o analista corrige, a automação gera uma nova mensagem e o fluxo recomeça.</li>
+      </ul>
+      <ul class="en">
+        <li><b>Decision points became scenarios:</b> was the appointment found by plate? Did validation identify the appointment type? Did the TOS and the warehouse record the entry without error? Each outcome of those decisions became a group of tests.</li>
+        <li><b>The search window:</b> the flow's most sensitive rule. An inspection within the past hour, outside it, or within the configured delay leads to different results.</li>
+        <li><b>The error path, end to end:</b> the "no appointment found for this plate or truck not inspected" message reaches the operator, the analyst corrects the data, the automation builds a new message, and the flow restarts.</li>
+      </ul>
+
+      <!-- PART 2 -->
+      <h4><span class="pt">Parte 2 · O novo SGG em mensageria</span><span class="en">Part 2 · The new gate system (SGG) on messaging</span></h4>
+      <div class="ba">
+        <div><span class="lbl2 pt">Antes</span><span class="lbl2 en">Before</span><p class="pt">O sistema do gate chamava o TOS e o armazém diretamente e esperava as respostas para decidir.</p><p class="en">The gate system called the TOS and the warehouse directly and waited for their replies to decide.</p></div>
+        <div><span class="lbl2 pt">Depois</span><span class="lbl2 en">After</span><p class="pt">O gate publica um evento, cada sistema consome o evento de forma independente e devolve sucesso ou falha em outro evento. A falha de um sistema vira um evento rastreável, em vez de um travamento.</p><p class="en">The gate publishes an event, each system consumes it independently and returns success or failure as another event. A failure in one system becomes a traceable event instead of a hang.</p></div>
+      </div>
+      <h4 class="sub"><span class="pt">2a · Validar o fluxo etapa por etapa</span><span class="en">2a · Validating the flow step by step</span></h4>
+      <p class="pt">Montei o mapa de testes do fluxo com funcionalidades impactadas, fluxo de negócio, cenários, passo a passo de execução, parâmetros e os pontos críticos a testar. Para cada etapa, uma validação:</p>
+      <p class="en">I built the test map for the flow, covering impacted features, business flow, scenarios, an execution how-to, parameters and the critical points to test. Each step had its own check:</p>
+      <ol class="pipe">
+        <li><div class="pw pt">Agendamento validado na inspeção prévia</div><div class="pw en">Appointment validated at pre-gate inspection</div><div class="pv pt">Massa de teste com inspeção registrada</div><div class="pv en">Test data with a recorded inspection</div></li>
+        <li><div class="pw pt">Veículo no gate: OCR do contêiner e da placa, peso, digital do motorista</div><div class="pw en">Vehicle at the gate: container and plate OCR, weight, driver fingerprint</div><div class="pv pt">Dados capturados coerentes com o agendamento</div><div class="pv en">Captured data consistent with the appointment</div></li>
+        <li><div class="pw pt">A automação monta o XML de entrada e envia à API do gate</div><div class="pw en">The automation builds the entry XML and sends it to the gate API</div><div class="pv pt">Contrato bloco a bloco: controle, pista, contêiner, horário e tipo de movimento, motorista, placas (cavalo e carreta), peso. XML gravado na tabela de rastreamento</div><div class="pv en">Contract block by block: control, lane, container, move time and type, driver, plates (tractor and trailer), weight. XML stored in the tracking table</div></li>
+        <li><div class="pw pt">A API busca a inspeção para achar o agendamento e confronta os dados do XML</div><div class="pw en">The API looks up the inspection to find the appointment and cross-checks the XML data</div><div class="pv pt">Dado igual passa; dado divergente é barrado com o motivo certo</div><div class="pv en">Matching data passes; mismatched data is stopped with the right reason</div></li>
+        <li><div class="pw pt">Dados ok: a API publica o evento "transação de gate iniciada"</div><div class="pw en">Data ok: the API publishes a "gate transaction started" event</div><div class="pv pt">Evento publicado e consumido pelos três sistemas: TOS, armazém e um terceiro sistema da operação</div><div class="pv en">Event published and consumed by all three systems: TOS, warehouse and a third operations system</div></li>
+        <li><div class="pw pt">O consumer do TOS valida nas views e publica sucesso ou falha da integração</div><div class="pw en">The TOS consumer validates against its views and publishes integration success or failure</div><div class="pv pt">Os dois eventos, provocando a falha de propósito</div><div class="pv en">Both events, forcing the failure on purpose</div></li>
+        <li><div class="pw pt">O consumer do gate gera o XML de resposta para a automação</div><div class="pw en">The gate consumer builds the reply XML for the automation</div><div class="pv pt">Sucesso abre a cancela; erro mostra a mensagem certa ao operador. Resposta validada em pista, etapa, placa, resultado e mensagem do quiosque</div><div class="pv en">Success opens the barrier; error shows the operator the right message. Reply validated for lane, stage, plate, result and kiosk message</div></li>
+      </ol>
+      <p class="pt">Cobri as operações de entrega e retirada de contêiner, carga solta e a saída do terminal.</p>
+      <p class="en">I covered container delivery and pickup, break bulk, and exit from the terminal.</p>
+
+      <!-- PART 3 -->
+      <h4 class="sub"><span class="pt">2b · A matriz de cobertura do novo SGG</span><span class="en">2b · The new SGG coverage matrix</span></h4>
+      <p class="pt">Para garantir que nenhuma combinação de acesso ficasse fora do novo SGG, cruzei 5 variáveis de entrada numa tabela de decisão (tipo de carga, entrada ou saída, situação da inspeção, veículo no pátio e tipo de veículo) e multipliquei pelos 19 tipos de agendamento. O resultado esperado de cada linha é liberar, bloquear com erro ou gerar o documento de entrada. Com a matriz em mãos, fiz a validação estática dos requisitos antes do desenvolvimento.</p>
+      <p class="en">To make sure no access combination was left out of the new SGG, I crossed 5 input variables in a decision table (cargo type, entry or exit, inspection status, vehicle already in the yard, vehicle type) and multiplied by the 19 appointment types. The expected result of each row is allow, block with an error, or issue the entry document. With the matrix in hand, I ran a static review of the requirements before development.</p>
+      <div class="figure">
+        <div><b>5</b><span class="pt">variáveis de entrada</span><span class="en">input variables</span></div>
+        <div><b>110</b><span class="pt">cenários base</span><span class="en">base scenarios</span></div>
+        <div><b>× 19</b><span class="pt">tipos de agendamento</span><span class="en">appointment types</span></div>
+        <div><b><span class="pt">2.090</span><span class="en">2,090</span></b><span class="pt">cenários mapeados</span><span class="en">mapped scenarios</span></div>
+      </div>
+<div class="scroll">
+      <table class="matrix">
+        <thead><tr>
+          <th class="pt">Carga</th><th class="en">Cargo</th>
+          <th class="pt">Acesso</th><th class="en">Access</th>
+          <th class="pt">Inspeção</th><th class="en">Inspection</th>
+          <th class="pt">No pátio</th><th class="en">In yard</th>
+          <th class="pt">Veículo</th><th class="en">Vehicle</th>
+          <th class="pt">Esperado</th><th class="en">Expected</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="pt">Contêiner</td><td class="en">Container</td><td class="pt">Entrada</td><td class="en">Entry</td><td class="pt">Realizada</td><td class="en">Done</td><td class="pt">Não</td><td class="en">No</td><td>Truck</td><td class="ok pt">Gerar documento</td><td class="ok en">Issue document</td></tr>
+          <tr><td class="pt">Contêiner</td><td class="en">Container</td><td class="pt">Entrada</td><td class="en">Entry</td><td class="pt">Não realizada</td><td class="en">Not done</td><td class="pt">Não</td><td class="en">No</td><td>Truck</td><td class="warn pt">Erro</td><td class="warn en">Error</td></tr>
+          <tr><td class="pt">Carga solta</td><td class="en">Break bulk</td><td class="pt">Saída</td><td class="en">Exit</td><td class="pt">Com atraso</td><td class="en">Late</td><td class="pt">Sim</td><td class="en">Yes</td><td class="pt">Bitrem</td><td class="en">B-double</td><td>…</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:13px;color:var(--muted)" class="pt">Linhas ilustrativas, com valores genéricos.</p>
+      <p style="font-size:13px;color:var(--muted)" class="en">Illustrative rows with generic values.</p>
+
+      <div class="callout pt"><b>O que isso trouxe.</b> O motorista deixou de depender de uma guia para passar pelo gate, e a nova arquitetura separou os sistemas: cada um reage ao evento e responde por conta própria, e toda mensagem fica registrada para investigação. Do lado do teste, o processo desenhado antes da mudança, o fluxo em mensageria validado etapa por etapa e a matriz de cobertura do novo SGG deram cobertura verificável a um sistema em que um defeito significa caminhão parado.</div>
+      <div class="callout en"><b>What it delivered.</b> Drivers no longer needed a slip to get through the gate, and the new architecture decoupled the systems: each one reacts to the event and replies on its own, and every message is recorded for investigation. On the testing side, a process mapped before the change, the messaging flow validated step by step and the new SGG coverage matrix gave verifiable coverage to a system where one defect means a stopped truck.</div>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="case">
+    <aside>
+      <span class="no">03</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2025 – 2026</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">QA Sênior e autor do manual do usuário</span><span class="en">Senior QA and user-manual author</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">Micro front-ends</span><span class="tag">Gherkin</span><span class="tag">Swagger</span><span class="tag">Postman</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">App de inspeção de veículos e cargas no pré-gate</h3>
+      <h3 class="en">Pre-gate vehicle and cargo inspection app</h3>
+      <p class="kicker pt">Um app responsivo, usado em navegador e em coletores com leitor NFC, que substitui a inspeção em papel antes do gate.</p>
+      <p class="kicker en">A responsive app, used in browsers and on handheld NFC scanners, that replaces paper inspections before the gate.</p>
+
+      <h4><span class="pt">Contexto</span><span class="en">Context</span></h4>
+      <p class="pt">O inspetor segue 6 etapas: agendamento, motorista (crachá NFC), veículo, carga (contêiner, excesso de dimensão, carga perigosa por lado, avarias e lacres com foto) e sumário. Recusas disparam e-mail automático para transportadora, atendimento, armador e gate.</p>
+      <p class="en">The inspector follows 6 steps: appointment, driver (NFC badge), vehicle, cargo (container, out-of-gauge, hazardous labels per side, damage and seals with photos), then summary. Rejections trigger an automatic e-mail to the haulier, customer service, the shipping line and the gate.</p>
+      <div class="flow"><span class="pt">Agendamento</span><span class="en">Appointment</span><span class="pt">Motorista</span><span class="en">Driver</span><span class="pt">Veículo</span><span class="en">Vehicle</span><span class="pt">Carga</span><span class="en">Cargo</span><span class="pt">Avarias e lacres</span><span class="en">Damage and seals</span><span class="pt">Sumário</span><span class="en">Summary</span></div>
+
+      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
+      <ul class="pt">
+        <li>Escrevi a estratégia de testes para microsserviços, com cada micro front-end testado isoladamente em vários navegadores e resoluções mobile, e depois integrado ao back-end.</li>
+        <li>Testei as APIs REST em contrato, autenticação, autorização, exceções e desempenho. Na API de notificações, cobri paginação, filtros, as respostas 204 e 206 e a regra de só aceitar e-mails do domínio da empresa, testando como consumidor da API.</li>
+        <li>Documentei os cenários em Gherkin no Confluence, rastreados no Jira, e acompanhei a pré e a pós-implantação.</li>
+        <li>Escrevi o manual do usuário do app.</li>
+      </ul>
+      <ul class="en">
+        <li>Wrote the microservices test strategy: each micro front-end tested in isolation across browsers and mobile resolutions, then integrated with the back end.</li>
+        <li>Tested the REST APIs for contract, authentication, authorisation, exceptions and performance. On the notifications API, I covered paging, filters, 204 and 206 responses, and the rule that only company-domain e-mails are accepted, testing as the API's consumer.</li>
+        <li>Documented scenarios in Gherkin on Confluence, traced in Jira, and supported pre- and post-deployment.</li>
+        <li>Wrote the app's user manual.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- 04 -->
+  <article class="case">
+    <aside>
+      <span class="no">04</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2020 – 2021</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Negócios e QA</span><span class="en">Business Analyst and QA</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">EDI</span><span class="tag">Oracle SQL</span><span class="tag">Event consumers</span><span class="tag">CRM</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Cancelamento de reserva por EDI: um evento, dez efeitos</h3>
+      <h3 class="en">Booking cancellation via EDI: one event, ten side effects</h3>
+      <p class="kicker pt">Quando o armador cancela uma unidade da reserva, o cliente precisa saber antes de mandar o caminhão.</p>
+      <p class="kicker en">When a shipping line cancels a unit from a booking, the customer must know before sending the truck.</p>
+
+      <h4><span class="pt">Contexto</span><span class="en">Context</span></h4>
+      <p class="pt">Um único evento de cancelamento dispara 25 regras em cascata: cancelar o pré-cadastro da carga, devolver a nota fiscal para o status anterior, cancelar o agendamento e liberar a janela, abrir um caso no CRM, mandar um e-mail segmentado ao cliente e não cobrar o não comparecimento.</p>
+      <p class="en">A single cancellation event triggers 25 cascading rules: cancel the cargo pre-registration, roll the invoice back to its previous status, cancel the appointment and free the time slot, open a CRM case, send a targeted e-mail to the customer, and waive the no-show fee.</p>
+
+      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
+      <ul class="pt">
+        <li>Mapeei a máquina de estados da nota fiscal e encontrei e corrigi um defeito de transição antes da entrega.</li>
+        <li>Quando gerar o evento real pelo armador não era viável, simulei o evento pela base de dados e depois validei o fluxo integrado.</li>
+        <li>Para cada cenário, conferi o resultado em cerca de 10 lugares: telas de consulta, rastreamento, inventário, nota fiscal, agendamento, exportação para planilha, CRM e e-mail.</li>
+        <li>Gravei um vídeo demonstrativo para as áreas de negócio.</li>
+      </ul>
+      <ul class="en">
+        <li>Mapped the invoice state machine, then found and fixed a transition defect before delivery.</li>
+        <li>When triggering the real event from the shipping line wasn't feasible, I simulated it through the database and then validated the integrated flow.</li>
+        <li>For each scenario, I checked the result in about 10 places: lookup screens, tracking, inventory, invoice, appointment, spreadsheet export, CRM and e-mail.</li>
+        <li>Recorded a demo video for the business areas.</li>
+      </ul>
+      <div class="callout pt"><b>Padrão encontrado.</b> O defeito mais recorrente, aqui e em outros projetos, era uma tela secundária que continuava mostrando o dado antigo depois de uma mudança de estado. Esse mesmo checklist repetido é exatamente o que eu automatizaria primeiro.</div>
+      <div class="callout en"><b>Pattern found.</b> The most recurrent defect, here and in other projects, was a secondary screen still showing stale data after a state change. That repeated checklist is exactly what I would automate first.</div>
+    </div>
+  </article>
+
+  <!-- 05 -->
+  <article class="case">
+    <aside>
+      <span class="no">05</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd><span class="pt">2023 · revisitado em 2024–2025</span><span class="en">2023 · revisited 2024–2025</span></dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Negócios e QA, suporte pós-produção</span><span class="en">Business Analyst and QA, post-launch support</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Webhook</span><span class="tag">REST APIs</span><span class="tag">TOS events</span><span class="tag">Oracle views</span><span class="tag">Holds</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Webhook de status de contêiner para um grande exportador</h3>
+      <h3 class="en">Container-status webhook for a major exporter</h3>
+      <p class="kicker pt">Um cliente exportador queria saber, sem ligar para o terminal, em que situação estava cada contêiner dele.</p>
+      <p class="kicker en">An exporting customer wanted to know the status of each of its containers without having to call the terminal.</p>
+
+      <h4><span class="pt">Contexto</span><span class="en">Context</span></h4>
+      <p class="pt">O terminal passou a enviar as operações do cliente direto para as APIs do próprio cliente, a cada evento físico do contêiner. O cliente não enxerga o TOS; ele só recebe um status. Por isso a regra que converte o estado interno em status precisa estar certa.</p>
+      <p class="en">The terminal started pushing the customer's operations straight to the customer's own APIs on every physical container event. The customer never sees the TOS, only a status, so the rule that turns internal state into that status has to be right.</p>
+      <div class="flow"><span class="pt">Evento no TOS</span><span class="en">TOS event</span><span class="pt">View com bloqueios ativos</span><span class="en">View with active holds</span><span class="pt">Regra de status</span><span class="en">Status rule</span><span class="pt">API do cliente</span><span class="en">Customer API</span></div>
+      <div class="figure">
+        <div><b>8</b><span class="pt">gatilhos de status físico</span><span class="en">physical-status triggers</span></div>
+        <div><b>3</b><span class="pt">status enviados ao cliente</span><span class="en">statuses sent to the customer</span></div>
+        <div><b>2</b><span class="pt">bloqueios que impedem o embarque</span><span class="en">holds that block loading</span></div>
+      </div>
+
+      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
+      <ul class="pt">
+        <li>Levantei os requisitos com o cliente e traduzi o vocabulário dele para as condições do TOS.</li>
+        <li>Mapeei os 8 gatilhos: entrada pelo gate, liberação da carga, atracação, contêiner a bordo, descarga, desatracação, saída pelo gate e atualização de status.</li>
+        <li>Defini a regra dos 3 status. <b>Bloqueado</b>: no pátio com bloqueio de avaria ou de reparo refrigerado, que impede o embarque. <b>No terminal</b>: no pátio sem esses bloqueios. <b>Embarcado</b>: já saiu no navio.</li>
+        <li>Detalhei o gatilho de bloqueio e liberação da carga, ligado à ordem de embarque e ao bloqueio aduaneiro que a cancela.</li>
+        <li>Especifiquei o trabalho técnico: expor os bloqueios ativos na view de origem e validar cada status na aplicação antes do envio.</li>
+        <li>Dei suporte depois da entrada em produção e revisitei a integração na migração do TOS. Nos ensaios de virada, identifiquei que a tabela de eventos que alimenta o webhook não estava sendo gerada no novo TOS e registrei isso como pendência crítica.</li>
+      </ul>
+      <ul class="en">
+        <li>Gathered requirements with the customer and translated its vocabulary into TOS conditions.</li>
+        <li>Mapped the 8 triggers: gate in, cargo release, berthing, container on board, discharge, unberthing, gate out and status update.</li>
+        <li>Defined the rule for the 3 statuses. <b>Blocked</b>: in the yard with a damage or reefer-repair hold that prevents loading. <b>In terminal</b>: in the yard without those holds. <b>Loaded</b>: already departed on the vessel.</li>
+        <li>Detailed the cargo block/release trigger, tied to the loading order and to the customs block that cancels it.</li>
+        <li>Specified the technical work: expose active holds in the source view and validate each status in the application before sending.</li>
+        <li>Supported the integration after go-live and revisited it during the TOS migration. In the cutover rehearsals I found that the event table feeding the webhook was not being populated in the new TOS, and logged it as a critical open item.</li>
+      </ul>
+      <div class="callout pt"><b>Por que é um bom exemplo.</b> Quando a tabela de origem para de ser gerada, nenhuma tela do terminal quebra e o problema só aparece do lado do cliente. Por isso integrações de saída precisam entrar no regressivo de toda virada, com teste que verifique se o dado realmente foi gerado.</div>
+      <div class="callout en"><b>Why it's a good example.</b> When the source table stops being populated, no terminal screen breaks and the problem only shows up on the customer's side. That's why outbound integrations belong in every cutover regression, with a test that checks the data was actually produced.</div>
+    </div>
+  </article>
+
+  <!-- 06 -->
+  <article class="case">
+    <aside>
+      <span class="no">06</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2023 – 2024</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">QA: autor do checklist, do modelo de trabalho do time e das queries de validação</span><span class="en">QA: author of the checklist, the team's working model and the validation queries</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Oracle SQL</span><span class="tag">Data validation</span><span class="tag">API testing</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Change management</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Um checklist de 11 pontos para migrar views sem quebrar quem as consome</h3>
+      <h3 class="en">An 11-point checklist for migrating views without breaking their consumers</h3>
+      <p class="kicker pt">Antes da troca do TOS, as views que alimentavam telas, APIs e painéis foram reescritas para uma camada intermediária. Eu criei o método para provar, com SQL e evidência, que nada mudou para quem usa esses dados.</p>
+      <p class="kicker en">Ahead of the TOS switch, the views feeding screens, APIs and dashboards were rewritten onto an intermediate layer. I built the method to prove, with SQL and evidence, that nothing changed for anyone using that data.</p>
+
+      <h4><span class="pt">O risco</span><span class="en">The risk</span></h4>
+      <p class="pt">Uma view pode compilar, devolver linhas e passar num teste superficial, mas com uma coluna que mudou de significado. Nesse caso nada dá erro: a tela continua funcionando e mostra o dado errado. E cada view tinha consumidores diferentes, cada um com um jeito de quebrar.</p>
+      <p class="en">A view can compile, return rows and pass a shallow test while one column has quietly changed meaning. Nothing errors out: the screen keeps working and shows the wrong data. And each view had different consumers, each of which could break in its own way.</p>
+
+      <h4><span class="pt">1. Checklist de testes: 11 verificações, cada uma com evidência</span><span class="en">1. Test checklist: 11 checks, each with evidence</span></h4>
+      <ol class="chk">
+        <li><span class="cat">EST</span><span class="pt">O código da view nova não referencia o schema do TOS antigo.</span><span class="en">The new view's code has no references to the old TOS schema.</span></li>
+        <li><span class="cat">EST</span><span class="pt">Termos próprios do TOS antigo (chaves internas, por exemplo) não sobrevivem no script nem nos nomes de coluna.</span><span class="en">Old-TOS-specific terms (internal keys, for instance) don't survive in the script or in column names.</span></li>
+        <li><span class="cat">EST</span><span class="pt">Quantidade e nomes das colunas iguais aos da view antiga.</span><span class="en">Same number and names of columns as the old view.</span></li>
+        <li><span class="cat">EST</span><span class="pt">Tipos de dados e tamanhos das colunas iguais.</span><span class="en">Same column data types and sizes.</span></li>
+        <li class="key"><span class="cat">DADO</span><span class="pt"><b>Mesma semântica:</b> comparar o retorno da view antiga com o da nova. Se a coluna retornava o número do contêiner, ela ainda precisa retornar o número do contêiner.</span><span class="en"><b>Same meaning:</b> compare the old view's output with the new one's. If a column returned the container number, it must still return the container number.</span></li>
+        <li><span class="cat">DADO</span><span class="pt">Questionar todo retorno nulo nas colunas.</span><span class="en">Challenge every null returned in any column.</span></li>
+        <li><span class="cat">PERF</span><span class="pt">Tempo de resposta da view nova medido em QA e em produção.</span><span class="en">New view's response time measured in QA and in production.</span></li>
+        <li><span class="cat">DEP</span><span class="pt">Views auxiliares do mesmo processo identificadas, com a decisão de migrar ou não.</span><span class="en">Auxiliary views in the same process identified, with a decision on whether to migrate them.</span></li>
+        <li class="key"><span class="cat">DADO</span><span class="pt"><b>Contagem de registros com os mesmos filtros que a tela aplica,</b> não com um <code>SELECT *</code> solto.</span><span class="en"><b>Record counts using the same filters the screen applies,</b> not a bare <code>SELECT *</code>.</span></li>
+        <li><span class="cat">CEN</span><span class="pt">Cenários criados a partir dos filtros da própria view (condições do WHERE e dos subselects).</span><span class="en">Scenarios derived from the view's own filters (WHERE conditions and subselects).</span></li>
+        <li><span class="cat">CEN</span><span class="pt">Cenários criados a partir da tela mapeada na documentação de usuário e na técnica.</span><span class="en">Scenarios derived from the screen as mapped in the user and technical documentation.</span></li>
+      </ol>
+      <p class="chk-legend"><span><b>EST</b> <span class="pt">estrutura</span><span class="en">structure</span></span><span><b>DADO</b> <span class="pt">dados</span><span class="en">data</span></span><span><b>PERF</b> <span class="pt">desempenho</span><span class="en">performance</span></span><span><b>DEP</b> <span class="pt">dependências</span><span class="en">dependencies</span></span><span><b>CEN</b> <span class="pt">cenários</span><span class="en">scenarios</span></span></p>
+
+      <h4><span class="pt">2. Testar onde o dado é consumido, não só a view</span><span class="en">2. Test where the data is consumed, not just the view</span></h4>
+      <p class="pt">Para cada view, eu mapeava quais sistemas a executavam: a URL da tela e o endpoint da API afetados. Assim o teste chegava até o ponto em que o usuário ou outro sistema usa o dado.</p>
+      <p class="en">For each view I mapped which systems executed it: the affected screen URL and API endpoint. That way testing reached the point where a user or another system actually uses the data.</p>
+      <div class="consume">
+        <div class="src"><span class="lbl2">View</span><b class="pt">Camada intermediária</b><b class="en">Intermediate layer</b><span class="pt">queries de validação em SQL</span><span class="en">SQL validation queries</span></div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="dst">
+          <div><span class="lbl2"><span class="pt">Tela</span><span class="en">Screen</span></span><span class="pt">Ao informar uma reserva, a tela mostra os mesmos dados que mostrava com a view antiga.</span><span class="en">Entering a booking shows the same data the screen showed with the old view.</span></div>
+          <div><span class="lbl2">API</span><span class="pt">O response contém todos os dados válidos para o front ou para a continuidade do processo.</span><span class="en">The response contains all the valid data needed by the front end or by the next step in the process.</span></div>
+          <div><span class="lbl2"><span class="pt">Entrada</span><span class="en">Input</span></span><span class="pt">O campo da tela aceita somente valores válidos.</span><span class="en">The screen field accepts only valid values.</span></div>
+          <div><span class="lbl2"><span class="pt">Dependentes</span><span class="en">Dependants</span></span><span class="pt">Views auxiliares, painéis e jobs do mesmo processo.</span><span class="en">Auxiliary views, dashboards and jobs in the same process.</span></div>
+        </div>
+      </div>
+
+      <h4><span class="pt">3. Um modelo de trabalho para o time de QA</span><span class="en">3. A working model for the QA team</span></h4>
+      <p class="pt">Transformei o método em um fluxo padrão, usado a cada sprint e a cada GMUD (gestão de mudança).</p>
+      <p class="en">I turned the method into a standard flow, used in every sprint and every change request (GMUD).</p>
+      <div class="flow"><span class="pt">0 · Entender a demanda</span><span class="en">0 · Understand the request</span><span class="pt">1 · Mapear testes por camada na história do Jira</span><span class="en">1 · Map tests by layer in the Jira story</span><span class="pt">2 · Executar com evidência</span><span class="en">2 · Execute with evidence</span><span class="pt">Notas e dúvidas da sprint</span><span class="en">Sprint notes and questions</span></div>
+      <ul class="pt">
+        <li><b>Mapeamento por camada:</b> checklist para a view, validação do novo mapeamento da API, cenários funcionais do fluxo de negócio e lista de pré-requisitos, com o plano de testes do Confluence como referência.</li>
+        <li><b>Modelo de documentação da GMUD:</b> links das documentações de usuário, técnica e de testes; nome da view antes e depois; views auxiliares; sistemas afetados; trabalho feito (ajuste de script, mapeamento de API com as colunas novas, adequação a um novo processo, remoção de código); regras, dúvidas, riscos e pontos de atenção; responsáveis (analista, dev, QA); e o que compõe a entrega (PR, banco, artefatos).</li>
+        <li>O mesmo modelo foi estendido aos testes das customizações do novo TOS: integrações de eventos, tipos de tarefa, tarefas executáveis e gatilhos de sistema.</li>
+      </ul>
+      <ul class="en">
+        <li><b>Mapping by layer:</b> a checklist for the view, validation of the new API mapping, functional scenarios from the business flow, and a list of prerequisites, using the Confluence test plan as reference.</li>
+        <li><b>Change-request documentation template:</b> links to user, technical and test documentation; view name before and after; auxiliary views; affected systems; work done (script adjustment, API mapping for the new columns, adaptation to a new process, code removal); rules, open questions, risks and attention points; owners (analyst, dev, QA); and what the delivery contains (PR, database, artifacts).</li>
+        <li>The same model was extended to testing the new TOS customisations: event integrations, task types, executable tasks and system triggers.</li>
+      </ul>
+
+      <div class="figure">
+        <div><b>11</b><span class="pt">verificações por view</span><span class="en">checks per view</span></div>
+        <div><b>4</b><span class="pt">camadas testadas: view, API, tela e dependentes</span><span class="en">layers tested: view, API, screen, dependants</span></div>
+        <div><b>1</b><span class="pt">evidência por verificação</span><span class="en">piece of evidence per check</span></div>
+      </div>
+      <div class="callout pt"><b>O que faz a diferença.</b> Os itens 5 e 9 pegam o defeito que nenhum erro de compilação mostra: a view "funciona", mas o dado mudou de sentido ou o total não bate com o que a tela exibe. Como cada verificação tinha evidência anexada à GMUD, a aprovação deixava de ser "testado, ok" e passava a ser auditável.</div>
+      <div class="callout en"><b>What makes the difference.</b> Checks 5 and 9 catch the defect no compile error reveals: the view "works", but the data has changed meaning or the total doesn't match what the screen shows. Because each check had evidence attached to the change request, sign-off stopped being "tested, ok" and became auditable.</div>
+    </div>
+  </article>
+
+  <!-- 07 -->
+  <article class="case">
+    <aside>
+      <span class="no">07</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2018 – 2020</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Testes Sênior</span><span class="en">Senior Test Analyst</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Protractor</span><span class="tag">BackstopJS</span><span class="tag">SuperTest</span><span class="tag">Mocha</span><span class="tag">Chai</span><span class="tag">JavaScript</span><span class="tag">Cypress (POC)</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Automação E2E e regressão visual na migração do portal do cliente</h3>
+      <h3 class="en">E2E automation and visual regression for the customer-portal migration</h3>
+      <p class="kicker pt">O portal do cliente passou de uma aplicação monolítica para microsserviços. A pergunta era: a tela nova é igual à antiga?</p>
+      <p class="kicker en">The customer portal moved from a monolith to microservices. The question was: does the new screen match the old one?</p>
+
+      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
+      <ul class="pt">
+        <li>Automatizei testes funcionais E2E com Protractor, usados em produção por mais de 4 anos.</li>
+        <li>Mapeei 39 cenários de regressão visual comparando o portal antigo e o novo, página a página, com rota de referência para cada tela, e implementei os primeiros com BackstopJS.</li>
+        <li>Automatizei testes de API com SuperTest, Mocha e Chai.</li>
+        <li>Participei da definição de stack de testes e fiz uma POC com Cypress.</li>
+      </ul>
+      <ul class="en">
+        <li>Automated functional E2E tests with Protractor, used in production for over 4 years.</li>
+        <li>Mapped 39 visual-regression scenarios comparing the old and new portal page by page, with a reference route for each screen, and implemented the first ones with BackstopJS.</li>
+        <li>Automated API tests with SuperTest, Mocha and Chai.</li>
+        <li>Helped define the test stack and ran a proof of concept with Cypress.</li>
+      </ul>
+      <div class="callout pt"><b>Na prática.</b> A comparação visual pegou quebras de layout e erros de servidor, e mostrou rotas novas que ainda não existiam antes de o usuário chegar até elas.</div>
+      <div class="callout en"><b>In practice.</b> The visual comparison caught layout breaks and server errors, and exposed new routes that didn't exist yet before any user reached them.</div>
+    </div>
+  </article>
+
+  <!-- 08 -->
+  <article class="case">
+    <aside>
+      <span class="no">08</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2022 – 2024</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd>Product Owner &amp; QA</dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Android</span><span class="tag">Push notifications</span><span class="tag">QR Code</span><span class="tag">LGPD</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">App do motorista: da guia em papel ao QR Code</h3>
+      <h3 class="en">Driver app: from paper slip to QR code</h3>
+      <p class="kicker pt">Motoristas de caminhão imprimiam a guia de agendamento para entrar no terminal. O app eliminou o papel.</p>
+      <p class="kicker en">Truck drivers used to print an appointment slip to enter the terminal. The app removed the paper.</p>
+
+      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
+      <ul class="pt">
+        <li>Defini o MVP e o que ficaria para depois. O MVP incluiu primeiro acesso validado por documento, código de segurança por SMS e e-mail, termos LGPD, próxima viagem e histórico, guia com QR Code, avaliação da viagem, situação cadastral, FAQ e notificações push.</li>
+        <li>Dividi o trabalho entre desenvolvimento, jurídico e negócio, e testei as entregas.</li>
+        <li>Escrevi o manual do usuário e dei suporte até 2024.</li>
+      </ul>
+      <ul class="en">
+        <li>Defined the MVP and what would come later. The MVP included first access validated by ID document, security code by SMS and e-mail, privacy terms (LGPD), next trip and history, a QR-code slip, trip rating, registration status, FAQ and push notifications.</li>
+        <li>Split the work between development, legal and business, and tested the deliveries.</li>
+        <li>Wrote the user manual and supported the app until 2024.</li>
+      </ul>
+      <div class="callout pt"><b>O que levo daqui.</b> Ter sido PO me faz testar pensando no valor para quem usa, não só na especificação.</div>
+      <div class="callout en"><b>What I took from it.</b> Having been a PO makes me test for the value to the user, not just against the spec.</div>
+    </div>
+  </article>
+</section>
+
+<!-- SUPPORT -->
+<section id="sustentacao">
+  <h2><span class="pt">Sustentação e troubleshooting em produção</span><span class="en">Production support and troubleshooting</span></h2>
+  <p class="sec-sub pt">Boa parte do meu trabalho foi depois do deploy: regressivos de prontidão a cada atualização de plataforma, sustentação dos sistemas em produção e estabilização depois de migrações. Quando algo falha, investigo nesta ordem até achar a camada que causou o problema.</p>
+  <p class="sec-sub en">Much of my work happened after deployment: operational-readiness regressions on every platform upgrade, support of production systems, and stabilisation after migrations. When something fails, I investigate in this order until I find the layer that caused it.</p>
+
+  <div class="inv">
+    <span><b class="pt">Sintoma</b><b class="en">Symptom</b><span class="pt">tela, usuário, cliente</span><span class="en">screen, user, customer</span></span>
+    <span><b class="pt">Reproduzir</b><b class="en">Reproduce</b><span class="pt">massa e passos mínimos</span><span class="en">minimal data and steps</span></span>
+    <span><b>Logs</b>Kibana · OpenSearch · Lens</span>
+    <span><b>API</b>Swagger · Postman</span>
+    <span><b class="pt">Fila</b><b class="en">Queue</b>RabbitMQ</span>
+    <span><b class="pt">Banco</b><b class="en">Database</b>Oracle · MongoDB</span>
+    <span><b class="pt">Parâmetros</b><b class="en">Settings</b>Consul · flags</span>
+    <span><b class="pt">Causa raiz</b><b class="en">Root cause</b><span class="pt">evidência e ticket</span><span class="en">evidence and ticket</span></span>
+  </div>
+
+  <h3 class="pt" style="font-size:19px;margin-bottom:12px">Registro de investigações (anonimizado)</h3>
+  <h3 class="en" style="font-size:19px;margin-bottom:12px">Investigation log (anonymised)</h3>
+  <div class="log">
+    <div class="row head">
+      <div><span class="pt">Sintoma</span><span class="en">Symptom</span></div>
+      <div><span class="pt">Onde estava a causa</span><span class="en">Where the cause was</span></div>
+      <div><span class="pt">Resultado</span><span class="en">Outcome</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Recálculo da cobrança de cancelamento de exportação falhava</span><span class="en">Recalculating an export-cancellation charge failed</span><span class="layer">DB</span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">A operação de desfazer o registro limpava a marcação de entrega especial, mas não removia o bloqueio. Pelo SQL, vi que o faturamento só libera se houver registro na tabela de bloqueios ativos ou no histórico, e que o billing exige a entrega especial.</span><span class="en">The undo operation cleared the special-delivery flag but did not remove the hold. Using SQL, I saw that billing only proceeds if there is a record in the active-holds table or its history, and that the billing system requires the special delivery.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Regra entre sistemas documentada, com o passo de contorno e a correção.</span><span class="en">Cross-system rule documented, with the workaround and the fix.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Erro 500 ao solicitar custos de desova</span><span class="en">HTTP 500 when requesting unstuffing costs</span><span class="layer">API → DB</span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">Um status do contêiner não estava mapeado na camada de compatibilidade com o novo TOS.</span><span class="en">A container status was not mapped in the compatibility layer for the new TOS.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Corrigido com o mapeamento do status e revalidado no regressivo.</span><span class="en">Fixed by mapping the status, then re-checked in regression.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Painel filtrado por armador mostrava dados de exportadores</span><span class="en">Dashboard filtered by shipping line showed exporter data</span><span class="layer">API</span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">A API consultava uma tabela auxiliar para identificar processos de armador, mas essa tabela não era populada na geração do rascunho da fatura.</span><span class="en">The API looked up an auxiliary table to identify shipping-line processes, but that table was never populated when the draft invoice was created.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Defeito registrado com a causa já apontada.</span><span class="en">Defect logged with the root cause already identified.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Valor de armazenagem dividido errado entre contêineres</span><span class="en">Storage value split incorrectly across containers</span><span class="layer"><span class="pt">Integração</span><span class="en">Integration</span></span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">Registros duplicados vindos do sistema aduaneiro alteravam a divisão do valor da carga.</span><span class="en">Duplicate records coming from the customs system changed how the cargo value was split.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Equipe responsável pela integração notificada com evidência.</span><span class="en">Integration owners notified with evidence.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Data "pago até" gravada sem o fim do dia</span><span class="en">"Paid until" date stored without end-of-day time</span><span class="layer">DB</span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">No recálculo com nova data de retirada, a camada intermediária gravava a data sem o horário 23:59, o que encurtava em um dia o período já pago.</span><span class="en">When recalculating with a new pickup date, the intermediate layer stored the date without 23:59, cutting one day off the period already paid.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Corrigido.</span><span class="en">Fixed.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Guia de retirada de importação saía no nome errado</span><span class="en">Import pickup slip showed the wrong party</span><span class="layer"><span class="pt">Mapeamento</span><span class="en">Mapping</span></span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">O campo do importador estava mapeado para o dono do contêiner no novo TOS.</span><span class="en">The importer field was mapped to the container owner in the new TOS.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Encontrado no ensaio de virada, antes do go-live.</span><span class="en">Caught in the cutover rehearsal, before go-live.</span></div>
+    </div>
+
+    <div class="row">
+      <div class="sym"><span class="lbl pt">Sintoma</span><span class="lbl en">Symptom</span><span class="pt">Nota fiscal não voltava para "Completa" após cancelar o pré-cadastro</span><span class="en">Invoice did not return to "Complete" after cancelling pre-registration</span><span class="layer"><span class="pt">Regressão</span><span class="en">Regression</span></span></div>
+      <div><span class="lbl pt">Causa</span><span class="lbl en">Cause</span><span class="pt">O mesmo defeito que eu tinha corrigido em 2020 voltou depois da migração do TOS, porque a regra não foi levada para o novo sistema.</span><span class="en">The same defect I had fixed in 2020 came back after the TOS migration, because the rule was not carried over to the new system.</span></div>
+      <div class="out"><span class="lbl pt">Resultado</span><span class="lbl en">Outcome</span><span class="pt">Registrado como pendência de produção. É o argumento mais forte para automatizar regressões antigas.</span><span class="en">Logged as a production open item. It's the strongest argument for automating old regressions.</span></div>
+    </div>
+  </div>
+
+  <div class="periods">
+    <div><span class="when">2018 – 2020</span><b class="pt">Prontidão operacional</b><b class="en">Operational readiness</b><p class="pt">Regressivos a cada nova versão do TOS, do barramento de serviços e do banco Oracle: scanner, planejamento ferroviário, armazém, portal e atendimento.</p><p class="en">Regressions on every new version of the TOS, the service bus and the Oracle database: scanner, rail planning, warehouse, portal and front desk.</p></div>
+    <div><span class="when">2022</span><b class="pt">Sistemas produtivos</b><b class="en">Production systems</b><p class="pt">Correções no portal (janelas de vazios e cadastro de janelas que não apareciam), colunas de auditoria no histórico de agendamento e relatórios operacionais.</p><p class="en">Portal fixes (empty-container slots and slot setup not showing), audit columns in appointment history, and operational reports.</p></div>
+    <div><span class="when">2023</span><b class="pt">Apoio ao atendimento</b><b class="en">Customer-service support</b><p class="pt">FAQ dinâmico para o atendimento publicar tutoriais e avisos no portal, além da estabilização do portal.</p><p class="en">A dynamic FAQ so customer service could publish tutorials and notices on the portal, plus portal stabilisation.</p></div>
+    <div><span class="when">2025</span><b class="pt">Estabilização pós-migração</b><b class="en">Post-migration stabilisation</b><p class="pt">Suporte em produção às aplicações integradas ao novo TOS, incluindo o bloqueio de refaturamento de ordens emitidas antes da virada.</p><p class="en">Production support for applications integrated with the new TOS, including a guard against re-billing orders issued before cutover.</p></div>
+  </div>
+</section>
+
+<!-- MORE -->
+<section>
+  <h2><span class="pt">Outros exemplos</span><span class="en">More examples</span></h2>
+  <p class="sec-sub pt">Casos menores que mostram uma técnica específica.</p>
+  <p class="sec-sub en">Smaller cases, each showing one specific technique.</p>
+  <div class="mini">
+    <article>
+      <h3 class="pt">Valores-limite em janelas de tempo</h3><h3 class="en">Boundary values on time windows</h3>
+      <p class="pt">Regra para impedir o mesmo motorista ou placa em agendamentos sobrepostos, com tempo de operação diferente por serviço (1 h a 4 h). Testei cada combinação de serviços, antes e depois da janela e antes e depois da nova regra. Achados: só a placa principal era validada, a edição aceitava janela bloqueada e a mensagem mostrava o tempo errado.</p>
+      <p class="en">A rule to block the same driver or plate from overlapping appointments, with an operating time that varies by service (1 to 4 h). I tested every service combination, before and after the window, and before and after the new rule. Findings: only the main plate was validated, editing accepted a blocked slot, and the message showed the wrong duration.</p>
+    </article>
+    <article>
+      <h3 class="pt">Segregação de dados por perfil</h3><h3 class="en">Data segregation by profile</h3>
+      <p class="pt">Consulta consolidada de contêineres (CQRS em MongoDB) usada por importadores, exportadores, despachantes, transportadoras, agentes e armadores. O risco principal que testei: um cliente ver a carga de outro.</p>
+      <p class="en">A consolidated container lookup (CQRS on MongoDB) used by importers, exporters, customs brokers, hauliers, agents and shipping lines. The main risk I tested: one customer seeing another's cargo.</p>
+    </article>
+    <article>
+      <h3 class="pt">Concorrência na reserva de janelas</h3><h3 class="en">Concurrency in slot booking</h3>
+      <p class="pt">Mais de um veículo conseguia reservar a mesma janela. Testei as três soluções propostas (bloqueio por transação, pré-agendamento e trigger no banco) e comparei o comportamento de cada uma sob acesso simultâneo.</p>
+      <p class="en">More than one vehicle could book the same slot. I tested the three proposed fixes (transaction lock, pre-booking and a database trigger) and compared how each behaved under simultaneous access.</p>
+    </article>
+    <article>
+      <h3 class="pt">Divergência entre bases de dados</h3><h3 class="en">Divergence between databases</h3>
+      <p class="pt">Validação de placas e motoristas no agendamento: status do cadastro, tipos de placa, placas repetidas em bitrem, placas estrangeiras e documentos do motorista. Encontrei valores de tipo de veículo diferentes entre o MongoDB e o Oracle, e um status que não existia no sistema legado.</p>
+      <p class="en">Validation of plates and drivers at booking: registration status, plate types, repeated plates on B-doubles, foreign plates and driver documents. I found vehicle-type values that differed between MongoDB and Oracle, and a status that didn't exist in the legacy system.</p>
+    </article>
+    <article>
+      <h3 class="pt">Conformidade com a LGPD</h3><h3 class="en">LGPD (privacy law) compliance</h3>
+      <p class="pt">Site, portal e intranet: consentimento de cookies em 3 idiomas, opt-in e opt-out, exclusão de conta e termos de consentimento. Refinei os requisitos com o jurídico e testei em Chrome, Firefox, Edge e mobile.</p>
+      <p class="en">Website, portal and intranet: cookie consent in 3 languages, opt-in and opt-out, account deletion and consent terms. I refined the requirements with the legal team and tested on Chrome, Firefox, Edge and mobile.</p>
+    </article>
+    <article>
+      <h3 class="pt">Chave de configuração com efeito colateral</h3><h3 class="en">Feature flag with side effects</h3>
+      <p class="pt">Uma chave para reservas sem armador definido acionava um job que corrigia o armador da unidade em eventos do pátio. Testei com a chave ligada e desligada, validei no banco por SQL e procurei efeitos em telas e em mensagens EDI.</p>
+      <p class="en">A flag for bookings with no shipping line assigned started a job that corrected the unit's line on yard events. I tested with the flag on and off, validated in the database with SQL, and looked for side effects on screens and in EDI messages.</p>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="habilidades">
+  <h2><span class="pt">Habilidades</span><span class="en">Skills</span></h2>
+  <p class="sec-sub pt">Cada item traz o nível real de uso, para facilitar a conversa na entrevista.</p>
+  <p class="sec-sub en">Each item shows my real level of use, to make the interview conversation easier.</p>
+  <div class="legend">
+    <span><span class="lv p">PROD</span><span class="pt">usado em trabalho real</span><span class="en">used in real work</span></span>
+    <span><span class="lv f">FAMILIAR</span><span class="pt">usado de forma pontual</span><span class="en">used occasionally</span></span>
+    <span><span class="lv s">ESTUDO</span><span class="pt">curso, pós ou POC</span><span class="en">course, postgrad or POC</span></span>
+  </div>
+  <div class="skills">
+    <div class="grp">
+      <h3 class="pt">Testes e qualidade</h3><h3 class="en">Testing and quality</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Estratégia e plano de testes por camada</span><span class="en">Layered test strategy and planning</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Tabela de decisão, partição, valores-limite, risco</span><span class="en">Decision tables, partitioning, boundaries, risk</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Funcional, regressão, integração, E2E, homologação</span><span class="en">Functional, regression, integration, E2E, UAT</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Testes de API REST (contrato, auth, status)</span><span class="en">REST API testing (contract, auth, status codes)</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Testes de filas e eventos</span><span class="en">Queue and event testing</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Regressão visual</span><span class="en">Visual regression</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">BDD / Gherkin e rastreabilidade</span><span class="en">BDD / Gherkin and traceability</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Troubleshooting e análise de causa raiz</span><span class="en">Troubleshooting and root-cause analysis</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Sustentação e suporte a produção</span><span class="en">Production support</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Processos CMMI nível III</span><span class="en">CMMI level III processes</span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Automação</h3><h3 class="en">Automation</h3>
+      <ul>
+        <li><span class="lv p">PROD</span>Protractor (E2E)</li>
+        <li><span class="lv p">PROD</span>BackstopJS <span class="pt">(regressão visual)</span><span class="en">(visual regression)</span></li>
+        <li><span class="lv p">PROD</span>SuperTest · Mocha · Chai <span class="pt">(API)</span><span class="en">(API)</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">IA para cenários: Claude, ChatGPT, Copilot</span><span class="en">AI for scenarios: Claude, ChatGPT, Copilot</span></li>
+        <li><span class="lv s">ESTUDO</span>Playwright</li>
+        <li><span class="lv s">ESTUDO</span>Cypress</li>
+        <li><span class="lv s">ESTUDO</span>Selenium · Selenide · Capybara/Cucumber</li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Dados</h3><h3 class="en">Data</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Oracle SQL (queries de validação e investigação)</span><span class="en">Oracle SQL (validation and investigation queries)</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">MongoDB (validação de collections)</span><span class="en">MongoDB (collection validation)</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Validação de migração de dados e views</span><span class="en">Data and view migration validation</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Gestão de massa de teste</span><span class="en">Test data management</span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Observabilidade e ambiente</h3><h3 class="en">Observability and environments</h3>
+      <ul>
+        <li><span class="lv p">PROD</span>RabbitMQ</li>
+        <li><span class="lv p">PROD</span>Kubernetes <span class="pt">via Lens (logs, consumers)</span><span class="en">via Lens (logs, consumers)</span></li>
+        <li><span class="lv p">PROD</span>Kibana · OpenSearch</li>
+        <li><span class="lv p">PROD</span>Consul</li>
+        <li><span class="lv p">PROD</span>Swagger · Postman</li>
+        <li><span class="lv f">FAMILIAR</span>Grafana · Chrome DevTools · Lighthouse</li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Ferramentas</h3><h3 class="en">Tools</h3>
+      <ul>
+        <li><span class="lv p">PROD</span>Jira · Confluence</li>
+        <li><span class="lv p">PROD</span>Microsoft Test Manager</li>
+        <li><span class="lv p">PROD</span><span class="pt">Mapas mentais e fluxogramas em raias</span><span class="en">Mind maps and swimlane flowcharts</span></li>
+        <li><span class="lv f">FAMILIAR</span>Figma · Git · SVN</li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Domínio</h3><h3 class="en">Domain</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Operação de terminal (TOS, pátio, navio, ferrovia)</span><span class="en">Terminal operations (TOS, yard, vessel, rail)</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Gate e agendamento</span><span class="en">Gate and truck appointments</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Faturamento portuário e regimes aduaneiros</span><span class="en">Port billing and customs regimes</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Integrações com órgãos públicos, EDI e webhooks de clientes</span><span class="en">Government integrations, EDI and customer webhooks</span></li>
+      </ul>
+    </div>
+  </div>
+  <h4 style="margin-top:34px"><span class="pt">Habilidades não técnicas</span><span class="en">Soft skills</span></h4>
+  <p class="pt">Investigação analítica · documentação rigorosa · aprendizado rápido de domínio · comunicação com operação, jurídico, clientes, órgãos públicos e fornecedores · liderança e formação de time · didática (8 anos como instrutor) · visão de produto · senso de criticidade operacional.</p>
+  <p class="en">Analytical investigation · rigorous documentation · fast domain learning · communication with operations, legal, customers, public agencies and vendors · team leadership and building · teaching (8 years as an instructor) · product thinking · a sense of operational criticality.</p>
+</section>
+
+<!-- CAREER -->
+<section id="trajetoria">
+  <h2><span class="pt">Trajetória</span><span class="en">Career</span></h2>
+  <p class="sec-sub pt">Cada etapa mostra as ferramentas que usei no dia a dia e as tecnologias dos sistemas que testei.</p><p class="sec-sub en">Each step shows the tools I used day to day and the technologies behind the systems I tested.</p>
+  <div class="tl-leg"><span><i class="tt u">&nbsp;</i><span class="pt">usei diretamente</span><span class="en">used directly</span></span><span><i class="tt s">&nbsp;</i><span class="pt">prova de conceito</span><span class="en">proof of concept</span></span><span><i class="tt c">&nbsp;</i><span class="pt">tecnologia do sistema testado</span><span class="en">technology of the system under test</span></span></div>
+  <div class="two">
+    <ol class="tl">
+      <li class="now"><span class="when">2025 – 2026</span><b class="pt">QA Sênior / Quality Engineer</b><b class="en">Senior QA / Quality Engineer</b><span class="d pt">TCP · novo SGG em mensageria, app de inspeção pré-gate, APIs internas reescritas e estabilização pós-migração</span><span class="d en">TCP · new messaging-based gate system, pre-gate inspection app, rewritten internal APIs and post-migration stabilisation</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Gherkin / BDD</span><span class="tt u">Claude</span><span class="tt u">ChatGPT</span><span class="tt u">GitHub Copilot</span><span class="tt u">Chrome DevTools</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET Core C#</span><span class="tt c">Microservices</span><span class="tt c">Vue.js micro front-ends</span><span class="tt c">Ionic</span><span class="tt c">Event-driven</span><span class="tt c">XML contracts</span><span class="tt c">NFC handhelds</span></div></li>
+      <li><span class="when">2024 – 2025</span><b>Senior Test Lead</b><span class="d pt">TCP · troca do sistema operacional do terminal (TOS) · estruturação e liderança da área de QA</span><span class="d en">TCP · terminal operating system (TOS) replacement · built and led the QA function</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">GitMind / FreeMind</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">In-house TOS</span><span class="tt c">Oracle 19c</span><span class="tt c">Billing engine</span><span class="tt c">ERP (Protheus)</span><span class="tt c">WMS</span><span class="tt c">Salesforce</span><span class="tt c">Event integrations</span><span class="tt c">ESB jobs</span></div></li>
+      <li><span class="when">2020 – 2023</span><b class="pt">Analista de Negócios / PO / QA</b><b class="en">Business Analyst / PO / QA</b><span class="d pt">TCP · portal do cliente, agendamento, gate sem código de barras, app do motorista, webhook, LGPD, sustentação</span><span class="d en">TCP · customer portal, appointments, barcode-free gate, driver app, webhook, LGPD, production support</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Postman</span><span class="tt u">Swagger</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Figma</span><span class="tt u">Lighthouse</span><span class="tt u">FreeMind</span><span class="tt u">Swimlane BPM</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Angular 9</span><span class="tt c">.NET C#</span><span class="tt c">CQRS</span><span class="tt c">RabbitMQ</span><span class="tt c">Android</span><span class="tt c">Firebase</span><span class="tt c">WordPress</span><span class="tt c">EDI</span><span class="tt c">Salesforce</span><span class="tt c">Navis N4</span></div></li>
+      <li><span class="when">2016 – 2020</span><b class="pt">Analista de Testes Sênior</b><b class="en">Senior Test Analyst</b><span class="d pt">TCP · primeira migração de TOS, regressivos de plataforma, automação E2E, visual e de API, portal em microsserviços</span><span class="d en">TCP · first TOS migration, platform regressions, E2E, visual and API automation, microservices portal</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Protractor</span><span class="tt u">BackstopJS</span><span class="tt u">SuperTest</span><span class="tt u">Mocha</span><span class="tt u">Chai</span><span class="tt u">JavaScript</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt s">Cypress (POC)</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Navis N4 (Java / Groovy)</span><span class="tt c">WSO2 ESB</span><span class="tt c">Oracle 12g</span><span class="tt c">.NET 4 C# services</span><span class="tt c">WMS (Oracle Forms)</span><span class="tt c">Kubernetes</span><span class="tt c">Docker</span><span class="tt c">RabbitMQ</span><span class="tt c">Elasticsearch</span><span class="tt c">AWS (hybrid)</span></div></li>
+      <li><span class="when">2013 – 2016</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">Ewave, alocado na Rumo ALL · sistemas de licenciamento de trens e alteração de malha ferroviária</span><span class="d en">Ewave, placed at Rumo ALL · train-licensing and rail-network change systems</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">Oracle PL/SQL</span><span class="tt u">Jira</span><span class="tt u">Tortoise SVN</span><span class="tt u">Build Server</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET</span><span class="tt c">Delphi</span><span class="tt c">WPF</span><span class="tt c">ASP</span></div></li>
+      <li><span class="when">2012 – 2013</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">TechResult · fábrica de software CMMI nível III, projetos web e desktop para vários clientes</span><span class="d en">TechResult · CMMI level III software house, web and desktop projects for several clients</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">CMMI III artifacts</span><span class="tt u">Traceability matrix</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Web</span><span class="tt c">Desktop</span><span class="tt c">Ruby</span></div></li>
+      <li><span class="when">2002 – 2011</span><b class="pt">Instrutor e coordenador de cursos</b><b class="en">Instructor and course coordinator</b><span class="d pt">Ensino de informática e coordenação de cursos profissionalizantes · base da minha didática</span><span class="d en">IT teaching and vocational course coordination · where my teaching skills come from</span></li>
+    </ol>
+    <div class="edu">
+      <h3 class="pt">Formação</h3><h3 class="en">Education</h3>
+      <p><b class="pt">Pós-graduação em Automação de Testes de Software</b><b class="en">Postgraduate in Software Test Automation</b><br>Faculdade Facint</p>
+      <p><b class="pt">Tecnólogo em Análise e Desenvolvimento de Sistemas</b><b class="en">Associate degree in Systems Analysis and Development</b><br>Universidade Tuiuti do Paraná</p>
+      <p><b class="pt">Técnico em Informática</b><b class="en">IT Technician</b><br>Colégio Estadual do Paraná</p>
+      <h3 class="pt" style="margin-top:22px">Certificações e cursos</h3><h3 class="en" style="margin-top:22px">Certifications and courses</h3>
+      <p>DevOps Essentials Professional Certificate (Certiprof)<br>
+      <span class="pt">Formação DevTester, Protractor, Selenium, Performance, Selenide, Capybara (QASkills)</span><span class="en">DevTester track, Protractor, Selenium, Performance, Selenide, Capybara (QASkills)</span><br>
+      Programming in HTML5 with JavaScript and CSS3</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <p class="eyebrow"><span class="pt">Contato</span><span class="en">Contact</span></p>
+  <p class="big">linkedin.com/in/marlon-cristo-paula-b1299144</p>
+  <p class="pt">Posso detalhar qualquer um destes casos em uma conversa técnica.</p>
+  <p class="en">Happy to walk through any of these cases in a technical conversation.</p>
+  <p class="note pt">Os casos descrevem trabalho real. Para proteger a empresa e seus clientes, não aparecem aqui nomes de clientes, identificadores internos, endereços de sistemas, consultas de produção nem dados pessoais. Os valores das tabelas são ilustrativos.</p>
+  <p class="note en">These cases describe real work. To protect the company and its customers, no customer names, internal identifiers, system addresses, production queries or personal data appear here. Table values are illustrative.</p>
+</section>
+
+</div>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function apply(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l==='en'?'en':'pt-BR');
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false')});
+    document.title=l==='en'?'Marlon Paula Portfolio':'Portfólio Marlon Paula';
+  }
+  var l=null;
+  try{l=localStorage.getItem('lang')}catch(e){}
+  if(l!=='pt'&&l!=='en'){
+    var q=(location.hash||'').toLowerCase();
+    if(q==='#en'){l='en'}else{
+      var n=(navigator.language||'pt').toLowerCase();
+      l=n.indexOf('pt')===0?'pt':'en';
+    }
+  }
+  apply(l);
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click',function(){
+      apply(b.dataset.set);
+      try{localStorage.setItem('lang',b.dataset.set)}catch(e){}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

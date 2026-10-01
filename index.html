@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portfólio de Marlon de Cristo Paula, QA Sênior e Test Lead: qualidade de sistemas críticos de ponta a ponta, do requisito ao acompanhamento em produção. 14 anos em qualidade de software, com estudos de caso em migração de sistemas, APIs, mensageria e dados.">
+<meta name="description" content="Portfólio de Marlon de Cristo Paula, QA Sênior, Test Lead e Analista de Negócios: do requisito à produção, garantindo que o sistema faça o que o negócio precisa. 14 anos em projetos de software, com estudos de caso em migração de sistemas, requisitos, APIs, mensageria e dados.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://marloncristo1985.github.io/">
-<meta property="og:title" content="Marlon de Cristo Paula · Qualidade de sistemas críticos">
-<meta property="og:description" content="Portfólio de Marlon de Cristo Paula, QA Sênior e Test Lead: qualidade de sistemas críticos de ponta a ponta, do requisito ao acompanhamento em produção. 14 anos em qualidade de software, com estudos de caso em migração de sistemas, APIs, mensageria e dados.">
+<meta property="og:title" content="Marlon de Cristo Paula · Do requisito à produção">
+<meta property="og:description" content="Portfólio de Marlon de Cristo Paula, QA Sênior, Test Lead e Analista de Negócios: do requisito à produção, garantindo que o sistema faça o que o negócio precisa. 14 anos em projetos de software, com estudos de caso em migração de sistemas, requisitos, APIs, mensageria e dados.">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://marloncristo1985.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314213d'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-weight='700' font-size='15' fill='%23d4af37' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
@@ -545,12 +545,168 @@ h4.sub{color:var(--ink)}
 @media (max-width:560px){.band .status{flex-direction:column;gap:2px}.band .status > span + span::before{content:none}}
 .bar .wrap{justify-content:flex-end}.bar nav{margin-right:auto}
 @media (min-width:1100px){.bar .wrap{height:48px}}
+/* ===== v4: menu flutuante, seções em cartões, casos em abas, ciclo de atuação ===== */
+.toc{display:none!important}
+.layout{display:block!important}
+.band .inner{padding-left:0!important}
+.wrap{max-width:1180px}
+html{scroll-padding-top:96px}
+html,body{overflow-x:clip}
+::selection{background:rgba(212,175,55,.35)}
+/* barra de leitura e voltar ao topo */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--band-gold);z-index:70;pointer-events:none}
+.totop{position:fixed;right:20px;bottom:20px;z-index:55;width:48px;height:48px;border-radius:50%;border:1px solid rgba(212,175,55,.4);background:rgba(10,17,32,.86);color:#f7f8fa;font-size:20px;display:grid;place-items:center;text-decoration:none;box-shadow:0 12px 28px -12px rgba(0,0,0,.6);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .3s,transform .3s}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{background:var(--band-gold);color:#0a1120}
+/* menu flutuante em pílula */
+.bar{position:sticky!important;top:0!important;height:0;z-index:60;background:transparent!important;border:0!important;backdrop-filter:none!important}
+.bar .wrap{height:auto!important;margin:0 auto;position:relative;top:12px;width:max-content;max-width:calc(100% - 24px);display:flex!important;flex-wrap:nowrap!important;align-items:center;justify-content:center!important;gap:10px;padding:6px 6px 6px 8px!important;background:rgba(10,17,32,.84);border:1px solid rgba(212,175,55,.28);border-radius:999px;box-shadow:0 12px 32px -14px rgba(0,0,0,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.bar nav{display:flex!important;order:0!important;flex:1 1 auto!important;min-width:0;margin:0!important;gap:2px!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-size:15px!important}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{padding:8px 14px!important;border:0!important;border-radius:999px;color:#c9d2e3!important;text-decoration:none;transition:background .2s,color .2s}
+.bar nav a:hover{background:rgba(255,255,255,.08);color:#fff!important}
+.bar nav a.on{background:var(--band-gold);color:#0a1120!important;font-weight:600}
+.bar .lang{border:0;border-radius:999px;overflow:hidden;flex:none;background:rgba(255,255,255,.06)}
+.bar .lang button{padding:7px 12px}
+@media (max-width:700px){.bar .wrap{width:calc(100% - 24px)}.bar nav{font-size:14px!important}.bar nav a{padding:7px 11px!important}}
+.band{padding-block:108px 60px;background:radial-gradient(900px 420px at 88% -10%,rgba(212,175,55,.16),transparent 62%),radial-gradient(700px 380px at 0% 120%,rgba(157,187,239,.10),transparent 60%),var(--band)}
+/* abertura */
+.hero{padding:56px 0 36px;border-bottom:0}
+.hero .lede{text-align:justify;-webkit-hyphens:auto;hyphens:auto;max-width:860px}
+.btn{border-radius:10px}
+details.more > summary{border-radius:10px}
+.seek{margin:0 0 22px!important;gap:8px}
+.seek .sk{font-family:var(--mono);font-size:12.5px!important;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-right:6px;flex-basis:100%}
+.seek .chip{border-radius:999px;border:1px solid var(--rule)!important;background:var(--surface);padding:6px 14px!important;font-weight:600;font-size:15px}
+.cta{margin-bottom:40px}
+.wins{border-top:0;gap:16px;margin-bottom:22px}
+.wins a,.wins a + a{border:1px solid var(--rule)!important;border-radius:18px;padding:22px!important;background:var(--surface);transition:transform .25s,box-shadow .25s,border-color .25s}
+.wins a:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(20,33,61,.45);border-color:var(--accent)!important}
+.stackbar,.chart,.eco,.tldr,.figure,.resp,.flows4,.ba,.swim{border-radius:16px;overflow:hidden}
+.stackbar{padding:22px 24px;margin-bottom:0}
+/* ciclo de atuação: informativo, não clicável */
+.lc{margin:0 0 40px;padding:30px 32px 34px;border-radius:22px;background:linear-gradient(135deg,var(--soft),transparent 75%);cursor:default}
+.lc-k{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.lc-s{font-size:16.5px;color:var(--muted);margin:0 0 26px;max-width:70ch}
+.lc-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 0 14px}
+.lc-phases > span{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:10px;border-top:2px solid var(--gold);position:relative}
+.lc-phases > span::before,.lc-phases > span::after{content:"";position:absolute;top:-2px;width:2px;height:8px;background:var(--gold)}
+.lc-phases > span::before{left:0}.lc-phases > span::after{right:0}
+.lc-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;position:relative;max-width:none}
+.lc-steps::before{content:"";position:absolute;left:7px;right:7px;top:7px;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold))}
+.lc-steps li{position:relative;padding-top:30px;margin:0;max-width:none}
+.lc-dot{position:absolute;top:0;left:0;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.lc-steps li:last-child .lc-dot{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 5px rgba(212,175,55,.2)}
+.lc-n{display:block;font-family:var(--mono);font-size:12px;color:var(--gold);margin-bottom:2px}
+.lc-steps b{display:block;font-family:var(--display);font-weight:600;font-size:19px;line-height:1.2;margin-bottom:6px}
+.lc-d{display:block;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.lc-p{display:none}
+@media (max-width:900px){.lc{padding:24px 20px}.lc-phases{display:none}.lc-steps{grid-template-columns:1fr;gap:0}.lc-steps::before{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,var(--accent),var(--gold))}.lc-steps li{padding:0 0 18px 34px}.lc-p{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}}
+/* seções como cartões */
+.content{padding-bottom:48px}
+.content > section{position:relative;padding:56px!important;margin:0 0 28px;background:var(--surface);border:1px solid var(--rule)!important;border-radius:28px;box-shadow:0 34px 70px -56px rgba(20,33,61,.55)}
+@media (max-width:820px){.content > section{padding:32px 20px!important;border-radius:22px}}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px;margin:0 0 36px}
+.sec-head > div{flex:1 1 520px}
+.sec-head h2{font-size:clamp(30px,3.8vw,44px)!important;line-height:1.1;margin:0 0 10px}
+.sec-head .sec-sub{font-size:18px;margin:0!important}
+.sec-chip{flex:none;display:inline-flex;align-items:baseline;gap:8px;padding:10px 18px;border-radius:999px;background:var(--soft);color:var(--ink);font-size:15px;white-space:nowrap}
+.sec-chip b{font-family:var(--display);font-size:26px;font-weight:600;color:var(--accent);line-height:1}
+#metodo,#contato{--bg:#14213d;--surface:#1b2a4a;--ink:#f7f8fa;--muted:#b9c3d6;--rule:#2f416a;--accent:#9dbbef;--accent-ink:#0e1628;--soft:#22335a;--gold:#d4af37;--signal:#d4af37;background:radial-gradient(700px 360px at 100% 0%,rgba(212,175,55,.12),transparent 60%),#14213d!important;color:var(--ink);border-color:#14213d!important}
+#metodo .principles{border-top:0;gap:16px}
+#metodo .principles > div{border:1px solid var(--rule)!important;border-radius:18px;padding:24px!important;background:var(--surface)}
+#metodo .principles b{font-family:var(--display);font-size:21px;font-weight:600}
+#exemplos .mini{border-top:0;gap:16px}
+#exemplos .mini article{border:1px solid var(--rule)!important;border-radius:18px;padding:24px!important;background:var(--bg)}
+#habilidades .skills{gap:0 16px}
+#habilidades .skills .grp{background:var(--bg);border:1px solid var(--rule);border-radius:18px;padding:20px 22px;margin-bottom:16px}
+#habilidades .chart,#trajetoria .chart{background:var(--bg)}
+#ambiente .eco{background:var(--bg);border-width:1px}
+#sustentacao .inv > span{border-radius:10px;margin:0 10px 10px 0}
+#contato .contacts{border-top:0;gap:16px}
+#contato .contacts .ct,#contato .contacts .ct + .ct{border:1px solid var(--rule)!important;border-radius:18px;padding:22px!important;background:var(--surface)}
+#contato .eyebrow{display:none}
+/* próxima seção */
+.nextsec{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:48px;padding:22px 26px;border:1px solid var(--rule);border-radius:18px;background:var(--bg);text-decoration:none;color:var(--ink);transition:border-color .25s,transform .25s}
+#metodo .nextsec{background:var(--surface)}
+.nextsec:hover{border-color:var(--gold);transform:translateY(-2px)}
+.nextsec .nk{display:block;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.nextsec .nt{font-family:var(--display);font-size:clamp(21px,2.4vw,26px);font-weight:600;line-height:1.2}
+.nextsec .na{font-size:28px;color:var(--gold);transition:transform .25s}
+.nextsec:hover .na{transform:translateX(6px)}
+/* casos: carrossel com sinais claros de clique */
+.v3 #casos .casebar{display:none}
+.rail-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin:0 0 12px}
+.rail-head .rh-k{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.rail-head .rh-h{font-size:15px;color:var(--muted);margin-left:10px}
+.rh-nav{display:flex;gap:8px}
+.rh-nav button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--rule);background:var(--surface);color:var(--ink);font-size:18px;transition:background .2s,border-color .2s,color .2s}
+.rh-nav button:hover{background:var(--band);border-color:var(--band);color:var(--band-gold)}
+.rh-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rh-nav button[disabled]{opacity:.35;pointer-events:none}
+.v3 #casos .cindex{display:flex;gap:12px;overflow-x:auto;border:0;margin:0 0 26px;padding:6px 2px 16px;scroll-snap-type:x proximity;scrollbar-width:thin;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 56px),transparent)}
+.v3 #casos .cindex a{position:relative;flex:0 0 250px;scroll-snap-align:start;border:1px solid var(--rule);border-radius:18px;background:var(--bg);padding:16px 18px 16px;gap:6px;cursor:pointer;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.v3 #casos .cindex a:hover{border-color:var(--accent);transform:translateY(-3px);background:var(--surface);box-shadow:0 16px 32px -22px rgba(20,33,61,.5)}
+.v3 #casos .cindex .k{display:none}
+.v3 #casos .cindex .t{font-size:16.5px}
+.v3 #casos .cindex .r{font-size:14px;line-height:1.4}
+.v3 #casos .cindex .go2{margin-top:auto;padding-top:8px;font-size:14px;font-weight:600;color:var(--accent)}
+.v3 #casos .cindex .go2 .on-t{display:none}
+.v3 #casos .cindex a:hover .go2 .off-t i{display:inline-block;transform:translateX(4px)}
+.v3 #casos .cindex .go2 i{font-style:normal;transition:transform .2s}
+.v3 #casos .cindex a[aria-current="true"]{background:var(--band);border-color:var(--band);color:var(--band-ink);box-shadow:0 16px 32px -18px rgba(20,33,61,.75)}
+.v3 #casos .cindex a[aria-current="true"] .n{color:var(--band-gold)}
+.v3 #casos .cindex a[aria-current="true"] .r{color:#b9c3d6}
+.v3 #casos .cindex a[aria-current="true"] .go2{color:var(--band-gold)}
+.v3 #casos .cindex a[aria-current="true"] .go2 .off-t{display:none}
+.v3 #casos .cindex a[aria-current="true"] .go2 .on-t{display:inline}
+.v3 #casos .case{border:1px solid var(--rule)!important;border-radius:24px;background:var(--surface);padding:0 40px!important;margin:0;box-shadow:0 30px 60px -40px rgba(20,33,61,.45);gap:8px 40px;overflow:hidden}
+.v3 #casos .case .no{display:none}
+.v3 #casos .case:not(.is-active){display:none}
+.v3 #casos .case.is-active{animation:caseIn .45s ease both}
+@keyframes caseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.case-head{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin:0 -40px 22px;padding:16px 40px;background:var(--band);color:var(--band-ink)}
+.case-head .ch-l{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#b9c3d6}
+.case-head .ch-l b{color:var(--band-gold);font-weight:500}
+.case-head .ch-bar{display:flex;gap:5px}
+.case-head .ch-bar i{display:block;width:26px;height:4px;border-radius:4px;background:rgba(255,255,255,.18)}
+.case-head .ch-bar i.on{background:var(--band-gold)}
+.case-foot{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 32px;padding-top:24px;border-top:1px solid var(--rule)}
+.case-foot .cf{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--rule);border-radius:14px;text-decoration:none;color:var(--ink);transition:border-color .2s,background .2s}
+.case-foot .cf:hover{border-color:var(--accent);background:var(--soft)}
+.case-foot .cf.next{text-align:right}
+.case-foot .cf.empty{border:0}
+.case-foot .cf-k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.case-foot .cf-t{font-family:var(--display);font-size:18px;font-weight:600;line-height:1.25}
+@media (max-width:820px){.v3 #casos .case{padding:0 18px!important}.case-head{margin:0 -18px 18px;padding:14px 18px}.case-head .ch-bar i{width:16px}.case-foot{grid-template-columns:1fr}.case-foot .cf.next{text-align:left}.case-foot .cf.empty{display:none}.v3 #casos .cindex a{flex-basis:220px}.rail-head .rh-h{display:block;margin:4px 0 0}}
+/* entrada suave ao rolar */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}.v3 #casos .case.is-active{animation:none}html{scroll-behavior:auto}}
+#habilidades .skills{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){#habilidades .skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){#habilidades .skills{grid-template-columns:1fr}}
+#habilidades .skills li{font-size:15.5px}
+.tl .trow .tt.u{border-radius:6px}
+.v3 #casos .case .evo{margin-top:12px}
+.tl .trow.prac .tt.u{background:rgba(212,175,55,.13);color:var(--ink);border:1px solid rgba(201,162,39,.55);font-family:var(--body);font-weight:600;font-size:13.5px!important;padding:3px 9px}
+.tl-leg .tt.prac{background:rgba(212,175,55,.13);border:1px solid rgba(201,162,39,.55)}
+#contato .contacts{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){#contato .contacts{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){#contato .contacts{grid-template-columns:1fr}}
+.sb-note{font-size:13.5px;color:var(--muted);margin:14px 0 0}
+#metodo .principles .hk{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+#metodo .principles .hb-n .hk{background:rgba(212,175,55,.16);color:#e7c95c;border:1px solid rgba(212,175,55,.45)}
+#metodo .principles .hb-q .hk{background:rgba(157,187,239,.12);color:#b8cdf3;border:1px solid rgba(157,187,239,.35)}
+#metodo .principles .hb-n{box-shadow:inset 0 3px 0 #d4af37}
 </style>
 </head>
 <body>
+
 <header class="bar">
   <div class="wrap">
     <nav aria-label="Seções">
+      <a href="#topo"><span class="pt">Início</span><span class="en">Home</span></a>
       <a href="#casos"><span class="pt">Casos</span><span class="en">Case studies</span></a>
       <a href="#metodo"><span class="pt">Método</span><span class="en">Approach</span></a>
       <a href="#sustentacao"><span class="pt">Sustentação</span><span class="en">Production support</span></a>
@@ -569,8 +725,8 @@ h4.sub{color:var(--ink)}
   <p class="status pt"><span>Curitiba, PR · Brasil</span><span><b>Disponível para trabalho</b> remoto, híbrido ou presencial</span></p>
   <p class="status en"><span>Curitiba, Brazil</span><span><b>Available for</b> remote, hybrid or on-site work</span></p>
   <h1>Marlon de Cristo Paula</h1>
-  <p class="roles pt">QA Sênior · Test Lead · Quality Engineer · Analista de Negócios</p>
-  <p class="roles en">Senior QA · Test Lead · Quality Engineer · Business Analyst</p>
+  <p class="roles pt">QA Sênior · Test Lead · Analista de Negócios</p>
+  <p class="roles en">Senior QA · Test Lead · Business Analyst</p>
 </div></div></div>
 
 <main>
@@ -580,7 +736,7 @@ h4.sub{color:var(--ink)}
   <ol>
     <li><a href="#topo"><span class="pt">Início</span><span class="en">Top</span></a></li>
     <li><a href="#casos"><span class="pt">Estudos de caso</span><span class="en">Case studies</span></a>
-      <ol><li><a href="#caso-01"><b>01</b><span class="pt">Liderança de QA na troca do sistema central</span><span class="en">QA leadership for a core-system replacement</span></a></li><li><a href="#caso-02"><b>02</b><span class="pt">Gate sem código de barras, em mensageria</span><span class="en">Barcode-free gate on messaging</span></a></li><li><a href="#caso-03"><b>03</b><span class="pt">App de inspeção pré-gate</span><span class="en">Pre-gate inspection app</span></a></li><li><a href="#caso-04"><b>04</b><span class="pt">Um evento EDI, dez efeitos</span><span class="en">One EDI event, ten side effects</span></a></li><li><a href="#caso-05"><b>05</b><span class="pt">Webhook de status para exportador</span><span class="en">Status webhook for an exporter</span></a></li><li><a href="#caso-06"><b>06</b><span class="pt">Checklist de 11 pontos para views</span><span class="en">11-point checklist for views</span></a></li><li><a href="#caso-07"><b>07</b><span class="pt">Automação E2E e regressão visual</span><span class="en">E2E automation and visual regression</span></a></li><li><a href="#caso-08"><b>08</b><span class="pt">App do motorista como PO</span><span class="en">Driver app as Product Owner</span></a></li></ol></li>
+      <ol><li><a href="#caso-01"><b>01</b><span class="pt">Liderança de QA na troca do sistema central</span><span class="en">QA leadership for a core-system replacement</span></a></li><li><a href="#caso-02"><b>02</b><span class="pt">Portal: do monólito aos microsserviços</span><span class="en">Portal: monolith to microservices</span></a></li><li><a href="#caso-03"><b>03</b><span class="pt">Gate sem código de barras, em mensageria</span><span class="en">Barcode-free gate on messaging</span></a></li><li><a href="#caso-04"><b>04</b><span class="pt">App de inspeção pré-gate</span><span class="en">Pre-gate inspection app</span></a></li><li><a href="#caso-05"><b>05</b><span class="pt">Um evento EDI, dez efeitos</span><span class="en">One EDI event, ten side effects</span></a></li><li><a href="#caso-06"><b>06</b><span class="pt">Webhook de status para exportador</span><span class="en">Status webhook for an exporter</span></a></li><li><a href="#caso-07"><b>07</b><span class="pt">Checklist de 11 pontos para views</span><span class="en">11-point checklist for views</span></a></li><li><a href="#caso-08"><b>08</b><span class="pt">App do motorista como PO</span><span class="en">Driver app as Product Owner</span></a></li></ol></li>
     <li><a href="#ambiente"><span class="pt">Onde trabalhei</span><span class="en">Where I worked</span></a></li>
     <li><a href="#metodo"><span class="pt">Como eu trabalho</span><span class="en">How I work</span></a></li>
     <li><a href="#sustentacao"><span class="pt">Sustentação</span><span class="en">Production support</span></a></li>
@@ -594,22 +750,30 @@ h4.sub{color:var(--ink)}
 
 <!-- HERO -->
 <div class="hero" id="topo">
-  <p class="statement pt">Garanto a qualidade de <span class="u">sistemas críticos</span> de ponta a ponta: do requisito ao acompanhamento em produção.</p>
-  <p class="statement en">I own quality for <span class="u">critical systems</span> end to end: from the first requirement to follow-up in production.</p>
-  <p class="lede pt">São 14 anos em qualidade de software, atuando no ciclo inteiro. Entendo o negócio e refino o requisito com quem pede, desenho a estratégia e os cenários de teste, valido cada camada do sistema, da tela à API, à fila de mensagens e ao banco, conduzo a entrada em produção e sigo acompanhando depois dela, até a causa raiz de cada falha. Aprendo rápido domínios complexos e transformo regra de negócio em testes rastreáveis, liderando o time ou atuando como especialista.</p>
-  <p class="lede en">14 years in software quality, working across the whole lifecycle. I understand the business and refine requirements with the people asking for them, design the test strategy and scenarios, validate every layer of the system, from the screen to the API, the message queue and the database, see the release into production and keep following it afterwards, down to the root cause of each failure. I learn complex domains fast and turn business rules into traceable tests, whether leading the team or working as the specialist.</p>
-  <ol class="cycle" aria-label="Ciclo de qualidade">
-    <li><span class="pt">Requisito</span><span class="en">Requirements</span></li>
-    <li><span class="pt">Estratégia</span><span class="en">Strategy</span></li>
-    <li><span class="pt">Desenho de testes</span><span class="en">Test design</span></li>
-    <li><span class="pt">Execução por camada</span><span class="en">Layered execution</span></li>
-    <li><span class="pt">Go-live</span><span class="en">Go-live</span></li>
-    <li><span class="pt">Produção</span><span class="en">Production</span></li>
-  </ol>
+  <p class="statement pt">Do requisito à produção: garanto que o sistema faça <span class="u">o que o negócio precisa</span>.</p>
+  <p class="statement en">From requirement to production: I make sure the system does <span class="u">what the business needs</span>.</p>
+  <p class="lede pt">São 14 anos em projetos de software, da análise do negócio à garantia de qualidade. Levanto e refino requisitos com as áreas e com os clientes, mapeio processos e regras antes da primeira linha de código e garanto que o que foi pedido é o que chega à produção: desenho a estratégia e os cenários de teste, valido cada camada do sistema, da tela à API, à fila de mensagens e ao banco, e acompanho a operação até a causa raiz de cada falha. Para mim, os dois lados são o mesmo trabalho: entender o negócio a fundo deixa o teste preciso, e pensar como QA deixa o requisito verificável.</p>
+  <p class="lede en">14 years on software projects, from business analysis to quality assurance. I gather and refine requirements with business areas and customers, map processes and rules before the first line of code, and make sure what was asked for is what reaches production: I design the test strategy and scenarios, validate every layer of the system, from the screen to the API, the message queue and the database, and follow operations down to the root cause of each failure. To me, both sides are the same job: understanding the business deeply makes testing precise, and thinking like a QA makes requirements verifiable.</p>
+  <p class="seek"><span class="sk pt">Posições que busco</span><span class="sk en">Roles I'm looking for</span><span class="chip pt">QA Sênior / Quality Engineer</span><span class="chip en">Senior QA / Quality Engineer</span><span class="chip">QA Lead / Test Lead</span><span class="chip pt">Test Manager / Coordenação de QA</span><span class="chip en">Test Manager / QA Coordinator</span><span class="chip pt">Analista de Negócios / Requisitos</span><span class="chip en">Business Analyst / Requirements</span></p>
   <div class="cta">
     <a class="btn primary" href="#casos"><span class="pt">Ver os estudos de caso</span><span class="en">See the case studies</span></a>
     <a class="btn" href="https://www.linkedin.com/in/marlon-de-cristo-paula-b1299144" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/marlonCristo1985" target="_blank" rel="noopener">GitHub ↗</a>
     <a class="btn" href="#contato"><span class="pt">Contato</span><span class="en">Contact</span></a>
+  </div>
+
+  <div class="lc" role="group" aria-labelledby="lc-t">
+    <p class="lc-k" id="lc-t"><span class="pt">Onde eu atuo em um projeto</span><span class="en">Where I work in a project</span></p>
+    <p class="lc-s"><span class="pt">Do primeiro levantamento ao acompanhamento em produção: as seis etapas que cubro, todas presentes nos estudos de caso.</span><span class="en">From first discovery to production follow-up: the six stages I cover, all of them shown in the case studies.</span></p>
+    <div class="lc-phases" aria-hidden="true"><span><span class="pt">Antes do código</span><span class="en">Before the code</span></span><span><span class="pt">Durante o desenvolvimento</span><span class="en">During development</span></span><span><span class="pt">Depois da entrega</span><span class="en">After delivery</span></span></div>
+    <ol class="lc-steps">
+      <li><span class="lc-p"><span class="pt">Antes do código</span><span class="en">Before the code</span></span><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">01</span><b><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></b><span class="lc-d"><span class="pt">Entendo o processo e refino a regra com quem pede.</span><span class="en">I learn the process and refine the rule with whoever asks for it.</span></span></li>
+      <li><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">02</span><b><span class="pt">Estratégia</span><span class="en">Strategy</span></b><span class="lc-d"><span class="pt">Defino o que testar, em que camada e com que prioridade de risco.</span><span class="en">I decide what to test, at which layer and with what risk priority.</span></span></li>
+      <li><span class="lc-p"><span class="pt">Durante o desenvolvimento</span><span class="en">During development</span></span><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">03</span><b><span class="pt">Desenho de testes</span><span class="en">Test design</span></b><span class="lc-d"><span class="pt">Tabelas de decisão, valores-limite e cenários rastreáveis.</span><span class="en">Decision tables, boundary values and traceable scenarios.</span></span></li>
+      <li><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">04</span><b><span class="pt">Execução por camada</span><span class="en">Layered execution</span></b><span class="lc-d"><span class="pt">Tela, API, fila de mensagens e banco, sempre com evidência.</span><span class="en">Screen, API, message queue and database, always with evidence.</span></span></li>
+      <li><span class="lc-p"><span class="pt">Depois da entrega</span><span class="en">After delivery</span></span><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">05</span><b><span class="pt">Go-live</span><span class="en">Go-live</span></b><span class="lc-d"><span class="pt">Ensaios de virada e pendências priorizadas por impacto.</span><span class="en">Cutover rehearsals and open items prioritised by impact.</span></span></li>
+      <li><span class="lc-dot" aria-hidden="true"></span><span class="lc-n">06</span><b><span class="pt">Produção</span><span class="en">Production</span></b><span class="lc-d"><span class="pt">Acompanhamento da operação até a causa raiz de cada falha.</span><span class="en">Following operations down to the root cause of each failure.</span></span></li>
+    </ol>
   </div>
 
   <div class="wins">
@@ -619,33 +783,36 @@ h4.sub{color:var(--ink)}
       <p class="en">Built and led the QA function, with a team of 7 QAs, for replacing a company's core system, from hiring to post-go-live, without stopping operations.</p>
       <span class="go pt">Caso 01 →</span><span class="go en">Case 01 →</span>
     </a>
-    <a href="#ambiente">
-      <span class="wl pt">Sistemas críticos</span><span class="wl en">Critical systems</span>
-      <p class="pt">10 anos garantindo a qualidade de 42 sistemas integrados, com faturamento, controle de acesso e órgãos do governo, numa operação que não pode parar.</p>
-      <p class="en">10 years assuring the quality of 42 integrated systems, including billing, access control and government links, in an operation that can't stop.</p>
-      <span class="go pt">Onde trabalhei →</span><span class="go en">Where I worked →</span>
+    <a href="#caso-06">
+      <span class="wl pt">Negócio e requisitos</span><span class="wl en">Business and requirements</span>
+      <p class="pt">Levantei requisitos direto com um grande cliente exportador, traduzi o vocabulário dele em regras do sistema e defini os status que ele passou a receber automaticamente.</p>
+      <p class="en">Gathered requirements directly with a major exporting customer, translated its vocabulary into system rules and defined the statuses it then received automatically.</p>
+      <span class="go pt">Caso 06 →</span><span class="go en">Case 06 →</span>
     </a>
-    <a href="#caso-07">
-      <span class="wl pt">Automação</span><span class="wl en">Automation</span>
-      <p class="pt">Automação E2E, de regressão visual e de API em uso em produção por mais de 4 anos, e IA aplicada ao desenho de testes.</p>
-      <p class="en">E2E, visual-regression and API automation used in production for more than 4 years, plus AI applied to test design.</p>
-      <span class="go pt">Caso 07 →</span><span class="go en">Case 07 →</span>
+    <a href="#caso-02">
+      <span class="wl pt">Migração de legado</span><span class="wl en">Legacy migration</span>
+      <p class="pt">Qualidade da migração do portal do cliente de monólito para microsserviços, piloto da cultura DevOps da empresa, sem afetar a prontidão operacional.</p>
+      <p class="en">Quality for the customer portal's move from monolith to microservices, the company's DevOps pilot, without affecting operational readiness.</p>
+      <span class="go pt">Caso 02 →</span><span class="go en">Case 02 →</span>
     </a>
   </div>
 
   <div class="stackbar">
     <p class="sb-t pt">Stack principal</p><p class="sb-t en">Core stack</p>
     <div class="sb">
-      <div><span class="pt">Testes de API</span><span class="en">API testing</span><b>Postman · Swagger · REST · XML</b></div>
+      <div><span class="pt">Requisitos e processos</span><span class="en">Requirements and process</span><b class="pt">Jira · Confluence · BPM em raias · Tabelas de decisão · Figma</b><b class="en">Jira · Confluence · Swimlane BPM · Decision tables · Figma</b></div>
+      <div><span class="pt">Gestão ágil</span><span class="en">Agile delivery</span><b class="pt">Scrum · Backlog · Histórias e critérios de aceite · BDD / Gherkin</b><b class="en">Scrum · Backlog · User stories and acceptance criteria · BDD / Gherkin</b></div>
+      <div><span class="pt">Testes de API</span><span class="en">API testing</span><b>Postman · Swagger · REST · XML · Chrome DevTools</b></div>
+      <div><span class="pt">Automação</span><span class="en">Automation</span><b>SuperTest · Mocha · Chai · Protractor · BackstopJS · Cypress* · Playwright*</b></div>
+      <div><span class="pt">Versionamento e CI/CD</span><span class="en">Version control and CI/CD</span><b>Git · GitHub · GitHub Actions* · SVN</b></div>
       <div><span class="pt">Dados</span><span class="en">Data</span><b>Oracle SQL · MongoDB</b></div>
-      <div><span class="pt">Mensageria e observabilidade</span><span class="en">Messaging and observability</span><b>RabbitMQ · Kibana · OpenSearch · Kubernetes (Lens) · Consul</b></div>
-      <div><span class="pt">Automação</span><span class="en">Automation</span><b>Protractor · BackstopJS · SuperTest · Mocha · Chai</b></div>
-      <div><span class="pt">Gestão e processo</span><span class="en">Management and process</span><b>Jira · Confluence · BDD / Gherkin · CMMI</b></div>
-      <div><span class="pt">IA aplicada a QA</span><span class="en">AI for QA</span><b>Claude · ChatGPT · GitHub Copilot</b></div>
+      <div><span class="pt">Mensageria e eventos</span><span class="en">Messaging and events</span><b>RabbitMQ · Consumers · Webhooks · EDI</b></div>
+      <div><span class="pt">Observabilidade e ambiente</span><span class="en">Observability and environment</span><b>Kibana · OpenSearch · Kubernetes (Lens) · Consul · Grafana</b></div>
+      <div><span class="pt">IA aplicada</span><span class="en">Applied AI</span><b>Claude · ChatGPT · GitHub Copilot</b></div>
     </div>
+    <p class="sb-note"><span class="pt">* estudo na pós-graduação, com projetos públicos no GitHub</span><span class="en">* studied in my postgrad, with public projects on GitHub</span></p>
   </div>
 
-  <p class="seek"><span class="sk pt">Posições que busco</span><span class="sk en">Roles I'm looking for</span><span class="chip pt">QA Sênior / Quality Engineer</span><span class="chip en">Senior QA / Quality Engineer</span><span class="chip">QA Lead / Test Lead</span><span class="chip pt">Test Manager / Coordenação de QA</span><span class="chip en">Test Manager / QA Coordinator</span><span class="chip pt">Analista de Negócios / PO</span><span class="chip en">Business Analyst / PO</span></p>
 </div>
 
 
@@ -656,7 +823,7 @@ h4.sub{color:var(--ink)}
   <p class="sec-sub pt">Projetos reais, descritos sem dados confidenciais: nomes de clientes, identificadores internos, consultas de produção e dados pessoais foram removidos ou trocados por exemplos genéricos.</p>
   <p class="sec-sub en">Real projects, described without confidential data: customer names, internal identifiers, production queries and personal data were removed or replaced with generic examples.</p>
 <div class="casebar"><span class="pt" style="color:var(--muted);font-size:15.5px">Cada caso abre com um resumo. O detalhe completo fica expansível.</span><span class="en" style="color:var(--muted);font-size:15.5px">Each case opens with a summary. The full detail expands on demand.</span><button type="button" id="toggleAll"><span class="pt">Expandir todos os casos</span><span class="en">Expand all cases</span></button></div>
-  <nav class="cindex" aria-label="Índice de casos"><a href="#caso-01"><span class="n">01</span><span class="t pt">Liderança de QA na troca do sistema central</span><span class="t en">QA leadership for a core-system replacement</span><span class="r pt">Área de QA montada do zero, com 7 QAs; go-live com o terminal operando</span><span class="r en">QA function built from scratch with 7 QAs; go-live with the terminal running</span><span class="k"><span>Liderança</span><span>Faturamento</span><span>Eventos</span></span></a><a href="#caso-02"><span class="n">02</span><span class="t pt">Gate sem código de barras, em mensageria</span><span class="t en">Barcode-free gate on messaging</span><span class="r pt">7 atores mapeados, fluxo de eventos em 7 etapas, 2.090 cenários</span><span class="r en">7 actors mapped, 7-step event flow, 2,090 scenarios</span><span class="k"><span>Mensageria</span><span>XML</span><span>Tabela de decisão</span></span></a><a href="#caso-03"><span class="n">03</span><span class="t pt">App de inspeção pré-gate</span><span class="t en">Pre-gate inspection app</span><span class="r pt">Microsserviços e micro front-ends testados isolados e integrados</span><span class="r en">Microservices and micro front-ends tested alone and integrated</span><span class="k"><span>Microsserviços</span><span>APIs</span><span>Gherkin</span></span></a><a href="#caso-04"><span class="n">04</span><span class="t pt">Um evento EDI, dez efeitos</span><span class="t en">One EDI event, ten side effects</span><span class="r pt">25 regras em cascata e um padrão de defeito identificado</span><span class="r en">25 cascading rules and a recurring defect pattern found</span><span class="k"><span>EDI</span><span>SQL</span><span>Máquina de estados</span></span></a><a href="#caso-05"><span class="n">05</span><span class="t pt">Webhook de status para exportador</span><span class="t en">Status webhook for an exporter</span><span class="r pt">8 gatilhos, 3 status e uma falha silenciosa detectada</span><span class="r en">8 triggers, 3 statuses and a silent failure caught</span><span class="k"><span>Webhook</span><span>Integração</span><span>Requisitos</span></span></a><a href="#caso-06"><span class="n">06</span><span class="t pt">Checklist de 11 pontos para views</span><span class="t en">11-point checklist for views</span><span class="r pt">Aprovação auditável em cada GMUD</span><span class="r en">Auditable sign-off on every change request</span><span class="k"><span>SQL</span><span>Dados</span><span>GMUD</span></span></a><a href="#caso-07"><span class="n">07</span><span class="t pt">Automação E2E e regressão visual</span><span class="t en">E2E automation and visual regression</span><span class="r pt">Automação usada em produção por mais de 4 anos</span><span class="r en">Automation used in production for 4+ years</span><span class="k"><span>Protractor</span><span>BackstopJS</span><span>SuperTest</span></span></a><a href="#caso-08"><span class="n">08</span><span class="t pt">App do motorista como PO</span><span class="t en">Driver app as Product Owner</span><span class="r pt">Guia de papel substituída por QR Code</span><span class="r en">Paper slip replaced by a QR code</span><span class="k"><span>Produto</span><span>MVP</span><span>Mobile</span></span></a></nav>
+  <nav class="cindex" aria-label="Índice de casos"><a href="#caso-01"><span class="n">01</span><span class="t pt">Liderança de QA na troca do sistema central</span><span class="t en">QA leadership for a core-system replacement</span><span class="r pt">Área de QA montada do zero, com 7 QAs; go-live com o terminal operando</span><span class="r en">QA function built from scratch with 7 QAs; go-live with the terminal running</span><span class="k"><span>Liderança</span><span>Faturamento</span><span>Eventos</span></span></a><a href="#caso-02"><span class="n">02</span><span class="t pt">Portal do cliente: do monólito aos microsserviços</span><span class="t en">Customer portal: monolith to microservices</span><span class="r pt">Piloto DevOps, redesenho com UX e UI e 809 defeitos acompanhados</span><span class="r en">DevOps pilot, UX/UI redesign and 809 defects tracked</span><span class="k"><span>Microsserviços</span><span>Migração</span><span>Automação</span></span></a><a href="#caso-03"><span class="n">03</span><span class="t pt">Gate sem código de barras, em mensageria</span><span class="t en">Barcode-free gate on messaging</span><span class="r pt">7 atores mapeados, fluxo de eventos em 7 etapas, 2.090 cenários</span><span class="r en">7 actors mapped, 7-step event flow, 2,090 scenarios</span><span class="k"><span>Mensageria</span><span>XML</span><span>Tabela de decisão</span></span></a><a href="#caso-04"><span class="n">04</span><span class="t pt">App de inspeção pré-gate</span><span class="t en">Pre-gate inspection app</span><span class="r pt">Microsserviços e micro front-ends testados isolados e integrados</span><span class="r en">Microservices and micro front-ends tested alone and integrated</span><span class="k"><span>Microsserviços</span><span>APIs</span><span>Gherkin</span></span></a><a href="#caso-05"><span class="n">05</span><span class="t pt">Um evento EDI, dez efeitos</span><span class="t en">One EDI event, ten side effects</span><span class="r pt">25 regras em cascata e um padrão de defeito identificado</span><span class="r en">25 cascading rules and a recurring defect pattern found</span><span class="k"><span>EDI</span><span>SQL</span><span>Máquina de estados</span></span></a><a href="#caso-06"><span class="n">06</span><span class="t pt">Webhook de status para exportador</span><span class="t en">Status webhook for an exporter</span><span class="r pt">8 gatilhos, 3 status e uma falha silenciosa detectada</span><span class="r en">8 triggers, 3 statuses and a silent failure caught</span><span class="k"><span>Webhook</span><span>Integração</span><span>Requisitos</span></span></a><a href="#caso-07"><span class="n">07</span><span class="t pt">Checklist de 11 pontos para views</span><span class="t en">11-point checklist for views</span><span class="r pt">Aprovação auditável em cada GMUD</span><span class="r en">Auditable sign-off on every change request</span><span class="k"><span>SQL</span><span>Dados</span><span>GMUD</span></span></a><a href="#caso-08"><span class="n">08</span><span class="t pt">App do motorista como PO</span><span class="t en">Driver app as Product Owner</span><span class="r pt">Guia de papel substituída por QR Code</span><span class="r en">Paper slip replaced by a QR code</span><span class="k"><span>Produto</span><span>MVP</span><span>Mobile</span></span></a></nav>
 
   <!-- 01 -->
   <article class="case" id="caso-01">
@@ -733,7 +900,7 @@ h4.sub{color:var(--ink)}
         <p class="pt">Cada fluxo seguia os mesmos passos: <b>0</b> entender a demanda, <b>1</b> mapear os testes por camada na história do Jira, <b>2</b> executar com evidência e registrar notas e dúvidas. O conteúdo de cada passo mudava conforme a frente.</p>
         <p class="en">Every flow followed the same steps: <b>0</b> understand the request, <b>1</b> map tests by layer in the Jira story, <b>2</b> execute with evidence and log notes and questions. What went into each step depended on the workstream.</p>
         <div class="flows4">
-          <div><b>A</b><h5 class="pt">Camada de compatibilidade</h5><h5 class="en">Compatibility layer</h5><p class="pt">Views e APIs migradas, validadas pelo checklist de 11 pontos (caso 06).</p><p class="en">Migrated views and APIs, validated with the 11-point checklist (case 06).</p></div>
+          <div><b>A</b><h5 class="pt">Camada de compatibilidade</h5><h5 class="en">Compatibility layer</h5><p class="pt">Views e APIs migradas, validadas pelo checklist de 11 pontos (caso 07).</p><p class="en">Migrated views and APIs, validated with the 11-point checklist (case 07).</p></div>
           <div><b>B</b><h5 class="pt">Integração com o novo TOS</h5><h5 class="en">Integration with the new TOS</h5><p class="pt">Novo mapeamento das APIs, cenários do fluxo de negócio e pré-requisitos de cada teste.</p><p class="en">New API mappings, business-flow scenarios and prerequisites for each test.</p></div>
           <div><b>C</b><h5 class="pt">Customizações do TOS</h5><h5 class="en">TOS customisations</h5><p class="pt">Integrações de eventos, tipos de tarefa, tarefas executáveis e gatilhos de sistema.</p><p class="en">Event integrations, task types, executable tasks and system triggers.</p></div>
           <div><b>D</b><h5 class="pt">Operações integradas</h5><h5 class="en">Integrated operations</h5><p class="pt">Testes ponta a ponta das operações do terminal atravessando vários sistemas.</p><p class="en">End-to-end tests of terminal operations across several systems.</p></div>
@@ -745,12 +912,12 @@ h4.sub{color:var(--ink)}
         <ul class="pt">
           <li><b>Faturamento:</b> conduzi a discovery do novo módulo (pontos de cobrança, 13 tipos de fatura, regimes aduaneiros, rateio de custo, período livre, cobranças especiais) e rodei os regressivos de importação e exportação.</li>
           <li><b>Notificações orientadas a eventos:</b> testei o caminho completo, do evento no TOS ao serviço de integração, à fila no RabbitMQ e ao e-mail. Para ver o conteúdo exato de cada mensagem, parava o consumer no Kubernetes e inspecionava a fila.</li>
-          <li><b>Outras frentes:</b> migração do gate para mensageria, parametrização de cobranças, o webhook do cliente (caso 05) e o app do motorista.</li>
+          <li><b>Outras frentes:</b> migração do gate para mensageria, parametrização de cobranças, o webhook do cliente (caso 06) e o app do motorista.</li>
         </ul>
         <ul class="en">
           <li><b>Billing:</b> led discovery of the new module (billing points, 13 invoice types, customs regimes, cost sharing, free time, special charges) and ran the import and export regressions.</li>
           <li><b>Event-driven notifications:</b> tested the full path, from the TOS event through the integration service and the RabbitMQ queue to the e-mail. To see each message's exact content, I paused the consumer in Kubernetes and inspected the queue.</li>
-          <li><b>Other workstreams:</b> moving the gate onto messaging, charge configuration, the customer webhook (case 05) and the driver app.</li>
+          <li><b>Other workstreams:</b> moving the gate onto messaging, charge configuration, the customer webhook (case 06) and the driver app.</li>
         </ul>
       </div>
 
@@ -784,6 +951,70 @@ h4.sub{color:var(--ink)}
   <article class="case" id="caso-02">
     <aside>
       <span class="no">02</span>
+      <dl>
+        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2018 – 2020</dd>
+        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Testes Sênior: qualidade da migração e validação com UX, UI, PO e clientes</span><span class="en">Senior Test Analyst: migration quality and validation with UX, UI, the PO and customers</span></dd>
+        <dt>Stack</dt>
+        <dd><div class="tags"><span class="tag">Microservices</span><span class="tag">Angular micro front-ends</span><span class="tag">Kubernetes</span><span class="tag">RabbitMQ</span><span class="tag">MongoDB (CQRS)</span><span class="tag">Protractor</span><span class="tag">BackstopJS</span><span class="tag">Cypress (POC)</span><span class="tag">Design thinking</span><span class="tag">DevOps</span></div></dd>
+      </dl>
+    </aside>
+    <div>
+      <h3 class="pt">Portal do cliente: do monólito aos microsserviços, tela a tela</h3>
+      <h3 class="en">Customer portal: from monolith to microservices, screen by screen</h3>
+      <p class="kicker pt">É pelo portal que importadores, exportadores, despachantes, transportadoras e armadores consultam cargas, agendam e se cadastram. Ele saiu de uma aplicação monolítica para microsserviços e micro front-ends com o terminal operando e os clientes usando o portal todos os dias.</p>
+      <p class="kicker en">The portal is where importers, exporters, customs brokers, hauliers and shipping lines look up cargo, book slots and register. It moved from a monolith to microservices and micro front-ends while the terminal kept running and customers kept using it every day.</p>
+      <div class="tldr">
+        <div><span class="lbl3 pt">Desafio</span><span class="lbl3 en">Challenge</span><p class="pt">Migrar o portal para microsserviços e redesenhá-lo com UX e UI sob orientação profissional, como piloto da cultura DevOps da empresa, sem quebrar telas, dados nem permissões.</p><p class="en">Move the portal to microservices and redesign it with UX and UI under professional guidance, as the company's DevOps pilot, without breaking screens, data or permissions.</p></div>
+        <div><span class="lbl3 pt">O que eu fiz</span><span class="lbl3 en">What I did</span><p class="pt">Defini e aprovei os protótipos com UX e UI, participei do design thinking e da aprovação do MVP com clientes externos, e cuidei da qualidade da migração: dados, permissões e comparação tela a tela.</p><p class="en">Shaped and approved the prototypes with UX and UI, took part in design thinking and in MVP sign-off with external customers, and owned migration quality: data, permissions and screen-by-screen comparison.</p></div>
+        <div><span class="lbl3 pt">Resultado</span><span class="lbl3 en">Outcome</span><p class="pt">Portal migrado sem afetar a prontidão operacional, com 809 defeitos registrados e acompanhados até o fechamento.</p><p class="en">Portal migrated without affecting operational readiness, with 809 defects logged and followed through to closure.</p></div>
+      </div>
+      <details class="more"><summary><span class="x-open pt">Ver o caso completo</span><span class="x-open en">Read the full case</span><span class="x-close pt">Recolher o caso</span><span class="x-close en">Collapse the case</span></summary>
+
+      <h4><span class="pt">Antes e depois</span><span class="en">Before and after</span></h4>
+      <div class="ba">
+        <div><span class="lbl2 pt">Antes</span><span class="lbl2 en">Before</span><p class="pt">Uma aplicação monolítica, com telas, regras de negócio e acesso aos dados no mesmo bloco.</p><p class="en">A monolithic application, with screens, business rules and data access in one block.</p></div>
+        <div><span class="lbl2 pt">Depois</span><span class="lbl2 en">After</span><p class="pt">Microsserviços em Kubernetes conversando por RabbitMQ, consulta consolidada em MongoDB e micro front-ends em Angular, em ambiente híbrido (servidores próprios e AWS) e com análise de qualidade de código no pipeline. Foi o primeiro projeto da cultura DevOps na empresa.</p><p class="en">Microservices on Kubernetes talking over RabbitMQ, a consolidated MongoDB lookup and Angular micro front-ends, on a hybrid environment (on-premises and AWS) with code-quality checks in the pipeline. It was the company's first DevOps-culture project.</p></div>
+      </div>
+
+      <h4><span class="pt">A migração em etapas</span><span class="en">The migration in stages</span></h4>
+      <ol class="evo"><li><span class="evo-when">2018</span><div><h5><span class="pt">Novo portal e consulta consolidada</span><span class="en">New portal and consolidated lookup</span></h5><p class="pt">A consulta geral de cargas passou a ler uma base própria em MongoDB (CQRS), com regras de visualização por perfil de cliente.</p><p class="en">The cargo lookup moved to its own MongoDB read base (CQRS), with visibility rules per customer profile.</p></div></li><li><span class="evo-when">2019</span><div><h5><span class="pt">Definição do stack de testes</span><span class="en">Choosing the test stack</span></h5><p class="pt">Reuniões de definição de stack e prova de conceito com Cypress, ao lado da automação em Protractor que já existia.</p><p class="en">Stack-definition meetings and a Cypress proof of concept, alongside the existing Protractor automation.</p></div></li><li><span class="evo-when">2019</span><div><h5><span class="pt">Cadastro em microsserviços</span><span class="en">Registration on microservices</span></h5><p class="pt">Primeira frente migrada, com 809 defeitos registrados e acompanhados até o fechamento.</p><p class="en">The first workstream migrated, with 809 defects logged and followed through to closure.</p></div></li><li><span class="evo-when">2020</span><div><h5><span class="pt">Portal em microsserviços</span><span class="en">Portal on microservices</span></h5><p class="pt">Consulta de processos otimizada, telas de cadastro de agentes logísticos migradas e novo fluxo de acesso de despachantes e vínculo de empresas.</p><p class="en">Optimised process lookup, logistics-agent registration screens migrated, and a new flow for customs-broker access and company links.</p></div></li><li><span class="evo-when">2020</span><div><h5><span class="pt">Atualização para Angular 9</span><span class="en">Upgrade to Angular 9</span></h5><p class="pt">Regressão completa depois da troca de versão do framework do front-end.</p><p class="en">Full regression after the front-end framework upgrade.</p></div></li></ol>
+
+      <h4><span class="pt">Três frentes de qualidade</span><span class="en">Three quality fronts</span></h4>
+      <div class="resp">
+        <div><span class="lbl2"><span class="pt">1 · Dados e permissões</span><span class="en">1 · Data and permissions</span></span><p class="pt">A consulta geral passou a ler uma base consolidada. Testei as regras de visualização de cada perfil (importador, exportador, despachante, transportadora, agente e armador) com o risco principal mapeado: um cliente ver a carga de outro.</p><p class="en">The cargo lookup started reading a consolidated base. I tested the visibility rules for each profile (importer, exporter, customs broker, haulier, agent and shipping line), with the main risk mapped: one customer seeing another's cargo.</p></div>
+        <div><span class="lbl2"><span class="pt">2 · Antigo × novo, tela a tela</span><span class="en">2 · Old vs new, screen by screen</span></span><p class="pt">Mapeei cenários nas telas da área pública, como programação de navios, monitoramento de gates, consultas e cadastros, cada um com a rota antiga e a nova lado a lado. Implementei os primeiros no BackstopJS.</p><p class="en">I mapped scenarios across the public screens, such as vessel schedule, gate monitoring, lookups and registration, each with the old and new route side by side. I implemented the first ones in BackstopJS.</p></div>
+        <div><span class="lbl2"><span class="pt">3 · Automação como apoio</span><span class="en">3 · Automation as support</span></span><p class="pt">Protractor e BackstopJS apoiaram tarefas simples e repetitivas de regressão. Participei da definição do stack de testes e fiz a prova de conceito com Cypress.</p><p class="en">Protractor and BackstopJS supported simple, repetitive regression tasks. I helped choose the test stack and ran the Cypress proof of concept.</p></div>
+      </div>
+
+      <h4><span class="pt">Com o produto e o time</span><span class="en">With the product and the team</span></h4>
+      <ul class="pt">
+        <li>Defini e aprovei com UX e UI os protótipos do novo portal e cuidei do padrão visual nas entregas.</li>
+        <li>Participei das reuniões de design thinking e da aprovação do MVP com clientes externos.</li>
+        <li>Fiz a homologação e o review das entregas com o Product Owner e o time, a cada sprint.</li>
+        <li>Registrei e acompanhei 809 defeitos até o fechamento.</li>
+      </ul>
+      <ul class="en">
+        <li>Shaped and approved the new portal's prototypes with UX and UI, and kept the visual standard across deliveries.</li>
+        <li>Took part in design-thinking sessions and in MVP sign-off with external customers.</li>
+        <li>Ran sign-off and review of deliveries with the Product Owner and the team, sprint by sprint.</li>
+        <li>Logged 809 defects and followed them through to closure.</li>
+      </ul>
+
+      <div class="figure">
+        <div><b>809</b><span class="pt">defeitos registrados e acompanhados até o fechamento</span><span class="en">defects logged and followed through to closure</span></div>
+        <div><b class="pt">Piloto</b><b class="en">Pilot</b><span class="pt">da cultura DevOps na empresa</span><span class="en">for the company's DevOps culture</span></div>
+        <div><b class="pt">Mantida</b><b class="en">Kept</b><span class="pt">a prontidão operacional durante a migração</span><span class="en">operational readiness throughout the migration</span></div>
+      </div>
+      <div class="callout pt"><b>Na prática.</b> O portal mudou de arquitetura e de cara com os clientes usando todos os dias e sem afetar a prontidão operacional. A comparação entre a versão antiga e a nova pegou quebras de layout, erros de servidor e rotas que ainda não existiam, antes de algum cliente chegar até elas.</div>
+      <div class="callout en"><b>In practice.</b> The portal changed its architecture and its look while customers used it every day, without affecting operational readiness. Comparing old and new versions caught layout breaks, server errors and missing routes before any customer reached them.</div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="case" id="caso-03">
+    <aside>
+      <span class="no">03</span>
       <dl>
         <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2023 – 2026</dd>
         <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Responsável pelos testes; autor do fluxograma do processo, do mapa de testes do fluxo em mensageria e da matriz combinatória</span><span class="en">Owned testing; author of the process flowchart, the test map for the messaging flow and the combinatorial matrix</span></dd>
@@ -914,15 +1145,15 @@ h4.sub{color:var(--ink)}
     </div>
   </article>
 
-  <!-- 03 -->
-  <article class="case" id="caso-03">
+  <!-- 04 -->
+  <article class="case" id="caso-04">
     <aside>
-      <span class="no">03</span>
+      <span class="no">04</span>
       <dl>
         <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2025 – 2026</dd>
         <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">QA Sênior</span><span class="en">Senior QA</span></dd>
         <dt>Stack</dt>
-        <dd><div class="tags"><span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">Micro front-ends</span><span class="tag">Gherkin</span><span class="tag">Swagger</span><span class="tag">Postman</span></div></dd>
+        <dd><div class="tags"><span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">Micro front-ends</span><span class="tag">Gherkin</span><span class="tag">Swagger</span><span class="tag">Postman</span><span class="tag">SuperTest · Mocha · Chai</span></div></dd>
       </dl>
     </aside>
     <div>
@@ -932,7 +1163,7 @@ h4.sub{color:var(--ink)}
       <p class="kicker en">A responsive app, used in browsers and on handheld NFC scanners, that replaces paper inspections before the gate.</p>
       <div class="tldr">
         <div><span class="lbl3 pt">Desafio</span><span class="lbl3 en">Challenge</span><p class="pt">Substituir a inspeção em papel antes do gate por um app em microsserviços e micro front-ends.</p><p class="en">Replace paper inspections before the gate with an app built on microservices and micro front-ends.</p></div>
-        <div><span class="lbl3 pt">O que eu fiz</span><span class="lbl3 en">What I did</span><p class="pt">Estratégia por micro front-end, testes de API (contrato, autenticação, desempenho) e cenários em Gherkin rastreados no Jira.</p><p class="en">Strategy per micro front-end, API tests (contract, auth, performance) and Gherkin scenarios traced in Jira.</p></div>
+        <div><span class="lbl3 pt">O que eu fiz</span><span class="lbl3 en">What I did</span><p class="pt">Estratégia por micro front-end, testes de API manuais e automatizados (contrato, autenticação, desempenho) e cenários em Gherkin rastreados no Jira.</p><p class="en">Strategy per micro front-end, manual and automated API tests (contract, auth, performance) and Gherkin scenarios traced in Jira.</p></div>
         <div><span class="lbl3 pt">Resultado</span><span class="lbl3 en">Outcome</span><p class="pt">App validado em vários navegadores e resoluções, isolado e integrado ao back-end.</p><p class="en">App validated across browsers and resolutions, both in isolation and integrated with the back end.</p></div>
       </div>
       <details class="more"><summary><span class="x-open pt">Ver o caso completo</span><span class="x-open en">Read the full case</span><span class="x-close pt">Recolher o caso</span><span class="x-close en">Collapse the case</span></summary>
@@ -946,22 +1177,22 @@ h4.sub{color:var(--ink)}
       <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
       <ul class="pt">
         <li>Escrevi a estratégia de testes para microsserviços, com cada micro front-end testado isoladamente em vários navegadores e resoluções mobile, e depois integrado ao back-end.</li>
-        <li>Testei as APIs REST em contrato, autenticação, autorização, exceções e desempenho. Na API de notificações, cobri paginação, filtros, as respostas 204 e 206 e a regra de só aceitar e-mails do domínio da empresa, testando como consumidor da API.</li>
+        <li>Testei as APIs REST em contrato, autenticação, autorização, exceções e desempenho. Na API de notificações, cobri paginação, filtros, as respostas 204 e 206 e a regra de só aceitar e-mails do domínio da empresa, testando como consumidor da API. Automatizei os testes de API com SuperTest, Mocha e Chai.</li>
         <li>Documentei os cenários em Gherkin no Confluence, rastreados no Jira, e acompanhei a pré e a pós-implantação.</li>
       </ul>
       <ul class="en">
         <li>Wrote the microservices test strategy: each micro front-end tested in isolation across browsers and mobile resolutions, then integrated with the back end.</li>
-        <li>Tested the REST APIs for contract, authentication, authorisation, exceptions and performance. On the notifications API, I covered paging, filters, 204 and 206 responses, and the rule that only company-domain e-mails are accepted, testing as the API's consumer.</li>
+        <li>Tested the REST APIs for contract, authentication, authorisation, exceptions and performance. On the notifications API, I covered paging, filters, 204 and 206 responses, and the rule that only company-domain e-mails are accepted, testing as the API's consumer. I automated the API tests with SuperTest, Mocha and Chai.</li>
         <li>Documented scenarios in Gherkin on Confluence, traced in Jira, and supported pre- and post-deployment.</li>
       </ul>
       </details>
     </div>
   </article>
 
-  <!-- 04 -->
-  <article class="case" id="caso-04">
+  <!-- 05 -->
+  <article class="case" id="caso-05">
     <aside>
-      <span class="no">04</span>
+      <span class="no">05</span>
       <dl>
         <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2020 – 2021</dd>
         <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Negócios e QA</span><span class="en">Business Analyst and QA</span></dd>
@@ -1005,10 +1236,10 @@ h4.sub{color:var(--ink)}
     </div>
   </article>
 
-  <!-- 05 -->
-  <article class="case" id="caso-05">
+  <!-- 06 -->
+  <article class="case" id="caso-06">
     <aside>
-      <span class="no">05</span>
+      <span class="no">06</span>
       <dl>
         <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd><span class="pt">2023 · revisitado em 2024–2025</span><span class="en">2023 · revisited 2024–2025</span></dd>
         <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Negócios e QA, suporte pós-produção</span><span class="en">Business Analyst and QA, post-launch support</span></dd>
@@ -1062,10 +1293,10 @@ h4.sub{color:var(--ink)}
     </div>
   </article>
 
-  <!-- 06 -->
-  <article class="case" id="caso-06">
+  <!-- 07 -->
+  <article class="case" id="caso-07">
     <aside>
-      <span class="no">06</span>
+      <span class="no">07</span>
       <dl>
         <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2023 – 2024</dd>
         <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">QA: autor do checklist, do modelo de trabalho do time e das queries de validação</span><span class="en">QA: author of the checklist, the team's working model and the validation queries</span></dd>
@@ -1142,49 +1373,6 @@ h4.sub{color:var(--ink)}
       </div>
       <div class="callout pt"><b>O que faz a diferença.</b> Os itens 5 e 9 pegam o defeito que nenhum erro de compilação mostra: a view "funciona", mas o dado mudou de sentido ou o total não bate com o que a tela exibe. Como cada verificação tinha evidência anexada à GMUD, a aprovação deixava de ser "testado, ok" e passava a ser auditável.</div>
       <div class="callout en"><b>What makes the difference.</b> Checks 5 and 9 catch the defect no compile error reveals: the view "works", but the data has changed meaning or the total doesn't match what the screen shows. Because each check had evidence attached to the change request, sign-off stopped being "tested, ok" and became auditable.</div>
-      </details>
-    </div>
-  </article>
-
-  <!-- 07 -->
-  <article class="case" id="caso-07">
-    <aside>
-      <span class="no">07</span>
-      <dl>
-        <dt><span class="pt">Período</span><span class="en">Period</span></dt><dd>2018 – 2020</dd>
-        <dt><span class="pt">Papel</span><span class="en">Role</span></dt><dd><span class="pt">Analista de Testes Sênior</span><span class="en">Senior Test Analyst</span></dd>
-        <dt>Stack</dt>
-        <dd><div class="tags"><span class="tag">Protractor</span><span class="tag">BackstopJS</span><span class="tag">SuperTest</span><span class="tag">Mocha</span><span class="tag">Chai</span><span class="tag">JavaScript</span><span class="tag">Cypress (POC)</span></div></dd>
-      </dl>
-    </aside>
-    <div>
-      <h3 class="pt">Automação E2E e regressão visual na migração do portal do cliente</h3>
-      <h3 class="en">E2E automation and visual regression for the customer-portal migration</h3>
-      <p class="kicker pt">O portal do cliente passou de uma aplicação monolítica para microsserviços. A pergunta era: a tela nova é igual à antiga?</p>
-      <p class="kicker en">The customer portal moved from a monolith to microservices. The question was: does the new screen match the old one?</p>
-      <div class="tldr">
-        <div><span class="lbl3 pt">Desafio</span><span class="lbl3 en">Challenge</span><p class="pt">Garantir que o portal novo, em microsserviços, fosse igual ao antigo.</p><p class="en">Make sure the new microservices portal matched the old one.</p></div>
-        <div><span class="lbl3 pt">O que eu fiz</span><span class="lbl3 en">What I did</span><p class="pt">Automatizei E2E com Protractor, regressão visual com BackstopJS e APIs com SuperTest, Mocha e Chai.</p><p class="en">Automated E2E with Protractor, visual regression with BackstopJS and APIs with SuperTest, Mocha and Chai.</p></div>
-        <div><span class="lbl3 pt">Resultado</span><span class="lbl3 en">Outcome</span><p class="pt">Automação usada em produção por mais de 4 anos e 39 cenários visuais mapeados.</p><p class="en">Automation used in production for more than 4 years and 39 visual scenarios mapped.</p></div>
-      </div>
-      <details class="more"><summary><span class="x-open pt">Ver o caso completo</span><span class="x-open en">Read the full case</span><span class="x-close pt">Recolher o caso</span><span class="x-close en">Collapse the case</span></summary>
-
-
-      <h4><span class="pt">O que eu fiz</span><span class="en">What I did</span></h4>
-      <ul class="pt">
-        <li>Automatizei testes funcionais E2E com Protractor, usados em produção por mais de 4 anos.</li>
-        <li>Mapeei 39 cenários de regressão visual comparando o portal antigo e o novo, página a página, com rota de referência para cada tela, e implementei os primeiros com BackstopJS.</li>
-        <li>Automatizei testes de API com SuperTest, Mocha e Chai.</li>
-        <li>Participei da definição de stack de testes e fiz uma POC com Cypress.</li>
-      </ul>
-      <ul class="en">
-        <li>Automated functional E2E tests with Protractor, used in production for over 4 years.</li>
-        <li>Mapped 39 visual-regression scenarios comparing the old and new portal page by page, with a reference route for each screen, and implemented the first ones with BackstopJS.</li>
-        <li>Automated API tests with SuperTest, Mocha and Chai.</li>
-        <li>Helped define the test stack and ran a proof of concept with Cypress.</li>
-      </ul>
-      <div class="callout pt"><b>Na prática.</b> A comparação visual pegou quebras de layout e erros de servidor, e mostrou rotas novas que ainda não existiam antes de o usuário chegar até elas.</div>
-      <div class="callout en"><b>In practice.</b> The visual comparison caught layout breaks and server errors, and exposed new routes that didn't exist yet before any user reached them.</div>
       </details>
     </div>
   </article>
@@ -1287,38 +1475,62 @@ h4.sub{color:var(--ink)}
 <!-- METHOD -->
 <section id="metodo">
   <h2><span class="pt">Como eu trabalho</span><span class="en">How I work</span></h2>
-  <p class="sec-sub pt">Seis hábitos que aparecem em todos os projetos abaixo.</p>
-  <p class="sec-sub en">Six habits that show up in every project below.</p>
+  <p class="sec-sub pt">Nove hábitos que aparecem nos projetos deste portfólio: cinco do lado do negócio e do requisito, quatro do lado da qualidade.</p>
+  <p class="sec-sub en">Nine habits that show up across the projects in this portfolio: five on the business and requirements side, four on the quality side.</p>
   <div class="principles">
-    <div>
+    <div class="hb-n">
+      <span class="hk"><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></span>
+      <b class="pt">Discovery antes da solução</b><b class="en">Discovery before the solution</b>
+      <p class="pt">Mapeio termos, regras e dúvidas do negócio com quem pede, antes de qualquer especificação ou cenário. Muitos defeitos já aparecem nessa validação estática dos requisitos.</p>
+      <p class="en">I map business terms, rules and open questions with whoever asks, before any specification or scenario. Many defects surface already in this static review of the requirements.</p>
+    </div>
+    <div class="hb-n">
+      <span class="hk"><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></span>
+      <b class="pt">Processo desenhado antes do sistema</b><b class="en">Process before the system</b>
+      <p class="pt">Desenho o fluxo em raias, com atores, decisões e caminhos de erro. Todos enxergam o mesmo processo antes de se discutir tela ou API.</p>
+      <p class="en">I draw the flow as swimlanes, with actors, decisions and error paths. Everyone sees the same process before anyone discusses screens or APIs.</p>
+    </div>
+    <div class="hb-n">
+      <span class="hk"><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></span>
+      <b class="pt">Requisito que já nasce testável</b><b class="en">Requirements that are testable from day one</b>
+      <p class="pt">Cada regra vira critério de aceite com exemplos concretos ou uma tabela de decisão. Se não dá para testar, ainda não está claro.</p>
+      <p class="en">Each rule becomes acceptance criteria with concrete examples or a decision table. If it can't be tested, it isn't clear yet.</p>
+    </div>
+    <div class="hb-n">
+      <span class="hk"><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></span>
+      <b class="pt">Escopo explícito</b><b class="en">Explicit scope</b>
+      <p class="pt">Deixo registrado o que entra agora e o que fica para depois, com o motivo. O MVP sai mais rápido e ninguém se surpreende na entrega.</p>
+      <p class="en">I record what goes in now and what waits, and why. The MVP ships sooner and nobody is surprised at delivery.</p>
+    </div>
+    <div class="hb-n">
+      <span class="hk"><span class="pt">Negócio e requisito</span><span class="en">Business and requirements</span></span>
+      <b class="pt">A linguagem do cliente, traduzida</b><b class="en">The customer's language, translated</b>
+      <p class="pt">Converto o vocabulário de quem usa em regras do sistema e devolvo a regra em palavras que o cliente reconhece e aprova.</p>
+      <p class="en">I turn users' vocabulary into system rules and hand the rule back in words the customer recognises and signs off.</p>
+    </div>
+    <div class="hb-q">
+      <span class="hk"><span class="pt">Qualidade</span><span class="en">Quality</span></span>
       <b class="pt">Teste por camada</b><b class="en">Test by layer</b>
       <p class="pt">Cada estratégia separa front, API, fila de mensagens, banco, jobs e integrações. Um bug é investigado até a camada que o causou.</p>
       <p class="en">Every strategy separates front end, API, message queue, database, jobs and integrations. A bug is traced down to the layer that caused it.</p>
     </div>
-    <div>
-      <b class="pt">Discovery antes do teste</b><b class="en">Discovery before testing</b>
-      <p class="pt">Mapeio termos, regras e dúvidas do negócio antes de escrever cenários. Muitos defeitos aparecem já nessa validação estática dos requisitos.</p>
-      <p class="en">I map business terms, rules and open questions before writing scenarios. Many defects surface already during this static review of the requirements.</p>
-    </div>
-    <div>
+    <div class="hb-q">
+      <span class="hk"><span class="pt">Qualidade</span><span class="en">Quality</span></span>
       <b class="pt">Técnica de desenho explícita</b><b class="en">Explicit test design</b>
       <p class="pt">Tabela de decisão e análise combinatória, partição de equivalência, valores-limite e priorização por risco.</p>
       <p class="en">Decision tables and combinatorial analysis, equivalence partitioning, boundary values and risk-based prioritisation.</p>
     </div>
-    <div>
-      <b class="pt">Massa de teste como ativo</b><b class="en">Test data as an asset</b>
-      <p class="pt">Mantenho catálogos reutilizáveis de filtros, veículos e motoristas de teste. O mesmo catálogo serviu a vários projetos.</p>
-      <p class="en">I keep reusable catalogues of data filters, test vehicles and test drivers. The same catalogue served several projects.</p>
+    <div class="hb-q">
+      <span class="hk"><span class="pt">Qualidade</span><span class="en">Quality</span></span>
+      <b class="pt">Esperado × obtido, com evidência</b><b class="en">Expected vs actual, with evidence</b>
+      <p class="pt">Cada cenário tem massa, resultado esperado, resultado obtido e status, sobre catálogos de massa reutilizáveis. Qualquer pessoa do time consegue auditar.</p>
+      <p class="en">Each scenario records data, expected and actual results and status, on reusable test-data catalogues. Anyone on the team can audit it.</p>
     </div>
-    <div>
-      <b class="pt">Esperado × obtido, sempre</b><b class="en">Expected vs. actual, always</b>
-      <p class="pt">Cada cenário tem massa, resultado esperado, resultado obtido e status. Isso deixa o teste auditável por qualquer pessoa do time.</p>
-      <p class="en">Each scenario records its data, expected result, actual result and status, so anyone on the team can audit the test.</p>
-    </div>
-    <div>
-      <b class="pt">IA como parceira de desenho</b><b class="en">AI as a design partner</b>
-      <p class="pt">Uso Claude, ChatGPT e Copilot para ampliar cenários e estratégias de teste. A revisão e a decisão final continuam comigo.</p>
-      <p class="en">I use Claude, ChatGPT and Copilot to broaden test scenarios and strategies. Review and the final call stay with me.</p>
+    <div class="hb-q">
+      <span class="hk"><span class="pt">Qualidade</span><span class="en">Quality</span></span>
+      <b class="pt">IA como parceira de análise</b><b class="en">AI as an analysis partner</b>
+      <p class="pt">Uso Claude, ChatGPT e Copilot para ampliar cenários, regras e estratégias. A revisão e a decisão final continuam comigo.</p>
+      <p class="en">I use Claude, ChatGPT and Copilot to broaden scenarios, rules and strategies. Review and the final call stay with me.</p>
     </div>
   </div>
 </section>
@@ -1447,7 +1659,7 @@ h4.sub{color:var(--ink)}
   <div class="chart">
     <h3 class="pt">Onde usei cada competência</h3><h3 class="en">Where I used each skill</h3>
     <p class="csub pt">Cada ponto liga uma competência a um estudo de caso deste portfólio. Clique no número do caso para abri-lo.</p><p class="csub en">Each dot links a skill to a case study in this portfolio. Click a case number to open it.</p>
-    <div class="cmx-wrap"><table class="cmx"><thead><tr><th scope="col"><span class="pt">Competência</span><span class="en">Skill</span></th><th scope="col"><a href="#caso-01">01</a></th><th scope="col"><a href="#caso-02">02</a></th><th scope="col"><a href="#caso-03">03</a></th><th scope="col"><a href="#caso-04">04</a></th><th scope="col"><a href="#caso-05">05</a></th><th scope="col"><a href="#caso-06">06</a></th><th scope="col"><a href="#caso-07">07</a></th><th scope="col"><a href="#caso-08">08</a></th><th scope="col"><span class="pt">Casos</span><span class="en">Cases</span></th></tr></thead><tbody><tr><td><span class="pt">Liderança e gestão de QA</span><span class="en">QA leadership and management</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">2</td></tr><tr><td><span class="pt">Técnicas de desenho de testes</span><span class="en">Test design techniques</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">APIs REST</span><span class="en">REST APIs</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">Filas e eventos</span><span class="en">Queues and events</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">SQL e validação de dados</span><span class="en">SQL and data validation</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">5</td></tr><tr><td><span class="pt">Integrações com terceiros</span><span class="en">Third-party integrations</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">3</td></tr><tr><td><span class="pt">Faturamento e regras fiscais</span><span class="en">Billing and tax rules</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">1</td></tr><tr><td><span class="pt">Automação de testes</span><span class="en">Test automation</span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">1</td></tr><tr><td><span class="pt">Produto e requisitos</span><span class="en">Product and requirements</span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">3</td></tr><tr><td><span class="pt">Front-end, mobile e visual</span><span class="en">Front end, mobile and visual</span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">3</td></tr><tr><td><span class="pt">Processo e documentação</span><span class="en">Process and documentation</span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">4</td></tr></tbody></table></div>
+    <div class="cmx-wrap"><table class="cmx"><thead><tr><th scope="col"><span class="pt">Competência</span><span class="en">Skill</span></th><th scope="col"><a href="#caso-01">01</a></th><th scope="col"><a href="#caso-02">02</a></th><th scope="col"><a href="#caso-03">03</a></th><th scope="col"><a href="#caso-04">04</a></th><th scope="col"><a href="#caso-05">05</a></th><th scope="col"><a href="#caso-06">06</a></th><th scope="col"><a href="#caso-07">07</a></th><th scope="col"><a href="#caso-08">08</a></th><th scope="col"><span class="pt">Casos</span><span class="en">Cases</span></th></tr></thead><tbody><tr><td><span class="pt">Liderança e gestão de times</span><span class="en">Team leadership and management</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">2</td></tr><tr><td><span class="pt">Requisitos e regras de negócio</span><span class="en">Requirements and business rules</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">5</td></tr><tr><td><span class="pt">Produto, Scrum e stakeholders</span><span class="en">Product, Scrum and stakeholders</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">4</td></tr><tr><td><span class="pt">Técnicas de desenho de testes</span><span class="en">Test design techniques</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">Migração de sistemas legados</span><span class="en">Legacy system migration</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">Troubleshooting e causa raiz</span><span class="en">Troubleshooting and root cause</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">APIs REST</span><span class="en">REST APIs</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">Filas e eventos</span><span class="en">Queues and events</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">4</td></tr><tr><td><span class="pt">SQL e validação de dados</span><span class="en">SQL and data validation</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=nod></span></td><td class="tot">6</td></tr><tr><td><span class="pt">Integrações com terceiros</span><span class="en">Third-party integrations</span></td><td><span class=dot title=Caso&nbsp;01></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;05></span></td><td><span class=dot title=Caso&nbsp;06></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">3</td></tr><tr><td><span class="pt">Automação de testes</span><span class="en">Test automation</span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td class="tot">2</td></tr><tr><td><span class="pt">Front-end, mobile e visual</span><span class="en">Front end, mobile and visual</span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">3</td></tr><tr><td><span class="pt">Processo e documentação</span><span class="en">Process and documentation</span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;02></span></td><td><span class=dot title=Caso&nbsp;03></span></td><td><span class=dot title=Caso&nbsp;04></span></td><td><span class=nod></span></td><td><span class=nod></span></td><td><span class=dot title=Caso&nbsp;07></span></td><td><span class=dot title=Caso&nbsp;08></span></td><td class="tot">5</td></tr></tbody></table></div>
   </div>
   <div class="legend">
     <span><span class="lv p">PROD</span><span class="pt">usado em trabalho real</span><span class="en">used in real work</span></span>
@@ -1465,9 +1677,42 @@ h4.sub{color:var(--ink)}
         <li><span class="lv p">PROD</span><span class="pt">Testes de filas e eventos</span><span class="en">Queue and event testing</span></li>
         <li><span class="lv p">PROD</span><span class="pt">Regressão visual</span><span class="en">Visual regression</span></li>
         <li><span class="lv p">PROD</span><span class="pt">BDD / Gherkin e rastreabilidade</span><span class="en">BDD / Gherkin and traceability</span></li>
-        <li><span class="lv p">PROD</span><span class="pt">Troubleshooting e análise de causa raiz</span><span class="en">Troubleshooting and root-cause analysis</span></li>
-        <li><span class="lv p">PROD</span><span class="pt">Sustentação e suporte a produção</span><span class="en">Production support</span></li>
         <li><span class="lv p">PROD</span><span class="pt">Processos CMMI nível III</span><span class="en">CMMI level III processes</span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Requisitos e negócio</h3><h3 class="en">Requirements and business</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Levantamento e refinamento de requisitos com áreas e clientes</span><span class="en">Gathering and refining requirements with business areas and customers</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Regras de negócio, histórias de usuário e critérios de aceite</span><span class="en">Business rules, user stories and acceptance criteria</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Discovery de domínio: faturamento, aduaneiro, gate e agendamento</span><span class="en">Domain discovery: billing, customs, gate and booking</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Processos em raias (BPM), tabelas de decisão e máquinas de estado</span><span class="en">Swimlane processes (BPM), decision tables and state machines</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Validação estática de requisitos e análise de impacto e risco</span><span class="en">Static requirements review and impact and risk analysis</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Tradução entre o vocabulário do cliente e as regras do sistema</span><span class="en">Translating customer vocabulary into system rules</span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Produto, agilidade e gestão</h3><h3 class="en">Product, agile and management</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Product Owner: definição de MVP e priorização de backlog</span><span class="en">Product Owner: MVP definition and backlog prioritisation</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Scrum: planning, daily, review e retrospectiva</span><span class="en">Scrum: planning, daily, review and retrospective</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Homologação e aceite das entregas com o negócio</span><span class="en">Delivery sign-off and acceptance with the business</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Gestão de time: divisão do trabalho entre dev, jurídico e negócio</span><span class="en">Team management: splitting work across dev, legal and business</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Contratação técnica e onboarding de um time de 7 QAs</span><span class="en">Technical hiring and onboarding of a team of 7 QAs</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Relatórios de evolução e riscos para gestores e stakeholders</span><span class="en">Progress and risk reports for managers and stakeholders</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Design thinking para redesenho de processo</span><span class="en">Design thinking for process redesign</span></li>
+        <li><span class="lv f">FAMILIAR</span><span class="pt">Protótipos estáticos e navegáveis no Figma</span><span class="en">Static and clickable prototypes in Figma</span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3 class="pt">Troubleshooting e sustentação</h3><h3 class="en">Troubleshooting and production support</h3>
+      <ul>
+        <li><span class="lv p">PROD</span><span class="pt">Investigação por camada: tela, logs, API, fila, banco e parâmetros</span><span class="en">Layer-by-layer investigation: screen, logs, API, queue, database and settings</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Análise de causa raiz com evidência e ticket</span><span class="en">Root-cause analysis with evidence and ticket</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Reprodução de incidentes e validação de correções</span><span class="en">Reproducing incidents and validating fixes</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Ensaios de virada, go-live e estabilização pós-migração</span><span class="en">Cutover rehearsals, go-live and post-migration stabilisation</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Regressivos de prontidão operacional a cada atualização</span><span class="en">Operational-readiness regressions on every upgrade</span></li>
+        <li><span class="lv p">PROD</span><span class="pt">Sustentação de sistemas críticos 24 horas</span><span class="en">Support for 24/7 critical systems</span></li>
       </ul>
     </div>
     <div class="grp">
@@ -1475,10 +1720,11 @@ h4.sub{color:var(--ink)}
       <ul>
         <li><span class="lv p">PROD</span>Protractor (E2E)</li>
         <li><span class="lv p">PROD</span>BackstopJS <span class="pt">(regressão visual)</span><span class="en">(visual regression)</span></li>
-        <li><span class="lv p">PROD</span>SuperTest · Mocha · Chai <span class="pt">(API)</span><span class="en">(API)</span></li>
+        <li><span class="lv p">PROD</span>SuperTest · Mocha · Chai <span class="pt">(API, app de inspeção pré-gate)</span><span class="en">(API, pre-gate inspection app)</span></li>
         <li><span class="lv p">PROD</span><span class="pt">IA para cenários: Claude, ChatGPT, Copilot (Intensivão de Claude, 2026)</span><span class="en">AI for scenarios: Claude, ChatGPT, Copilot (Claude Intensive, 2026)</span></li>
         <li><span class="lv s">ESTUDO</span>Playwright <span class="pt">(pós-graduação e testes piloto)</span><span class="en">(postgrad and pilot tests)</span></li>
-        <li><span class="lv s">ESTUDO</span>Cypress</li>
+        <li><span class="lv s">ESTUDO</span>Cypress <span class="pt">(projetos da pós no <a href="https://github.com/marlonCristo1985" target="_blank" rel="noopener">GitHub</a>)</span><span class="en">(postgrad projects on <a href="https://github.com/marlonCristo1985" target="_blank" rel="noopener">GitHub</a>)</span></li>
+        <li><span class="lv s">ESTUDO</span><span class="pt">CI/CD com GitHub Actions: configurei pipelines de testes na pós; leio e acompanho a execução e sugiro melhorias nos steps</span><span class="en">CI/CD with GitHub Actions: set up test pipelines in my postgrad; I read and follow runs and suggest improvements to the steps</span></li>
         <li><span class="lv s">ESTUDO</span>Selenium · Selenide · Capybara/Cucumber</li>
       </ul>
     </div>
@@ -1536,15 +1782,15 @@ h4.sub{color:var(--ink)}
     <div class="legend" id="gLegend"></div>
     <div class="gantt-wrap"><svg class="gantt" id="gantt" role="img" aria-label="Linha do tempo da carreira"></svg></div>
   </div>
-  <div class="tl-leg"><span><i class="tt u">&nbsp;</i><span class="pt">usei diretamente</span><span class="en">used directly</span></span><span><i class="tt s">&nbsp;</i><span class="pt">prova de conceito</span><span class="en">proof of concept</span></span><span><i class="tt c">&nbsp;</i><span class="pt">tecnologia do sistema testado</span><span class="en">technology of the system under test</span></span></div>
+  <div class="tl-leg"><span><i class="tt prac">&nbsp;</i><span class="pt">prática de trabalho</span><span class="en">working practice</span></span><span><i class="tt u">&nbsp;</i><span class="pt">usei diretamente</span><span class="en">used directly</span></span><span><i class="tt s">&nbsp;</i><span class="pt">prova de conceito</span><span class="en">proof of concept</span></span><span><i class="tt c">&nbsp;</i><span class="pt">tecnologia do sistema testado</span><span class="en">technology of the system under test</span></span></div>
   <div class="two">
     <ol class="tl">
-      <li class="now"><span class="when">2025 – 2026</span><b class="pt">QA Sênior / Quality Engineer</b><b class="en">Senior QA / Quality Engineer</b><span class="d pt">TCP · novo SGG em mensageria, app de inspeção pré-gate, APIs internas reescritas e estabilização pós-migração</span><span class="d en">TCP · new messaging-based gate system, pre-gate inspection app, rewritten internal APIs and post-migration stabilisation</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Gherkin / BDD</span><span class="tt u">Claude</span><span class="tt u">ChatGPT</span><span class="tt u">GitHub Copilot</span><span class="tt u">Chrome DevTools</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET Core C#</span><span class="tt c">Microservices</span><span class="tt c">Vue.js micro front-ends</span><span class="tt c">Ionic</span><span class="tt c">Event-driven</span><span class="tt c">XML contracts</span><span class="tt c">NFC handhelds</span></div></li>
-      <li><span class="when">2024 – 2025</span><b>Senior Test Lead</b><span class="d pt">TCP · troca do sistema operacional do terminal (TOS) · estruturação e liderança da área de QA</span><span class="d en">TCP · terminal operating system (TOS) replacement · built and led the QA function</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">GitMind / FreeMind</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">In-house TOS</span><span class="tt c">Oracle 19c</span><span class="tt c">Billing engine</span><span class="tt c">ERP (Protheus)</span><span class="tt c">WMS</span><span class="tt c">Salesforce</span><span class="tt c">Event integrations</span><span class="tt c">ESB jobs</span></div></li>
-      <li><span class="when">2020 – 2023</span><b class="pt">Analista de Negócios / PO / QA</b><b class="en">Business Analyst / PO / QA</b><span class="d pt">TCP · portal do cliente, agendamento, gate sem código de barras, app do motorista, webhook, LGPD, sustentação</span><span class="d en">TCP · customer portal, appointments, barcode-free gate, driver app, webhook, LGPD, production support</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Postman</span><span class="tt u">Swagger</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Figma</span><span class="tt u">Lighthouse</span><span class="tt u">FreeMind</span><span class="tt u">Swimlane BPM</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Angular 9</span><span class="tt c">.NET C#</span><span class="tt c">CQRS</span><span class="tt c">RabbitMQ</span><span class="tt c">Android</span><span class="tt c">Firebase</span><span class="tt c">WordPress</span><span class="tt c">EDI</span><span class="tt c">Salesforce</span><span class="tt c">Navis N4</span></div></li>
-      <li><span class="when">2016 – 2020</span><b class="pt">Analista de Testes Sênior</b><b class="en">Senior Test Analyst</b><span class="d pt">TCP · primeira migração de TOS, regressivos de plataforma, automação E2E, visual e de API, portal em microsserviços</span><span class="d en">TCP · first TOS migration, platform regressions, E2E, visual and API automation, microservices portal</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Protractor</span><span class="tt u">BackstopJS</span><span class="tt u">SuperTest</span><span class="tt u">Mocha</span><span class="tt u">Chai</span><span class="tt u">JavaScript</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt s">Cypress (POC)</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Navis N4 (Java / Groovy)</span><span class="tt c">WSO2 ESB</span><span class="tt c">Oracle 12g</span><span class="tt c">.NET 4 C# services</span><span class="tt c">WMS (Oracle Forms)</span><span class="tt c">Kubernetes</span><span class="tt c">Docker</span><span class="tt c">RabbitMQ</span><span class="tt c">Elasticsearch</span><span class="tt c">AWS (hybrid)</span></div></li>
-      <li><span class="when">2013 – 2016</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">Ewave, alocado na Rumo ALL · sistemas de licenciamento de trens e alteração de malha ferroviária</span><span class="d en">Ewave, placed at Rumo ALL · train-licensing and rail-network change systems</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">Oracle PL/SQL</span><span class="tt u">Jira</span><span class="tt u">Tortoise SVN</span><span class="tt u">Build Server</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET</span><span class="tt c">Delphi</span><span class="tt c">WPF</span><span class="tt c">ASP</span></div></li>
-      <li><span class="when">2012 – 2013</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">TechResult · fábrica de software CMMI nível III, projetos web e desktop para vários clientes</span><span class="d en">TechResult · CMMI level III software house, web and desktop projects for several clients</span><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">CMMI III artifacts</span><span class="tt u">Traceability matrix</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Web</span><span class="tt c">Desktop</span><span class="tt c">Ruby</span></div></li>
+      <li class="now"><span class="when">2025 – 2026</span><b class="pt">QA Sênior / Quality Engineer</b><b class="en">Senior QA / Quality Engineer</b><span class="d pt">TCP · novo SGG em mensageria, app de inspeção pré-gate, APIs internas reescritas e estabilização pós-migração</span><span class="d en">TCP · new messaging-based gate system, pre-gate inspection app, rewritten internal APIs and post-migration stabilisation</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Validação estática de requisitos</span><span class="en">Static requirements review</span></span><span class="tt u"><span class="pt">Tabela de decisão (2.090 cenários)</span><span class="en">Decision table (2,090 scenarios)</span></span><span class="tt u"><span class="pt">Estratégia para microsserviços</span><span class="en">Microservices test strategy</span></span><span class="tt u"><span class="pt">BDD / Gherkin</span><span class="en">BDD / Gherkin</span></span><span class="tt u"><span class="pt">Estabilização pós-migração</span><span class="en">Post-migration stabilisation</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">SuperTest</span><span class="tt u">Mocha</span><span class="tt u">Chai</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Gherkin / BDD</span><span class="tt u">Claude</span><span class="tt u">ChatGPT</span><span class="tt u">GitHub Copilot</span><span class="tt u">Chrome DevTools</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET Core C#</span><span class="tt c">Microservices</span><span class="tt c">Vue.js micro front-ends</span><span class="tt c">Ionic</span><span class="tt c">Event-driven</span><span class="tt c">XML contracts</span><span class="tt c">NFC handhelds</span></div></li>
+      <li><span class="when">2024 – 2025</span><b>Senior Test Lead</b><span class="d pt">TCP · troca do sistema operacional do terminal (TOS) · estruturação e liderança da área de QA</span><span class="d en">TCP · terminal operating system (TOS) replacement · built and led the QA function</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Gestão de time (7 QAs)</span><span class="en">Team management (7 QAs)</span></span><span class="tt u"><span class="pt">Contratação técnica</span><span class="en">Technical hiring</span></span><span class="tt u"><span class="pt">Onboarding no negócio</span><span class="en">Business onboarding</span></span><span class="tt u"><span class="pt">Estratégia de testes por camada</span><span class="en">Layered test strategy</span></span><span class="tt u"><span class="pt">Discovery de faturamento</span><span class="en">Billing discovery</span></span><span class="tt u"><span class="pt">Plano de virada e go-live</span><span class="en">Cutover and go-live plan</span></span><span class="tt u"><span class="pt">Relatórios para stakeholders</span><span class="en">Stakeholder reporting</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">RabbitMQ</span><span class="tt u">Kubernetes / Lens</span><span class="tt u">OpenSearch</span><span class="tt u">Kibana</span><span class="tt u">Consul</span><span class="tt u">Swagger</span><span class="tt u">Postman</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">GitMind / FreeMind</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">In-house TOS</span><span class="tt c">Oracle 19c</span><span class="tt c">Billing engine</span><span class="tt c">ERP (Protheus)</span><span class="tt c">WMS</span><span class="tt c">Salesforce</span><span class="tt c">Event integrations</span><span class="tt c">ESB jobs</span></div></li>
+      <li><span class="when">2020 – 2023</span><b class="pt">Analista de Negócios / PO / QA</b><b class="en">Business Analyst / PO / QA</b><span class="d pt">TCP · portal do cliente, agendamento, gate sem código de barras, app do motorista, webhook, LGPD, sustentação</span><span class="d en">TCP · customer portal, appointments, barcode-free gate, driver app, webhook, LGPD, production support</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Gestão de backlog</span><span class="en">Backlog management</span></span><span class="tt u"><span class="pt">Definição de MVP</span><span class="en">MVP definition</span></span><span class="tt u"><span class="pt">Scrum: planning, daily, review e retro</span><span class="en">Scrum: planning, daily, review and retro</span></span><span class="tt u"><span class="pt">Histórias e critérios de aceite</span><span class="en">User stories and acceptance criteria</span></span><span class="tt u"><span class="pt">Levantamento com clientes</span><span class="en">Customer requirements gathering</span></span><span class="tt u"><span class="pt">Gestão de time multidisciplinar</span><span class="en">Cross-functional team management</span></span><span class="tt u"><span class="pt">BPM em raias</span><span class="en">Swimlane BPM</span></span><span class="tt u"><span class="pt">Design thinking</span><span class="en">Design thinking</span></span><span class="tt u"><span class="pt">Homologação com o negócio</span><span class="en">Business sign-off</span></span><span class="tt u"><span class="pt">Relatórios para stakeholders</span><span class="en">Stakeholder reporting</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Postman</span><span class="tt u">Swagger</span><span class="tt u">Consul</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt u">Figma</span><span class="tt u">Lighthouse</span><span class="tt u">FreeMind</span><span class="tt u">Swimlane BPM</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Angular 9</span><span class="tt c">.NET C#</span><span class="tt c">CQRS</span><span class="tt c">RabbitMQ</span><span class="tt c">Android</span><span class="tt c">Firebase</span><span class="tt c">WordPress</span><span class="tt c">EDI</span><span class="tt c">Salesforce</span><span class="tt c">Navis N4</span></div></li>
+      <li><span class="when">2016 – 2020</span><b class="pt">Analista de Testes Sênior</b><b class="en">Senior Test Analyst</b><span class="d pt">TCP · primeira migração de TOS, regressivos de plataforma, automação E2E, visual e de API, portal em microsserviços</span><span class="d en">TCP · first TOS migration, platform regressions, E2E, visual and API automation, microservices portal</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Scrum</span><span class="en">Scrum</span></span><span class="tt u"><span class="pt">Homologação e review com PO e UX</span><span class="en">Sign-off and review with PO and UX</span></span><span class="tt u"><span class="pt">Definição de stack de testes</span><span class="en">Test stack selection</span></span><span class="tt u"><span class="pt">Regressão baseada em risco</span><span class="en">Risk-based regression</span></span><span class="tt u"><span class="pt">Migração de monólito para microsserviços</span><span class="en">Monolith-to-microservices migration</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Protractor</span><span class="tt u">BackstopJS</span><span class="tt u">JavaScript</span><span class="tt u">Oracle SQL</span><span class="tt u">MongoDB</span><span class="tt u">Jira</span><span class="tt u">Confluence</span><span class="tt s">Cypress (POC)</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Navis N4 (Java / Groovy)</span><span class="tt c">WSO2 ESB</span><span class="tt c">Oracle 12g</span><span class="tt c">.NET 4 C# services</span><span class="tt c">WMS (Oracle Forms)</span><span class="tt c">Kubernetes</span><span class="tt c">Docker</span><span class="tt c">RabbitMQ</span><span class="tt c">Elasticsearch</span><span class="tt c">AWS (hybrid)</span></div></li>
+      <li><span class="when">2013 – 2016</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">Ewave, alocado na Rumo ALL · sistemas de licenciamento de trens e alteração de malha ferroviária</span><span class="d en">Ewave, placed at Rumo ALL · train-licensing and rail-network change systems</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Análise de requisitos</span><span class="en">Requirements analysis</span></span><span class="tt u"><span class="pt">Estimativa de esforço</span><span class="en">Effort estimation</span></span><span class="tt u"><span class="pt">Alocação e acompanhamento da equipe</span><span class="en">Team allocation and follow-up</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">Oracle PL/SQL</span><span class="tt u">Jira</span><span class="tt u">Tortoise SVN</span><span class="tt u">Build Server</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">.NET</span><span class="tt c">Delphi</span><span class="tt c">WPF</span><span class="tt c">ASP</span></div></li>
+      <li><span class="when">2012 – 2013</span><b class="pt">Analista de Testes</b><b class="en">Test Analyst</b><span class="d pt">TechResult · fábrica de software CMMI nível III, projetos web e desktop para vários clientes</span><span class="d en">TechResult · CMMI level III software house, web and desktop projects for several clients</span><div class="trow prac"><span class="tk pt">Práticas</span><span class="tk en">Practices</span><span class="tt u"><span class="pt">Casos de uso</span><span class="en">Use cases</span></span><span class="tt u"><span class="pt">Matriz de rastreabilidade</span><span class="en">Traceability matrix</span></span><span class="tt u"><span class="pt">Processos CMMI III</span><span class="en">CMMI III processes</span></span></div><div class="trow"><span class="tk pt">Usei</span><span class="tk en">Used</span><span class="tt u">Microsoft Test Manager</span><span class="tt u">CMMI III artifacts</span><span class="tt u">Traceability matrix</span></div><div class="trow"><span class="tk pt">Testei sistemas em</span><span class="tk en">Tested systems built on</span><span class="tt c">Web</span><span class="tt c">Desktop</span><span class="tt c">Ruby</span></div></li>
       <li><span class="when">2002 – 2011</span><b class="pt">Instrutor e coordenador de cursos</b><b class="en">Instructor and course coordinator</b><span class="d pt">Ensino de informática e coordenação de cursos profissionalizantes · base da minha didática</span><span class="d en">IT teaching and vocational course coordination · where my teaching skills come from</span></li>
     </ol>
     <div class="edu">
@@ -1578,6 +1824,11 @@ h4.sub{color:var(--ink)}
       <span class="ctl">LinkedIn</span>
       <span class="ctv">linkedin.com/in/marlon-de-cristo-paula-b1299144</span>
       <div class="cta-row"><a class="btn" href="https://www.linkedin.com/in/marlon-de-cristo-paula-b1299144" target="_blank" rel="noopener"><span class="pt">Abrir perfil</span><span class="en">Open profile</span> ↗</a></div>
+    </div>
+    <div class="ct">
+      <span class="ctl">GitHub</span>
+      <span class="ctv">github.com/marlonCristo1985</span>
+      <div class="cta-row"><a class="btn" href="https://github.com/marlonCristo1985" target="_blank" rel="noopener"><span class="pt">Ver projetos de estudo</span><span class="en">See study projects</span> ↗</a></div>
     </div>
     <div class="ct">
       <span class="ctl pt">Telefone</span><span class="ctl en">Phone</span>
@@ -1700,5 +1951,102 @@ h4.sub{color:var(--ink)}
   });
 })();
 </script>
+<script>
+/* v4: cabeçalhos das seções, abas dos casos, próxima seção, leitura e entrada suave. */
+(function(){
+  var root=document.documentElement;root.classList.add('v3');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function two(n){return (n<10?'0':'')+n;}
+  function bi(pt,en){return '<span class="pt">'+pt+'</span><span class="en">'+en+'</span>';}
+  /* barra de leitura e voltar ao topo */
+  var pb=document.createElement('div');pb.className='progress';document.body.appendChild(pb);
+  var tp=document.createElement('a');tp.className='totop';tp.href='#topo';tp.setAttribute('aria-label','Voltar ao topo / Back to top');tp.innerHTML='↑';document.body.appendChild(tp);
+  function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pb.style.width=(max>0?h.scrollTop/max*100:0)+'%';tp.classList.toggle('show',h.scrollTop>900);var nv=document.querySelector('.bar nav'),on=nv&&nv.querySelector('a.on');if(on&&nv.scrollWidth>nv.clientWidth){var l=on.offsetLeft-(nv.clientWidth-on.clientWidth)/2;if(Math.abs(nv.scrollLeft-l)>8)nv.scrollLeft=l;}}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  /* cabeçalho de cada seção, com um número de contexto */
+  var chips={casos:['8','estudos de caso','case studies'],ambiente:['42','sistemas integrados','integrated systems'],metodo:['9','hábitos de trabalho','working habits'],sustentacao:['7','investigações','investigations'],exemplos:['6','técnicas aplicadas','techniques applied'],habilidades:['13','competências mapeadas','skills mapped'],trajetoria:['24','anos de carreira','years of career']};
+  [].forEach.call(document.querySelectorAll('.content > section[id]'),function(s){
+    if(s.id==='contato')return;
+    var hs=[].slice.call(s.children).filter(function(el){return el.tagName==='H2'||el.classList.contains('sec-sub');});
+    if(!hs.length)return;
+    var head=document.createElement('div');head.className='sec-head';var left=document.createElement('div');
+    s.insertBefore(head,hs[0]);hs.forEach(function(el){left.appendChild(el);});head.appendChild(left);
+    var c=chips[s.id];if(c){var ch=document.createElement('span');ch.className='sec-chip';ch.innerHTML='<b>'+c[0]+'</b>'+bi(c[1],c[2]);head.appendChild(ch);}
+  });
+  /* estudos de caso em abas */
+  var arts=[].slice.call(document.querySelectorAll('#casos article.case'));
+  var rail=document.querySelector('#casos .cindex');
+  var tabs=rail?[].slice.call(rail.querySelectorAll('a')):[];
+  var N=arts.length,cur=0;
+  function tt(a){var p=a.querySelector('h3.pt'),e=a.querySelector('h3.en');return bi(p?p.innerHTML:'',e?e.innerHTML:'');}
+  tabs.forEach(function(t){var g=document.createElement('span');g.className='go2';g.innerHTML='<span class="off-t">'+bi('Abrir caso','Open case')+' <i>→</i></span><span class="on-t">● '+bi('Em leitura','Now reading')+'</span>';t.appendChild(g);});
+  var prevB,nextB;
+  if(rail){
+    var rh=document.createElement('div');rh.className='rail-head';
+    rh.innerHTML='<div><span class="rh-k">'+bi('Escolha um caso','Pick a case')+'</span><span class="rh-h">'+bi('Clique num cartão ou use as setas para navegar pelos '+N+' casos.','Click a card or use the arrows to browse all '+N+' cases.')+'</span></div><div class="rh-nav"><button type="button" class="rh-prev" aria-label="Caso anterior / Previous case">←</button><button type="button" class="rh-next" aria-label="Próximo caso / Next case">→</button></div>';
+    rail.parentNode.insertBefore(rh,rail);
+    prevB=rh.querySelector('.rh-prev');nextB=rh.querySelector('.rh-next');
+    prevB.addEventListener('click',function(){show(cur-1,false);});
+    nextB.addEventListener('click',function(){show(cur+1,false);});
+  }
+  arts.forEach(function(a,i){
+    var segs='';for(var k=0;k<N;k++)segs+='<i'+(k<=i?' class="on"':'')+'></i>';
+    var head=document.createElement('div');head.className='case-head';
+    head.innerHTML='<span class="ch-l">'+bi('Estudo de caso','Case study')+' <b>'+two(i+1)+'</b> / '+two(N)+'</span><span class="ch-bar" aria-hidden="true">'+segs+'</span>';
+    a.insertBefore(head,a.firstChild);
+    var foot=document.createElement('div');foot.className='case-foot';var h='';
+    if(i>0)h+='<a class="cf prev" href="#'+arts[i-1].id+'"><span class="cf-k">'+bi('← Caso anterior','← Previous case')+'</span><span class="cf-t">'+tt(arts[i-1])+'</span></a>';
+    else h+='<span class="cf prev empty"></span>';
+    if(i<N-1)h+='<a class="cf next" href="#'+arts[i+1].id+'"><span class="cf-k">'+bi('Próximo caso →','Next case →')+'</span><span class="cf-t">'+tt(arts[i+1])+'</span></a>';
+    else h+='<a class="cf next" href="#ambiente"><span class="cf-k">'+bi('Fim dos casos · próxima seção →','End of cases · next section →')+'</span><span class="cf-t">'+bi('Onde trabalhei','Where I worked')+'</span></a>';
+    foot.innerHTML=h;a.appendChild(foot);
+  });
+  function show(i,scroll){
+    if(i<0||i>=N)return;cur=i;
+    arts.forEach(function(a,k){a.classList.toggle('is-active',k===i);});
+    tabs.forEach(function(t,k){t.setAttribute('aria-current',k===i?'true':'false');});
+    if(prevB){prevB.disabled=i===0;nextB.disabled=i===N-1;}
+    var t=tabs[i];if(t&&rail){var l=t.offsetLeft-rail.offsetLeft-(rail.clientWidth-t.clientWidth)/2;try{rail.scrollTo({left:l,behavior:reduce?'auto':'smooth'});}catch(e){rail.scrollLeft=l;}}
+    if(scroll&&rail){var anchor=rail.previousElementSibling||rail;var y=anchor.getBoundingClientRect().top+pageYOffset-96;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#caso-"]');if(!a)return;
+    var id=a.getAttribute('href').slice(1),i=-1;arts.forEach(function(x,k){if(x.id===id)i=k;});if(i<0)return;
+    e.preventDefault();e.stopPropagation();show(i,true);
+  },true);
+  if(rail)rail.addEventListener('keydown',function(e){var i=tabs.indexOf(document.activeElement);if(i<0)return;
+    if(e.key==='ArrowRight'&&i<N-1){e.preventDefault();tabs[i+1].focus();show(i+1,false);}
+    if(e.key==='ArrowLeft'&&i>0){e.preventDefault();tabs[i-1].focus();show(i-1,false);}});
+  var m=(location.hash||'').match(/^#caso-(\d\d)$/),start=0;
+  if(m){arts.forEach(function(x,k){if(x.id==='caso-'+m[1])start=k;});}
+  show(start,!!m);
+  /* próxima seção */
+  var secs=[].slice.call(document.querySelectorAll('.content > section[id]'));
+  secs.forEach(function(s,i){var n=secs[i+1];if(!n||s.id==='casos')return;
+    var p=n.querySelector('h2 .pt, h2.pt'),e=n.querySelector('h2 .en, h2.en');
+    var a=document.createElement('a');a.className='nextsec';a.href='#'+n.id;
+    a.innerHTML='<span><span class="nk">'+bi('Próxima seção','Next section')+'</span><span class="nt">'+bi(p?p.textContent:'',e?e.textContent:'')+'</span></span><span class="na" aria-hidden="true">→</span>';
+    s.appendChild(a);});
+  /* entrada suave */
+  if('IntersectionObserver' in window&&!reduce){
+    var els=document.querySelectorAll('.lc, .sec-head, .principles > div, .mini article, .skills .grp, .tl > li, .chart, .eco, .periods > div, .log .row, .contacts .ct, .wins a, .stackbar, .nextsec');
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{rootMargin:'0px 0px -6% 0px'});
+    [].forEach.call(els,function(el){var idx=[].indexOf.call(el.parentNode.children,el);el.style.transitionDelay=(idx%6)*70+'ms';el.classList.add('reveal');io.observe(el);});
+  }
+})();
+</script>
+<script>
+/* Contador de visitas (GoatCounter): invisível para quem visita; o painel é privado.
+   Origem da visita: links com ?ref=linkedin, ?ref=gupy, ?ref=cv etc. aparecem como fonte.
+   Cada caso aberto é contado como evento "caso-0N". */
+(function(){
+  window.goatcounter={no_onload:false};
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#caso-"]');if(!a||!window.goatcounter||!window.goatcounter.count)return;
+    window.goatcounter.count({path:a.getAttribute('href').slice(1),title:'Caso aberto',event:true});
+  });
+})();
+</script>
+<script data-goatcounter="https://marloncristo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
